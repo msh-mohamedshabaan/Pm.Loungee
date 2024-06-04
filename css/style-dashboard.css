@@ -1,14 +1,27 @@
 /* <!-- Custom CSS --> */
+:root {
+    --color-blue1 :#5a108a; 
+    --color-blue3 :#320351; 
+    --color-blue2 :#a435f0; 
+    --text-color-purple:#5624d0;; 
+    --color-gray : #d5d0d039 ;
+    --color-gray-text : #6a6f73 ;
+
+    --font-stack-text: 'Udemy Sans', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-stack-heading-serif: SuisseWorks, Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
     body {
-        background-color: #6d0666; /* Purple color */
+        background-color: white; /* Purple color */
     }
     .form-container {
         background: white;
         padding: 20px;
         margin: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08);
     }
     .btn-primary {
-        background-color: #6d0666; /* Matching purple color */
+        background-color:var(--color-blue2); /* Matching purple color */
     }
     .form-group { margin-bottom: 10px; }
     label { display: block; margin-bottom: 5px; }
