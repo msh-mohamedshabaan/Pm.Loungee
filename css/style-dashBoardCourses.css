@@ -1,0 +1,63 @@
+:root {
+    --color-blue1 :#5a108a; 
+    --color-blue3 :#320351; 
+    --color-blue2 :#a435f0; 
+    --text-color-purple:#5624d0;; 
+    --color-gray : #d5d0d039 ;
+    --color-gray-text : #6a6f73 ;
+
+    --font-stack-text: 'Udemy Sans', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    --font-stack-heading-serif: SuisseWorks, Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+
+
+
+#sidebar-wrapper {
+    min-height: 100vh; /* Full height */
+    background-color: var(--color-blue1); /* Purple */
+    color: white;
+}
+.sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    background-color:var(--color-blue1); /* Darker purple */
+    margin-bottom: 1rem;
+}
+.list-group-item {
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+.list-group-item:hover, .list-group-item:focus {
+    background-color: var(--color-blue3); /* Darker purple on hover/focus */
+    color: white;
+}
+.list-group-item.active {
+    background-color: var(--color-blue3); /* Even darker purple for active state */
+    color: white;
+    border-color: var(--color-blue1);
+}
+.bg-purple {
+    background-color: var(--color-blue1); /* Purple */
+}
+/* Content styling */
+.content-wrapper {
+    padding-top: 20px;
+    padding-left: 50px; /* Width of the sidebar */
+}
+.actions {
+display: flex;
+justify-content: center;
+}
+.head-table {
+background-color: var(--color-blue1);
+color: white;
+}
+.dashbord-table {
+box-shadow: 0 2px 4px rgba(0, 0, 0, .08), 0 4px 12px rgba(0, 0, 0, .08)
+}
+.all-table {
+width: 150vh;
+
+}

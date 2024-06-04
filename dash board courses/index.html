@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purple Themed Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-dashBoardCourses.css">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <div class="sidebar-heading">Menu</div>
+            <div class="list-group list-group-flush">
+                <a href="#" class="list-group-item list-group-item-action bg-purple ">Home Page</a>
+                <a href="#" class="list-group-item list-group-item-action bg-purple active">Courses</a>
+                <a href="#" class="list-group-item list-group-item-action bg-purple">Students</a>
+                <a href="#" class="list-group-item list-group-item-action bg-purple">Teachers</a>
+                <a href="#" class="list-group-item list-group-item-action bg-purple">Free Courses</a>
+                <a href="#" class="list-group-item list-group-item-action bg-purple">Basic Data</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div class="content-wrapper">
+            <div class="container-fluid">
+                <!-- Your content goes here -->
+                <div class="container all-table my-5">
+                  <h1 class="text-center mb-4">Total Courses</h1>
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <input type="text" class="form-control" id="searchInput" placeholder="Search courses..." onkeyup="searchCourses()">
+                      <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+                    </div>
+                    <div class="col-md-6 text-right">
+                      <button class="btn btn-primary" data-toggle="modal" data-target="#addCourseModal">
+                        <i class="fas fa-plus"></i> 
+                      </button>
+                    </div>
+                  </div>
+                  <table class="table dashbord-table table-striped">
+                    <thead class="head-table">
+                      <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Language</th>
+                        <th class="text-center aljgn-itmes-center">Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+                    <tbody class="" id="coursesTableBody">
+                      <!-- Courses will be dynamically added here -->
+                      <th>1</th>
+                        <th>html</th>
+                        <th>front end Courses </th>
+                        <th>150 $</th>
+                        <th>English</th>
+                        <th class="text-center aljgn-itmes-center">
+                           <button class="btn btn-sm  mr-2" title="Edit">
+                             <i class="fas fa-edit text-success"></i>
+                           </button>
+                           <button class="btn btn-sm " title="delet">
+                            <i class="fa-solid fa-trash text-danger"></i>
+                         </button>
+                            <button class="btn btn-sm " title="view">
+                              <i class="fa-solid fa-eye text-info"></i>
+                           </button>
+                            
+                        </th>
+                    </tbody>
+
+                  </table>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Optional Bootstrap JavaScript is not included since you requested no JS -->
+</body>
+</html>
