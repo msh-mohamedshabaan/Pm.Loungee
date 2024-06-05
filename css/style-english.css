@@ -3,6 +3,7 @@
     --second-color: #15161d;
     --second-light-color: #1e1f29;
     --gray-color: #e7e5f1;
+    --blue-color :#052d62 ;
     --transition-time: 0.3s;
   } 
 
@@ -11,6 +12,8 @@
     color: var(--main-color) ;
 }
 /*  end form-add-category */
+
+
 
 /*  start form-add-courses */
 .form-add-courses .form-container {
@@ -30,3 +33,43 @@
   color: var(--main-color);
 }
 /*end  form-add-courses */
+
+
+
+
+/* :start cards */
+.star-rating i {
+  color: #f1c40f;
+}
+.card .add-to-cart {
+   padding: 20 40px;
+   background-color:var(--main-color);
+}
+.card {
+    overflow: hidden;
+    
+}
+.card img {
+    transition: .3s;
+
+}
+.card a:hover {
+    color: var(--main-color);
+}
+.card:hover img  {
+    scale: 1.1;
+
+}
+.card .btn {
+    transition: 0.35s;
+    background-color: var(--blue-color);
+    color: white;
+}
+.card:hover .btn:hover   {
+    color: var(--blue-color);
+    background-color: white;
+    border: 1px solid var(--blue-color);
+}
+
+
+/* end  cards */
