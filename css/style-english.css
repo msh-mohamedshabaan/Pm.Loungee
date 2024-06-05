@@ -5,6 +5,28 @@
     --gray-color: #e7e5f1;
     --transition-time: 0.3s;
   } 
+
+/*  end form-add-category */
 .text-head {
     color: var(--main-color) ;
 }
+/*  end form-add-category */
+
+/*  start form-add-courses */
+.form-add-courses .form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); 
+  margin-top: 50px;
+}
+ .form-add-courses .form-container  button {
+  background-color: var(--main-color);
+  border: none;
+}
+.form-add-courses .form-container h2 {
+  color: var(--main-color);
+}
+/*end  form-add-courses */
