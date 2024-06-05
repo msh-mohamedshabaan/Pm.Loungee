@@ -1,0 +1,10 @@
+:root {
+    --main-color: #7009a0;
+    --second-color: #15161d;
+    --second-light-color: #1e1f29;
+    --gray-color: #e7e5f1;
+    --transition-time: 0.3s;
+  } 
+.text-head {
+    color: var(--main-color) ;
+}
