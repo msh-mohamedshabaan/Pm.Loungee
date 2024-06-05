@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Start Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;400;600;800&family=Open+Sans:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+  <!-- End Google Fonts -->
+  <link rel="stylesheet" href="../css/icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <img src="../images/logo.jpeg" alt="Logo">
+      </div>
+
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#"">Home</a>
+        </li>
+        <li>
+          <a href=" #">About</a>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+      <!-- Sidebar Button  -->
+      <nav class="navbar">
+        <div class="container-fluid justify-content-start">
+          <button type="button" id="sidebarCollapse" class="navbar-toggler collapsed">
+            <div class="menu-btn">
+              <div class="menu-btn__burger">
+              </div>
+            </div>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Main Section  -->
+      <section class='main-section'>
+        <div class="container">
+          <h2 class="main-section-title">المحافظات</h2>
+          <div class="main-section-header">
+            <!-- Search Content -->
+            <div class="search mb-2">
+              <input type="text" placeholder="عن ماذا تبحث ؟">
+              <button>
+                <i class="icon-search"></i>
+              </button>
+            </div>
+            <div class="add" data-toggle="modal" data-target="#cityModal">
+              <i class="icon-add_circle"></i>
+            </div>
+          </div>
+          <!-- Table Content  -->
+          <ul class="responsive-table">
+            <li class="table-header">
+              <div class="column column-3">الكود</div>
+              <div class="column column-4">اسم المحافظة</div>
+              <div class="column column-4">قيمة الشحن</div>
+              <div class="column column-2"></div>
+            </li>
+            <li class="table-row">
+              <div class="column column-3" data-label="الكود">1</div>
+              <div class="column column-4" data-label="اسم المحافظة">القاهرة</div>
+              <div class="column column-4" data-label="قيمة الشحن">30</div>
+              <div class="column column-2 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+            </li>
+            <li class="table-row">
+              <div class="column column-3" data-label="الكود">2</div>
+              <div class="column column-4" data-label="اسم المحافظة">الشرقية</div>
+              <div class="column column-4" data-label="قيمة الشحن">60</div>
+              <div class="column column-2 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="cityModal" aria-labelledby="addCity" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addCity">أضافة محافظة</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group">
+              <label class="input-underlined" for="input1">
+                <input type="text" required id="input1">
+                <span class="input-label">اسم المحافظة</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input2">
+                <input type="text" required id="input2">
+                <span class="input-label">قيمة الشحن</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger ml-1" data-dismiss="modal">اغلاق</button>
+          <button type="button" class="btn btn-success">حفظ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('collapsed')
+      });
+    });
+  </script>
+</body>
+
+</html>

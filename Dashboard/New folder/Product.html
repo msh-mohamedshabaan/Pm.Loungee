@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Start Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;400;600;800&family=Open+Sans:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+  <!-- End Google Fonts -->
+  <link rel="stylesheet" href="../css/icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <img src="../images/logo.jpeg" alt="Logo">
+      </div>
+
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#"">Home</a>
+        </li>
+        <li>
+          <a href=" #">About</a>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+      <!-- Sidebar Button  -->
+      <nav class="navbar">
+        <div class="container-fluid justify-content-start">
+          <button type="button" id="sidebarCollapse" class="navbar-toggler collapsed">
+            <div class="menu-btn">
+              <div class="menu-btn__burger">
+              </div>
+            </div>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Main Section  -->
+      <section class='main-section'>
+        <div class="container">
+          <h2 class="main-section-title">الأصناف</h2>
+          <div class="main-section-header">
+            <!-- Search Content -->
+            <div class="d-flex">
+              <div class="input-group mb-2">
+                <select class="custom-select" id="Select">
+                  <option selected>مجموعة الاصناف</option>
+                  <option value="1">رجال</option>
+                  <option value="2">نساء</option>
+                  <option value="3">اطفال</option>
+                </select>
+              </div>
+              <div class="search mb-2 mr-2">
+                <input type="text" placeholder="عن ماذا تبحث ؟">
+                <button>
+                  <i class="icon-search"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="add" data-toggle="modal" data-target="#prodectModal">
+              <i class="icon-add_circle"></i>
+            </div>
+          </div>
+          <!-- Table Content  -->
+          <ul class="responsive-table">
+            <li class="table-header">
+              <div class="column column-1">الكود</div>
+              <div class="column column-2">اسم الصنف</div>
+              <div class="column column-2">سعر الشراء</div>
+              <div class="column column-2">سعر بيع القطاعى</div>
+              <div class="column column-2">مجموعة الصنف</div>
+              <div class="column column-2">الكمية</div>
+              <div class="column column-3"></div>
+            </li>
+            <li class="table-row">
+              <div class="column column-1" data-label="الكود">1</div>
+              <div class="column column-2" data-label="اسم الصنف">قميص</div>
+              <div class="column column-2" data-label="سعر الشراء">100</div>
+              <div class="column column-2" data-label="سعر بيع القطاعى">90</div>
+              <div class="column column-2" data-label="مجموعة الصنف">رجال</div>
+              <div class="column column-2" data-label="الكمية">20</div>
+              <div class="column column-3 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+              <!-- Data Hidden In Table -->
+              <div class="column column-2 d-none" data-label="الصورة">صورة</div>
+            </li>
+            <li class="table-row">
+              <div class="column column-1" data-label="الكود">2</div>
+              <div class="column column-2" data-label="اسم الصنف">قميص</div>
+              <div class="column column-2" data-label="سعر الشراء">100</div>
+              <div class="column column-2" data-label="سعر بيع القطاعى">90</div>
+              <div class="column column-2" data-label="مجموعة الصنف">رجال</div>
+              <div class="column column-2" data-label="الكمية">20</div>
+              <div class="column column-3 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+              <!-- Data Hidden In Table -->
+              <div class="column column-2 d-none" data-label="الصورة">صورة</div>
+            </li>
+            <li class="table-row">
+              <div class="column column-1" data-label="الكود">3</div>
+              <div class="column column-2" data-label="اسم الصنف">قميص</div>
+              <div class="column column-2" data-label="سعر الشراء">100</div>
+              <div class="column column-2" data-label="سعر بيع القطاعى">90</div>
+              <div class="column column-2" data-label="مجموعة الصنف">رجال</div>
+              <div class="column column-2" data-label="الكمية">20</div>
+              <div class="column column-3 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+              <!-- Data Hidden In Table -->
+              <div class="column column-2 d-none" data-label="الصورة">صورة</div>
+            </li>
+            <li class="table-footer">
+              <div class="column column-1">المجموع</div>
+              <div class="column column-2">-</div>
+              <div class="column column-2">-</div>
+              <div class="column column-2">-</div>
+              <div class="column column-2">-</div>
+              <div class="column column-2">60</div>
+              <div class="column column-3"></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="prodectModal" aria-labelledby="addProduct" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addProduct">أضافة صنف</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="input-group">
+              <label class="input-underlined" for="input1">
+                <input type="text" required id="input1">
+                <span class="input-label">اسم الصنف</span>
+              </label>
+            </div>
+            <div class="input-group mb-3">
+              <select class="custom-select" id="Select">
+                <option selected>اختر مجموعة الاصناف</option>
+                <option value="1">رجال</option>
+                <option value="2">نساء</option>
+                <option value="3">اطفال</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input2">
+                <input type="text" required id="input2">
+                <span class="input-label">سعر الشراء</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input3">
+                <input type="text" required id="input3">
+                <span class="input-label">سعر بيع القطاعى</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input4">
+                <input type="text" required id="input4">
+                <span class="input-label">سعر بيع نصف الجمله</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input5">
+                <input type="text" required id="input5">
+                <span class="input-label">سعر بيع الجمله</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input6">
+                <input type="text" required id="input6">
+                <span class="input-label">الخصم</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input7">
+                <input type="text" required id="input7">
+                <span class="input-label">حد الطلب</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input8">
+                <input type="text" required id="input8">
+                <span class="input-label">الكمية</span>
+              </label>
+            </div>
+            <div class="input-group">
+              <label class="input-underlined" for="input9">
+                <input type="file" multiple required id="input9">
+                <span class="input-label">الصوره</span>
+              </label>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger ml-1" data-dismiss="modal">اغلاق</button>
+          <button type="button" class="btn btn-success">حفظ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('collapsed')
+      });
+    });
+  </script>
+</body>
+
+</html>

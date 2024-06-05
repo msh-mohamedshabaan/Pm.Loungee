@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <!-- Start Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100;200;400;600;800&family=Open+Sans:wght@300;400;600;800&display=swap"
+    rel="stylesheet">
+  <!-- End Google Fonts -->
+  <link rel="stylesheet" href="../css/icons.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+      <div class="sidebar-header">
+        <img src="../images/logo.jpeg" alt="Logo">
+      </div>
+
+      <ul class="list-unstyled components">
+        <li class="active">
+          <a href="#"">Home</a>
+        </li>
+        <li>
+          <a href=" #">About</a>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+
+      <!-- Sidebar Button  -->
+      <nav class="navbar">
+        <div class="container-fluid justify-content-start">
+          <button type="button" id="sidebarCollapse" class="navbar-toggler collapsed">
+            <div class="menu-btn">
+              <div class="menu-btn__burger">
+              </div>
+            </div>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Main Section  -->
+      <section class='main-section'>
+        <div class="container">
+          <h2 class="main-section-title">اضافة اوردر</h2>
+          <div class="main-section-header align-items-end">
+            <!-- Search Content -->
+            <div class="filter">
+              <div class="d-flex align-items-end">
+                <h5>التاريخ</h5>
+                <div class=" form-group mb-2 ml-2">
+                  <label for="from">من</label>
+                  <input type="date" class="form-control" id="from">
+                </div>
+                <div class=" form-group mb-2 ml-2">
+                  <label for="to">الى</label>
+                  <input type="date" class="form-control" id="to">
+                </div>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div class="form-group mb-2 ml-2">
+                  <label for="city-select">المحافظة</label>
+                  <select class="custom-select" id="city-select">
+                    <option selected>اختر </option>
+                    <option value="1">giza</option>
+                    <option value="2">cairo</option>
+                    <option value="3">Alex</option>
+                  </select>
+                </div>
+                <div class="form-group mb-2 ml-2">
+                  <label for="added-select">مضاف بواسطة</label>
+                  <select class="custom-select" id="added-select">
+                    <option selected>اختر</option>
+                    <option value="1">عنصر اول</option>
+                    <option value="2">عنصر ثانى</option>
+                    <option value="3">عنصر ثالث</option>
+                  </select>
+                </div>
+                <div class="form-group mb-2 ml-2">
+                  <label for="case-select">الحاله</label>
+                  <select class="custom-select" id="case-select">
+                    <option selected>اختر</option>
+                    <option value="1">عنصر اول</option>
+                    <option value="2">عنصر ثانى</option>
+                    <option value="3">عنصر ثالث</option>
+                  </select>
+                </div>
+                <div class="form-group mb-2">
+                  <label for="complete-select">مكتمل</label>
+                  <select class="custom-select" id="complete-select">
+                    <option selected>اختر</option>
+                    <option value="1">عنصر اول</option>
+                    <option value="2">عنصر ثانى</option>
+                    <option value="3">عنصر ثالث</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="add" data-toggle="modal" data-target="#prodectModal">
+              <i class="icon-add_circle"></i>
+            </div>
+          </div>
+          <!-- Table Content  -->
+          <ul class="responsive-table">
+            <li class="table-header">
+              <div class="column column-1">الكود</div>
+              <div class="column column-2">اسم العميل</div>
+              <div class="column column-2">المحافظة</div>
+              <div class="column column-2">العنوان</div>
+              <div class="column column-2">القيمة</div>
+              <div class="column column-2">لخصم</div>
+              <div class="column column-2">الصافى</div>
+              <div class="column column-2">التاريخ</div>
+              <div class="column column-2">الحاله</div>
+              <div class="column column-2"></div>
+            </li>
+            <li class="table-row">
+              <div class="column column-1" data-label="الكود">1</div>
+              <div class="column column-2" data-label="اسم العميل">قميص</div>
+              <div class="column column-2" data-label="المحافظة">giza</div>
+              <div class="column column-2" data-label="العنوان">giza</div>
+              <div class="column column-2" data-label="القيمة">200</div>
+              <div class="column column-2" data-label="الخصم">20</div>
+              <div class="column column-2" data-label="الصافى">180</div>
+              <div class="column column-2" data-label="التاريخ">22/09/2022</div>
+              <div class="column column-2" data-label="الحاله">اعزب</div>
+              <div class="column column-2 action">
+                <i class="icon-delete text-danger"></i>
+                <i class="icon-edit-pencil text-indigo"></i>
+                <i class="icon-eye text-info"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="prodectModal" aria-labelledby="addProduct" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="addProduct">أضافة اوردر</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input1">
+                  <input type="text" required id="input1">
+                  <span class="input-label"> رقم الاوردر </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input2">
+                  <input type="text" required id="input2">
+                  <span class="input-label"> كود العميل </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input3">
+                  <input type="text" required id="input3">
+                  <span class="input-label"> اسم العميل </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input4">
+                  <input type="text" required id="input4">
+                  <span class="input-label"> رقم الهاتف </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input5">
+                  <input type="text" required id="input5">
+                  <span class="input-label"> 2رقم الهاتف </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input6">
+                  <input type="text" required id="input6">
+                  <span class="input-label"> الايميل </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input7">
+                  <input type="text" required id="input7">
+                  <span class="input-label"> المحافظة </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input8">
+                  <input type="text" required id="input8">
+                  <span class="input-label"> المنطقة </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input9">
+                  <input type="text" required id="input9">
+                  <span class="input-label"> الملاحظة </span>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="input-group">
+                <label class="input-underlined" for="input10">
+                  <input type="text" required id="input10">
+                  <span class="input-label"> الحاله</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col-md-4 text-center">
+              <div class="input-group">
+                <label class="input-underlined" for="input21">
+                  <input type="text" required id="input21">
+                  <span class="input-label"> الكود </span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="input-underlined" for="input22">
+                  <input type="text" required id="input22">
+                  <span class="input-label"> اسم الصنف </span>
+                </label>
+              </div>
+              <div class="input-group align-items-end">
+                <label for="added-select" class="ml-2">المقاس</label>
+                <select class="custom-select" id="added-select">
+                  <option selected="">اختر</option>
+                  <option value="1">XL</option>
+                  <option value="2">M</option>
+                  <option value="3">S</option>
+                </select>
+              </div>
+              <div class="input-group">
+                <label class="input-underlined" for="input23">
+                  <input type="text" required id="input23">
+                  <span class="input-label"> السعر </span>
+                </label>
+              </div>
+              <div class="input-group">
+                <label class="input-underlined" for="input24">
+                  <input type="text" required id="input24">
+                  <span class="input-label"> الاجمالى </span>
+                </label>
+              </div>
+              <button type="button" class="btn btn-success">اضافة</button>
+            </div>
+            <div class="col-md-8 d-flex flex-column">
+              <div class="table-content">
+                <table class="table order-table table-sm table-hover">
+                  <thead>
+                    <tr class="bg-primary text-white">
+                      <th scope="col">الكود</th>
+                      <th scope="col">الاسم</th>
+                      <th scope="col">المقاس</th>
+                      <th scope="col">العدد</th>
+                      <th scope="col">السعر</th>
+                      <th scope="col">الاجمالى</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td scope="col">1</td>
+                      <td scope="col">محمد</td>
+                      <td scope="col">XL</td>
+                      <td scope="col">2</td>
+                      <td scope="col">100</td>
+                      <td scope="col">200</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">2</td>
+                      <td scope="col">محمد</td>
+                      <td scope="col">XL</td>
+                      <td scope="col">2</td>
+                      <td scope="col">100</td>
+                      <td scope="col">200</td>
+                    </tr>
+                    <tr>
+                      <td scope="col">2</td>
+                      <td scope="col">محمد</td>
+                      <td scope="col">XL</td>
+                      <td scope="col">2</td>
+                      <td scope="col">100</td>
+                      <td scope="col">200</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="order-info">
+                <div>
+                  <div class="info-row my-2">
+                    <span>الاجمالى</span>
+                    <span class="screen">600</span>
+                  </div>
+                  <div class="order-discount info-row">
+                    <span>الخصم</span>
+                    <div class="d-flex">
+                      <div class=" group">
+                        <span>%</span>
+                        <span class="screen">10</span>
+                      </div>
+                      <div class="group">
+                        <span>نقدى</span>
+                        <span class="screen">60</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info-row mt-3">
+                    <span>بعد الخصم</span>
+                    <span class="screen">540</span>
+                  </div>
+                </div>
+                <div>
+                  <div class="info-row my-2">
+                    <span>مصاريف الشحن</span>
+                    <span class="screen">600</span>
+                  </div>
+                  <div class="info-row my-2">
+                    <span> شحن على الراسل </span>
+                    <span class="screen">600</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger ml-1" data-dismiss="modal">اغلاق</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+        $(this).toggleClass('collapsed')
+      });
+    });
+  </script>
+</body>
+
+</html>
