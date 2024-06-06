@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course Modal</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Add section</h2>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addCourseModal">
+        Add section
+    </button>
+</div>
+
+<!-- Add Course Modal -->
+<div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        
+    </div>
+</div>
+ <style>
+        .modal-content {
+            margin-top: 10%;
+        }
+    </style>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function addCourse() {
+        const arabicTitle = document.getElementById('arabicTitle').value;
+        const englishTitle = document.getElementById('englishTitle').value;
+        const position = document.getElementById('position').value;
+
+        if (arabicTitle && englishTitle && position > 0) {
+            console.log('Course Added:', {
+                arabicTitle,
+                englishTitle,
+                position
+            });
+            $('#addCourseModal').modal('hide');
+        } else {
+            alert('Please fill out all fields correctly.');
+        }
+    }
+</script>
+</body>
+</html>

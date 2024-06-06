@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style-english.css">
+</head>
+<body>
+    <!-- start Add courses  And section And Lesson -->
+    <div class="container modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="addCourseModalLabel">Add Course</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="titleArabic">Title (Arabic):</label>
+                    <input type="text" class="form-control" id="titleArabic" placeholder="Enter course title in Arabic">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="titleEnglish">Title (English):</label>
+                    <input type="text" class="form-control" id="titleEnglish" placeholder="Enter course title in English">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="descriptionArabic">Description (Arabic):</label>
+                    <textarea class="form-control" id="descriptionArabic" rows="3" placeholder="Enter course description in Arabic"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="descriptionEnglish">Description (English):</label>
+                    <textarea class="form-control" id="descriptionEnglish" rows="3" placeholder="Enter course description in English"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row same-class">
+                <div class="form-group col-md-4">
+                    <label for="language">Language:</label>
+                    <input type="text" class="form-control" id="titleArabic" placeholder="Language">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="price">Price:</label>
+                    <input type="number" class="form-control" min="0" step="any" id="positiveNumber" placeholder="Enter course price"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category">
+                        <option value="">Select Category</option>
+                        <option value="Development">Development</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Course</button>
+
+        </form>
+        <!-- end Add course -->
+
+         <!-- start Add section  -->
+    <form>
+            <div class="add-section">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addCourseModalLabel">Add section </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addCourseForm">
+                            <div class="form-group">
+                                <label for="arabicTitle">Arabic Title</label>
+                                <input type="text" class="form-control" id="arabicTitle" placeholder="Enter Lesson title in Arabic" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="englishTitle">English Title</label>
+                                <input type="text" class="form-control" id="englishTitle" placeholder="Enter Lesson title in English" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="position">Position</label>
+                                <input type="number" class="form-control" id="position" min="1" placeholder="Enter Position" required>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="m-3">
+                        <button type="submit" class="btn btn-primary" onclick="addCourse()">Add section</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+        <!-- End Add Section  -->
+
+         <!-- start Add Lesson  -->
+        <form action="">
+            <div class="modal-header ">
+                <h5 class="modal-title" id="addCourseModalLabel">Add Lesson </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="titleArabic">Title (Arabic):</label>
+                        <input type="text" class="form-control" id="titleArabic" placeholder="Enter Lesson title in Arabic">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="titleEnglish">Title (English):</label>
+                        <input type="text" class="form-control" id="titleEnglish" placeholder="Enter Lesson title in English">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="durationTime">Duration Time</label>
+                        <input type="number" class="form-control" id="durationTime" placeholder="Enter Duration Time">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="position">Position</label>
+                        <input type="number" class="form-control" id="position" min="1" placeholder="Enter Position">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="fileUpload">Upload File</label>
+                        <input type="file" class="form-control-file" id="fileUpload" accept=".pdf, .mp4">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="courseType">Course Type</label>
+                    <select class="form-control" id="courseType">
+                        <option value="free">visible</option>
+                        <option value="paid">invisible</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="m-3">
+                    <button type="submit" class="btn btn-primary" onclick="addCourse()">Add Lesson</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+        </form>
+        <!-- End Add Lesson -->
+    </div>
+</body>
+</html>

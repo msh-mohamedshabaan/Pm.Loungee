@@ -19,6 +19,9 @@
   body {
       background-color: #f5f5f5;
   }
+  .modal-title {
+    color: var(--main-color);
+  }
 
   .container {
       background-color: #fff;
@@ -28,7 +31,7 @@
       margin-top: 50px;
   }
 
-  h2 {
+  .modal-content h2 {
       color: var(--main-color); /* Purple color */
   }
 
@@ -70,6 +73,12 @@
 /*end  form-add-courses */
 
 
+
+ /* start add-section */
+ .modal-content {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 
 
 /* :start cards */
