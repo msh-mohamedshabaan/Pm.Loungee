@@ -3,51 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Course Form</title>
+    <title>Course Form</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style-english.css">
 </head>
 <body>
-    <div class="container form-add-courses">
-        <div class="form-container">
-            <h2 class="text-center mb-4">Add Course</h2>
-            <form>
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" class="form-control" id="title" placeholder="Enter course title">
+    <div class="container">
+        <h2>Add New Course</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="titleArabic">Title (Arabic):</label>
+                    <input type="text" class="form-control" id="titleArabic" placeholder="Enter course title in Arabic">
                 </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea class="form-control" id="description" rows="3" placeholder="Enter course description"></textarea>
+                <div class="form-group col-md-6">
+                    <label for="titleEnglish">Title (English):</label>
+                    <input type="text" class="form-control" id="titleEnglish" placeholder="Enter course title in English">
                 </div>
-                <div class="form-group">
-                    <label for="language">Language</label>
-                    <select class="form-control" id="language">
-                        <option>Arabic</option>
-                        <option>English</option>
-                        <option>French</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="title">Price</label>
-                    <input type="number" class="form-control" id="price" placeholder="Enter course title">
-                </div>
-                <div class="form-group">
-                    <label for="price">Category</label>
-                    <select class="form-control" id="price">
-                        <option>html </option>
-                        <option>css</option>
-                        <option>bootstrap</option>
-                        <option>js</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Add Course</button>
-            </form>
-        </div>
-    </div>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="descriptionArabic">Description (Arabic):</label>
+                    <textarea class="form-control" id="descriptionArabic" rows="3" placeholder="Enter course description in Arabic"></textarea>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="descriptionEnglish">Description (English):</label>
+                    <textarea class="form-control" id="descriptionEnglish" rows="3" placeholder="Enter course description in English"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row same-class">
+                <div class="form-group col-md-4">
+                    <label for="language">Language:</label>
+                    <input type="text" class="form-control" id="titleArabic" placeholder="Language">
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="price">Price:</label>
+                    <input type="number" class="form-control" min="0" step="any" id="positiveNumber" placeholder="Enter course price"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="category">Category:</label>
+                    <select class="form-control" id="category">
+                        <option value="">Select Category</option>
+                        <option value="Development">Development</option>
+                        <option value="Design">Design</option>
+                        <option value="Marketing">Marketing</option>
+                        <option value="Business">Business</option>
+                    </select>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Course</button>
+        </form>
+    </div>
 </body>
 </html>
