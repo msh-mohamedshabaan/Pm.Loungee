@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/style-english.css">
+
+</head>
+<body>
+    <!-- start nav  -->
+    <nav class="navbar navbar-expand-lg  bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Pm.Loungea</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Courses
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                <li><a class="dropdown-item" href="#">Development</a></li>
+                <li><a class="dropdown-item" href="#">Business</a></li>
+                <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                <li><a class="dropdown-item" href="#"> All Courses</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="categoryDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Specializations
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                <li><a class="dropdown-item" href="#">Specialization Certificate in International Relation</a></li>
+                <li><a class="dropdown-item" href="#">Specialization Certificate in Political Science</a></li>
+                <li><a class="dropdown-item" href="#">Specialization Certificate in Islam and Politics</a></li>
+                <li><a class="dropdown-item" href="#"> All Specialization</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex Search mx-auto" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search courses ..." aria-label="Search">
+            <button class="btn btn-outline-light" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+          <ul class="navbar-nav align-items-center text-center ms-auto">
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                About Us
+              </a>
+            </li>
+            <li class="nav-item ">
+              <a class="nav-link" href="#">
+                <i class="fas fa-shopping-cart"></i>
+                (0)
+              </a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign up</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="languageDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#">English</a></li>
+                <li><a class="dropdown-item" href="#">Arabic</a></li>
+                <li><a class="dropdown-item" href="#">French</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+      <!-- start slider  -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./img/slide 1.jpg" class="d-block w-100" alt="Slide 1">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 1 Heading</h5>
+                            <p>Slide 1 Description.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/slide 2.jpeg" class="d-block w-100" alt="Slide 2">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 2 Heading</h5>
+                            <p>Slide 2 Description.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/slide 1.jpg" class="d-block w-100" alt="Slide 3">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 3 Heading</h5>
+                            <p>Slide 3 Description.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/slide 2.jpeg" class="d-block w-100" alt="Slide 4">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Slide 4 Heading</h5>
+                            <p>Slide 4 Description.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <script>
+                $(document).ready(function(){
+                    $('#myCarousel').carousel({
+                        interval: 3000 // Changes the interval to 3000 milliseconds (3 seconds)
+                    });
+                });
+            </script>
+      <!-- end slider  -->
+    <!-- start component -->
+    <div class="component mt-5">
+      <div class="container">
+        <h3>Trusted by over 15,000 companies and millions of learners around the world</h3>
+        <ul class="d-flex justify-content-between mt-5 mx-3 row ">
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+          <li class="col-xl-2 col-lg-2 col-md-4 col-4"><a href=""><img src="./img/Ericsson_logo.svg.png" alt=""></a></li>
+      
+          
+        </ul>
+      </div>
+      
+    </div>
+    <!-- end component -->
+    <!-- start A broad selection of courses -->
+    <section class="container courses mt-5">
+      <div class="row">
+        <div class="col-8">
+          <h4>A broad selection of courses</h4>
+          <p>Choose from over 210,000 online video courses with new additions published every month</p>
+        </div>
+        <div class="">
+          <ul class=" d-flex gap-3 p-0 ">
+            <li class="active"><a href=""> Python </a></li>
+            <li><a href=""> Excel </a></li>
+            <li><a href=""> Web Development </a></li>
+            <li><a href=""> java script </a></li>
+            <li><a href="">data science </a></li>
+            <li><a href=""> Amazon AWS </a></li>
+            <li><a href=""> Drawing </a></li>
+          </ul>
+        </div>
+        <div class="cards-courses overflow-hidden row">
+          <div class="col-xl-6 col-lg-6 col-md-12 col-12 mt-3  m-2">
+            <h5  style="font-size: 24px; font-weight: 700 ;">Expand your career opportunities with Python</h5>
+            <p>Take one of Udemy’s range of Python courses and learn how to code using this incredibly useful language. Its simple syntax and readability makes Python perfect for Flask, Django, data science, and machine learning. You’ll learn how
+              to build everything from games to sites to apps. Choose from a range of courses that will appeal to</p>
+              <button>Explore Python</button>
+            </div>
+            <div class="d-flex row-gap-3  justify-content-between row ">
+              <div class=" cardea  col-xl-3 col-lg-4  col-md-6 col-12  mt-5">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+              <div class=" cardea col-xl-3 col-lg-4  col-md-6 col-12  mt-5 ">
+                <div class="card" style="width: 18rem;">
+                  <a href="#"><img src="./img/paython cor.png" class="card-img-top" alt="..."></a>
+                  <a href="#"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="before-text"> all courses</a>
+                  <div class="card-body ">
+                      <h5 style="font-size: 16px; font-weight: 600;" class="card-title text-center"><a href="">The Python and Django Learning Guide </a></h5>
+                      <div class="row mt-5">
+  
+                          <div class="col-6">
+                              <p class="card-text"><i class="fa-regular fa-clock me-2"></i><span>48</span>lesson </p>
+  
+                          </div>
+                      </div>
+                      <div>
+                          <p  class="card-text mt-3"><img style="width: 100%; width: 20px ; height: 20px; border-radius: 50%; border: 1px solid blue;" src="./img/mrs.jpeg" alt=""><a style="text-decoration: none; color: black;" href="#"> Mrs Eman Hassan </a></p>
+                          <p style="font-size: 12px; margin-left: 25px;">Biology Teacher</p>
+                      </div>
+  
+  
+                      <hr>
+                      <div class="row d-flex ">
+                          <div class="col-6">
+                              <span>150.00 $</span>
+                          </div>
+  
+                          <div class="col-6 d-flex justify-content-end">
+                              <a href="#" class="btn btn-primary "><i class="fa-solid fa-cart-plus "></i>Enroll</a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- end A broad selection of courses -->
+
+    <!-- start How learners like you are achieving their goals -->
+    <section class="learners pb-5 ">
+      <div class="container ">
+        <h6>How learners like you are achieving their goals</h6>
+        <div class="boxes gap-3 row d-flex justify-content-between">
+
+          <div class="box p-4 col-xl-3 col-lg-3 col-12  ">
+          <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+          <br>
+          <p>I am proud to say that after a few months of taking this course... <span> I passed my exam and am
+            now an AWS Certified Cloud Practitioner! </span> This content was exactly what the CCP exam covered.</p>
+            <div class="d-flex">
+              <div class="logo "></div>
+              <div class="mt-2 m-2">Abd elrahman  </div>
+            </div>
+            <hr>
+            <div class="video">
+              
+              <a>[NEW] Ultimate AWS Certifled Cloud Practitioner - 2022</a>
+            </div>
+            
+           </div>
+          
+          <div class="box p-4 col-xl-3 col-lg-3 col-12 ">
+          <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+          <br>
+          <p>I am proud to say that after a few months of taking this course... <span> I passed my exam and am
+            now an AWS Certified Cloud Practitioner! </span> This content was exactly what the CCP exam covered.</p>
+            <div class="d-flex">
+              <div class="logo "></div>
+              <div class="mt-2 m-2">Ahmed mohamed   </div>
+            </div>
+            <hr>
+            <div class="video">
+              
+              <a>[NEW] Ultimate AWS Certifled Cloud Practitioner - 2022</a>
+            </div>
+            
+           </div>
+          
+          <div class="box p-4 col-xl-3 col-lg-3 col-12 ">
+          <a href="#"><i class="fa-solid fa-comment-dots"></i></a>
+          <br>
+          <p>I am proud to say that after a few months of taking this course... <span> I passed my exam and am
+            now an AWS Certified Cloud Practitioner! </span> This content was exactly what the CCP exam covered.</p>
+            <div class="d-flex">
+              <div class="logo "></div>
+              <div class="mt-2 m-2">mohamed ahmed  </div>
+            </div>
+            <hr>
+            <div class="video">
+              
+              <a>[NEW] Ultimate AWS Certifled Cloud Practitioner - 2022</a>
+            </div>
+            
+           </div>
+          
+          </div>
+      </div>
+    </section>
+    <!-- end How learners like you are achieving their goals -->
+
+    <!--start Top categories -->
+    <section class="container mt-5">
+      <h6 style="font-size: 24px ; font-weight: 700; font-family: var(--font-stack-heading-serif);">Top categories</h6>
+      <div class="row top-Categorie">
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-business-v2.jpg" alt=""></a>
+          </div>
+            <span> Business</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-development-v2.jpg" alt=""></a>
+          </div>
+            <span>Development</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-it-and-software-v2.jpg" alt=""></a>
+          </div>
+            <span>IT and Software</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-marketing-v2.jpg" alt=""></a>
+          </div>
+            <span> Marketing</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-music-v2.jpg" alt=""></a>
+          </div>
+            <span> Music</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-personal-development-v2.jpg" alt=""></a>
+          </div>
+            <span>Development</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-photography-v2.jpg" alt=""></a>
+          </div>
+            <span>Photography</span>
+        </div>
+        <div  class="col-xl-3 col-lg-3 col-6 ">
+          <div class="img">
+            <a href=""><img src="./img/lohp-category-design-v2.jpg" alt=""></a>
+          </div >
+            <span>Design</span>
+        </div>
+      </div>
+    </section>
+      <!--end Top categories -->
+
+    <!-- start Featured topics by category -->
+    <section style="background-color: var( --color-gray ); padding: 50px 0; margin: 50px 0;">
+      <div class=" container all-Featured-topics" >
+        <h6>Featured topics by category</h6>
+        <div class="row align-items-center text-center">
+
+          <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+            <div>
+              <ul>
+                <li style="font-size: 19px ; font-weight: 600;">Development</li>
+                <li>
+                  <a href="">Python</a>
+                  <br>
+                  <span>11,415,615 learners</span>
+                </li>
+                <li>
+                  <a href="">Web Development</a>
+                  <br>
+                  <span>36,354,994 learners</span>
+                </li>
+                <li>
+                  <a href="">Machine Learning</a>
+                  <br>
+                  <span>7,070,015 learners</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+            <div>
+              <ul>
+                <li style="font-size: 19px ; font-weight: 600;">Business</li>
+                <li>
+                  <a href="">Financial Analysis</a>
+                  <br>
+                  <span>1,195,282 learners</span>
+                </li>
+                <li>
+                  <a href="">SQL</a>
+                  <br>
+                  <span>5,977,561 learners</span>
+                </li>
+                <li>
+                  <a href="">PMP</a>
+                  <br>
+                  <span>1,733,398 learners</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+            <div>
+              <ul>
+                <li style="font-size: 19px ; font-weight: 600;">IT and Software</li>
+                <li>
+                  <a href="">Amazon AWS</a>
+                  <br>
+                  <span>6,123,456 learners</span>
+                </li>
+                <li>
+                  <a href="">Ethical Hacking</a>
+                  <br>
+                  <span>36,354,994 learners</span>
+                </li>
+                <li>
+                  <a href="">Cyber Security</a>
+                  <br>
+                  <span>7,070,015 learners</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+          <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+            <div>
+              <ul>
+                <li style="font-size: 19px ; font-weight: 600;">Design</li>
+                <li>
+                  <a href="">Photoshop</a>
+                  <br>
+                  <span>11,415,615 learners</span>
+                </li>
+                <li>
+                  <a href="">Graphic Design</a>
+                  <br>
+                  <span>36,354 learners</span>
+                </li>
+                <li>
+                  <a href="">Drawing</a>
+                  <br>
+                  <span>5,060,015 learners</span>
+                </li>
+              </ul>
+            </div>
+            
+          </div>
+        </div >
+        <button>Explore more topics</button>
+        </div>
+      </section>
+    <!-- end Featured topics by category -->
+     <!-- start section  Business -->
+     <section class="container justify-content-center  business align-items-center text-center  d-flex">
+      <div class="row justify-content-center">
+
+        <div class="col-xl-5 col-lg-5 col-md-12 col-12">
+          <div>
+  
+            <span>web  Business</span>
+            <h6>Upskill your team with Udemy Business</h6>
+            <ul>
+              <li>Unlimited access to 25,000+ top Udemy courses, anytime, anywhere</li>
+              <li>International course collection in 14 languages</li>
+              <li>Top certifications in tech and business</li>
+            </ul>
+            <button>GET Udemy Business</button>
+            <button style="background-color:transparent; color: black;">Learn more</button>
+          </div>
+        </div>
+        <div class="col-xl-5 col-lg-5 col-md-12 col-12" ><a href="#"></a><img src="./img/UB_Promo_800x800 Business.jpg" alt=""></div>
+         
+      </div>
+    </section>
+    <!-- end section  Business -->
+
+    <!-- start Become an instructor -->
+    <section class="container instructor align-items-center text-center mt-5">
+      <div class="d-flex justify-content-center row ">
+        <div class=" col-xl-4 col-lg-4 col-md-12 col-12"><img src="./img/instructor-1x-v3 beco.jpg" alt=""></div>
+        <div style="padding-top:  15px;" class="col-5 mt-5 col-xl-4 col-lg-4 col-md-12 col-12">
+          <h3>Become an instructor</h3>
+          <p>nstructors from around the world teach millions of learners on Udemy. We provide the tools and skills to teach what you love.We provide the tools and skills to teach what you love.</p>
+          <button>Start teaching today</button>
+        </div> 
+      </div>
+    </section>
+    <!-- end Become an instructor -->
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Udemy Academy</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categories</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Help & Support</a></li>
+                        <li><a href="#">Trust & Safety</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Follow Us</h5>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 LOGO Academy. All rights reserved. </p>
+                </div>
+                <div class="col-md-6">
+                    <form class="form-inline float-right">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <div class="input-group-append">
+                                <button class="btn btn-danger" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>    
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

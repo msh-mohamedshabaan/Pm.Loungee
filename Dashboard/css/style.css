@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 body {
-  direction: rtl;
+ 
   text-align: right;
   font-family: "Noto Kufi Arabic", sans-serif;
   overflow-x: hidden;
