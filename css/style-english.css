@@ -344,3 +344,34 @@ margin: 2px;
   color:var(--main-color);
 }
 /* end learners */
+
+
+
+/* start .top-Categorie */
+.top-Categorie ul {
+text-align: center; 
+}
+.top-Categorie  img {
+  width: 100%; 
+  transition: 0.35s;  
+}
+.top-Categorie span {
+  font-weight: 700;
+
+}
+.top-Categorie a {
+  text-decoration: none;
+  transition: var(--main-color);
+}
+.top-Categorie a:hover   {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.top-Categorie .img {
+  overflow: hidden;
+}
+.top-Categorie img:hover {
+  transform: scale(1.1);
+} 
+
+/* start .top-Categorie */
