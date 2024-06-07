@@ -103,10 +103,10 @@
       <div class="carousel-inner">
         <!-- @for (item of images; track $index) { -->
           <div class="carousel-item active" [class.active]="$index=== 0">
-              <img src="./img/slide 1.jpg" class="d-block w-100" alt="Slide 1" [src]="item.src" [alt]="'Slide ' + ($index + 1)">
+              <img src="./img/slide 2.jpeg" class="d-block w-100" alt="Slide 1" [src]="item.src" [alt]="'Slide ' + ($index + 1)">
               <div class="carousel-caption d-none d-md-block">
-                  <h5>{{ item.title }}</h5>
-                  <p>{{ item.description }}</p>
+                  <h5 style="font-size: 30px;">24-Hour Flash Sale</h5>
+                  <p>Learn from real-world experts for as low as E£249.99. Sale ends tonight!</p>
               </div>
           </div>
           <div class="carousel-item " [class.active]="$index=== 0">
@@ -692,9 +692,156 @@
   </div>
 
  </section> 
- 
-    <!--end Top categories --
-  
+  <!--end Top categories -->
+
+
+
+  <!-- start Featured topics by category -->
+  <section style="background-color: white;   margin: 20px 0;">
+    <div class=" container all-Featured-topics" >
+      <h6>Featured topics by category</h6>
+      <div class="row align-items-center text-center">
+
+        <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+          <div>
+            <ul>
+              <li style="font-size: 19px ; font-weight: 600;">Development</li>
+              <li>
+                <a href="">Python</a>
+                <br>
+                <span>11,415,615 learners</span>
+              </li>
+              <li>
+                <a href="">Web Development</a>
+                <br>
+                <span>36,354,994 learners</span>
+              </li>
+              <li>
+                <a href="">Machine Learning</a>
+                <br>
+                <span>7,070,015 learners</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+          <div>
+            <ul>
+              <li style="font-size: 19px ; font-weight: 600;">Business</li>
+              <li>
+                <a href="">Financial Analysis</a>
+                <br>
+                <span>1,195,282 learners</span>
+              </li>
+              <li>
+                <a href="">SQL</a>
+                <br>
+                <span>5,977,561 learners</span>
+              </li>
+              <li>
+                <a href="">PMP</a>
+                <br>
+                <span>1,733,398 learners</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+          <div>
+            <ul>
+              <li style="font-size: 19px ; font-weight: 600;">IT and Software</li>
+              <li>
+                <a href="">Amazon AWS</a>
+                <br>
+                <span>6,123,456 learners</span>
+              </li>
+              <li>
+                <a href="">Ethical Hacking</a>
+                <br>
+                <span>36,354,994 learners</span>
+              </li>
+              <li>
+                <a href="">Cyber Security</a>
+                <br>
+                <span>7,070,015 learners</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <div class=" Featured-topics col-xl-3 col-lg-3 col-md-6 col-12" >
+          <div>
+            <ul>
+              <li style="font-size: 19px ; font-weight: 600;">Design</li>
+              <li>
+                <a href="">Photoshop</a>
+                <br>
+                <span>11,415,615 learners</span>
+              </li>
+              <li>
+                <a href="">Graphic Design</a>
+                <br>
+                <span>36,354 learners</span>
+              </li>
+              <li>
+                <a href="">Drawing</a>
+                <br>
+                <span>5,060,015 learners</span>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+      </div >
+      <button>Explore more topics</button>
+      </div>
+    </section>
+  <!-- end Featured topics by category -->
+
+
+    <!-- start section  Business -->
+     <section style="background-color: white;">
+      <div class="container   business    d-flex">
+        <div class="row justify-content-center">
+          <div class="col-xl-5 col-lg-5 col-md-12 col-12">
+            <div>
+              <span>web  Business</span>
+              <h6>Upskill your team with Udemy Business</h6>
+              <ul>
+                <li>Unlimited access to 25,000+ top Udemy courses, anytime, anywhere</li>
+                <li>International course collection in 14 languages</li>
+                <li>Top certifications in tech and business</li>
+              </ul>
+              <button>GET Udemy Business</button>
+              <button >Learn more</button>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-12 col-12" ><a href="#"></a><img src="./img/UB_Promo_800x800 Business.jpg" alt=""></div>
+           
+        </div>
+      </div>
+     </section>
+    
+    <!-- end section  Business -->
+
+  <!-- start Become an instructor -->
+   <section style="background-color: white;">
+    <div class="container instructor align-items-center  ">
+      <div class="d-flex justify-content-center row ">
+        <div class=" col-xl-5 col-lg-6 col-md-12 col-12"><img src="./img/instructor-1x-v3 beco.jpg" alt=""></div>
+        <div style="padding-top:  55px;" class="mt-5 col-xl-5 col-lg-6 col-md-12 col-12">
+          <h3>Become an instructor</h3>
+          <p style="font-size: 20px;">nstructors from around the world teach millions of learners on Udemy. We provide the tools and skills to teach what you love.We provide the tools and skills to teach what you love.</p>
+          <button>Start teaching today</button>
+        </div> 
+      </div>
+    </div>
+   </section>
+
+  <!-- end Become an instructor -->
+
 
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script>

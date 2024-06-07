@@ -375,3 +375,109 @@ text-align: center;
 } 
 
 /* start .top-Categorie */
+
+
+/* start Featured topics by category */
+.all-Featured-topics h6 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--font-stack-heading-serif);
+  margin-left: 50px;
+}
+.Featured-topics ul li a {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+  font-weight: 600;
+}
+.Featured-topics ul li a:hover {
+  color: var(--color-blue1);
+}
+.Featured-topics ul li span {
+  color: var(--color-gray-text);
+  
+}
+.Featured-topics ul li  {
+  margin: 20px 0;
+}
+.all-Featured-topics button {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  margin-left:  50px;
+  padding: 5px 10px;
+  transition: 0.35s;
+}
+.all-Featured-topics button:hover {
+  background-color : var(--color-blue1);
+}
+
+/* end Featured topics by category */
+
+
+
+/* start business */
+.business img {
+  width: 100%;
+  transition: var(--transition-time);
+}
+.business img:hover {
+  transform: translateX(15px);
+}
+.business ul li {
+  list-style-type: square;
+  margin: 10px 0;
+  font-size: 19px;
+}
+.business span {
+  color: var(--main-color);
+  font-size: 40px;
+  font-weight: 500;
+  font-family: var(--font-stack-heading-serif)
+}
+.business h6 {
+  font-size: 28px;
+  font-family: var(--font-stack-heading-serif);
+  font-weight: 550;
+}
+.business button {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px 20px ;
+  margin: 5px;
+  border: none;
+  border: 1px solid var(--main-color);
+  transition: 0.3s;
+}
+.business button:hover {
+  background-color:var(--color-blue1);
+}
+/* end business*/
+
+
+
+/* start instructor */
+.instructor h3 {
+  font-size: 32px ;
+  font-weight: 600;
+  font-family: var(--font-stack-heading-serif);
+}
+.instructor img {
+  transition: var(--transition-time);
+}
+.instructor img:hover {
+  transform: translateX(-15px);
+}
+.instructor button {
+  margin-top: 20px;
+  background-color:var(--main-color);
+  color: white;
+  padding: 10px 20px ;
+  border: none;
+  border: 1px solid var(--main-color);
+  transition: 0.35s;
+}
+.instructor button:hover {
+  background-color: var(--color-blue1);
+}
+
+/* end instructor */
