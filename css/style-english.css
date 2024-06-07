@@ -1,6 +1,7 @@
 :root {
-    --main-color: #7009a0;
-    --second-color: #15161d;
+  --main-color: #7009a0;
+  --Home-color: #f5f5f5;
+  --second-color: #15161d;
     --second-light-color: #1e1f29;
     --gray-color: #e7e5f1;
     --blue-color :#052d62 ;
@@ -8,6 +9,7 @@
     --color-gray : #d5d0d039 ;
     --color-gray-text : #6a6f73 ;
     --color-red-hover :#f64343 ;
+
 
     --font-stack-text: 'Udemy Sans', 'SF Pro Text', -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
     --font-stack-heading-serif: SuisseWorks, Georgia, Times, 'Times New Roman', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -156,6 +158,9 @@ margin: 2px;
 /* start slider  */
 
 /* start brands */
+.brands img {
+  transition: var(--transition-time);
+}
 .brands img:hover {
   filter: grayscale(70);
 }
@@ -237,7 +242,7 @@ margin: 2px;
 }
 
 
-/* :start cards */
+/* :start card home page */
 .home-category {
   background-color: white;
 }
@@ -276,7 +281,7 @@ margin: 2px;
     
 }
 .card img {
-    transition: .3s;
+    transition: .4s;
 
 }
 .card a:hover {
@@ -297,4 +302,45 @@ margin: 2px;
     background-color: white;
     border: 1px solid var(--blue-color);
 }
-/* end  cards */
+/* end  card home page  */
+
+.learners {
+  background-color: var(--Home-color);
+}
+.learners .boxes {
+  gap: 50px ;
+}
+.learners .box {
+  border: 1px solid var(--color-gray-text);
+  border-radius: 5px;
+  background-color: white;
+}
+.learners h6 {
+  font-size: 24px ;
+  font-family: var(--font-stack-heading-serif);
+  font-weight: 600;
+  margin: 25px 0;
+  padding-top: 25px;
+}
+.learners p {
+  font-size: 16px;
+}
+.learners p span {
+  font-size: 16px;
+  font-weight: 600;
+}
+.learners .box .logo {
+  width: 40px ;
+  height: 40px ;
+  border-radius: 50%;
+  background-color: #000000;
+}
+.learners .boxes  .box .video a {
+  color: var(--main-color);
+  font-weight: 600;
+  transition: 0.35s;
+}
+.learners .boxes .box .video a:hover {
+  color:var(--main-color);
+}
+/* end learners */
