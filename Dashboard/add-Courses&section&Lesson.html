@@ -16,26 +16,29 @@
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
+        <div class="addCourse-img" style="width: 250px; height: 125px ; border-radius: 50%; margin: auto; ">
+            <img style="width: 100%;" src="../img/Solgar-Logo 7.webp" alt="">
+        </div>
         <form>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="titleArabic">Title (Arabic):</label>
-                    <input type="text" class="form-control" id="titleArabic" placeholder="Enter course title in Arabic">
-                </div>
-                <div class="form-group col-md-6">
                     <label for="titleEnglish">Title (English):</label>
                     <input type="text" class="form-control" id="titleEnglish" placeholder="Enter course title in English">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="titleArabic"> Title (Arabic):</label>
+                    <input type="text" class="form-control" id="titleEnglish" placeholder="Enter course title in Arabic">
                 </div>
             </div>
         
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="descriptionArabic">Description (Arabic):</label>
-                    <textarea class="form-control" id="descriptionArabic" rows="3" placeholder="Enter course description in Arabic"></textarea>
+                    <label for="descriptionAEnglish">Description (English):</label>
+                    <textarea class="form-control" id="descriptionEnglish" rows="3" placeholder="Enter course description in English"></textarea>
                 </div>
                 <div class="form-group col-md-6">
-                    <label for="descriptionEnglish">Description (English):</label>
-                    <textarea class="form-control" id="descriptionEnglish" rows="3" placeholder="Enter course description in English"></textarea>
+                    <label for="descriptionEnglish"> Description (Arabic):</label>
+                    <textarea class="form-control" id="descriptionEnglish" rows="3" placeholder="Enter course description in Arabic"></textarea>
                 </div>
             </div>
         
@@ -59,12 +62,6 @@
                     </select>
                 </div>
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="image">Image:</label>
-                    <input type="file" class="form-control-file" id="image " accept="img">
-                </div>
-            </div>
             <button type="submit" class="btn btn-primary">Add Course</button>
         
         </form>
@@ -83,12 +80,12 @@
                     <div class="modal-body">
                         <form id="addCourseForm">
                             <div class="form-group">
-                                <label for="arabicTitle">Arabic Title</label>
-                                <input type="text" class="form-control" id="arabicTitle" placeholder="Enter Lesson title in Arabic" required>
+                                <label for="arabicTitle">English Title :</label>
+                                <input type="text" class="form-control" id="EnglishTitle" placeholder="Enter Lesson title in English" required>
                             </div>
                             <div class="form-group">
-                                <label for="englishTitle">English Title</label>
-                                <input type="text" class="form-control" id="englishTitle" placeholder="Enter Lesson title in English" required>
+                                <label for="ArabicTitle"> Arabic Title :</label>
+                                <input type="text" class="form-control" id="ArabicTitle" placeholder="Enter Lesson title in Arabic" required>
                             </div>
                             <div class="form-group">
                                 <label for="position">Position</label>
@@ -116,12 +113,12 @@
             </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="titleArabic">Title (Arabic):</label>
-                        <input type="text" class="form-control" id="titleArabic" placeholder="Enter Lesson title in Arabic">
-                    </div>
-                    <div class="form-group col-md-6">
                         <label for="titleEnglish">Title (English):</label>
                         <input type="text" class="form-control" id="titleEnglish" placeholder="Enter Lesson title in English">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="titleArabic">Title (Arabic):</label>
+                        <input type="text" class="form-control" id="titleArabic" placeholder="Enter Lesson title in Arabic">
                     </div>
                 </div>
                 <div class="form-row">

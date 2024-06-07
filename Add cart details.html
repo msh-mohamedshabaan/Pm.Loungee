@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Card</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style-english.css">
+    <style>
+    .card {
+    max-width: 340px; /* Adjust based on your needs */
+    margin: auto;
+}
+
+.card-video {
+    width: 100%;
+    height: auto;
+}
+.btn-addCard {
+  background-color: blueviolet;
+  color: white;
+}
+    
+    </style>
+</head>
+<body>
+  <div class="container my-5">
+    <div class="card">
+        <video class="card-img-top" controls>
+            <source src="./20240603_160901.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="card-body">
+            <h5 class="card-title">Price: $99 <small class="text-muted">50% off</small></h5>
+            <p class="card-text">Duration: 10 hours</p>
+            <button class="btn btn-addCard btn-block mb-2">Add Course</button>
+            <hr>
+            <button class="btn btn-addCard btn-block mb-2 ">Buy Now</button>
+            <hr>
+            <p><strong>This course includes:</strong></p>
+            <ul>
+                <li>Course time</li>
+                <li>Download option</li>
+                <li>Course completion certificate</li>
+            </ul>
+            <button class="btn btn-outline-secondary btn-block">Apply</button>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
