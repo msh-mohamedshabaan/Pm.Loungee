@@ -38,6 +38,13 @@ body {
   font-family: var(--font-stack-heading-serif);
     background-color: #fbfaf7;;
 } 
+
+
+
+
+
+
+
  /*  start  slider-sideBar */
 
  body {
@@ -303,6 +310,8 @@ margin: 2px;
     border: 1px solid var(--blue-color);
 }
 /* end  card home page  */
+
+
 
 .learners {
   background-color: var(--Home-color);
