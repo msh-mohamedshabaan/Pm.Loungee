@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Reviews</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <title>Course Card</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/GeneralStyle.css">
+  <style>
+
+/* <!--end User Review  --> */
+    .user-review {
+      background-color: #fdeed7d1;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .user-review img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-right: 20px;
+    }
+    .user-review .media-body {
+      color: #333;
+      flex-grow: 1;
+    }
+    .user-review .review-text {
+      font-size: 16px;
+    }
+  
+    .stars {
+      color: var( --main-color);
+      font-size: 25px;
+    }
+    .actions {
+      display: flex;
+      align-items: center;
+    }
+    .actions .action-item:hover {
+        color: var(--main-color);
+    }
+    .action-item {
+      margin-right: 20px;
+      color: #333;
+      transition: 0.3s;
+    }
+    .action-item i {
+      margin-right: 5px;
+    }
+    .reply {
+      color: #666;
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      border: none; /* Remove border */
+    }
+    .reply-item {
+      margin-right: 20px;
+    }
+    .text-head {
+        font-size: 50px;
+        color: var(--main-color);
+    }
+
+    /* <!--end User Review  --> */
+  </style>
+</head>
+<body>
+<!--start User Review  -->
+<div class="container mt-5">
+  <h6 class="text-center text-head mb-4"><a href=""> Reviews</a></h6> 
+  <div class="row"> 
+    <div class="col-lg-12">
+      <div class="user-review">
+        <img src="./img/mrs.jpeg" alt="User Image">
+        <div class="media-body">
+          <h5 class="mt-0">Mohamed shabaan </h5>
+          <span class="review-count"><a href="">1 Review</a></span>
+          <p class="review-text">Website building can be complicated and Nicepage takes that off your mind. I like the 
+            different breakpoint views where I have control over the different sizes of the site.
+             But what would Nicepage be without a great support? This makes it even better. Kudos to the Nicepage gang.</p>
+             <div class="d-flex align-items-center text-center justify-content-between" style="gap: 70px;">
+
+                 <div >
+                     <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5.0)</small></p>
+                 </div>
+              <div class="actions">
+                <span class="action-item"><i class="fas fa-thumbs-up"></i>Like</span>
+                <span class="action-item"><i class="fa-solid fa-share-nodes"></i>Share</span>
+              </div>
+             </div>
+          <div class="reply">
+            <i class="fa-solid fa-share ms-5"></i>
+            <input style="background-color:#fdeed7d1; border: none;" type="text" class="form-control" value="Reply section here...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="user-review">
+        <img src="./img/mrs.jpeg" alt="User Image">
+        <div class="media-body">
+          <h5 class="mt-0">Mohamed shabaan </h5>
+          <span class="review-count">1 review</span>
+          <p class="review-text">Website building can be complicated and Nicepage takes that off your mind. I like the 
+            different breakpoint views where I have control over the different sizes of the site.
+             But what would Nicepage be without a great support? This makes it even better. Kudos to the Nicepage gang.</p>
+             <div class="d-flex align-items-center text-center justify-content-between" style="gap: 70px;">
+
+                 <div >
+                     <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5.0)</small></p>
+                 </div>
+              <div class="actions">
+                <span class="action-item"><i class="fas fa-thumbs-up"></i>Like</span>
+                <span class="action-item"><i class="fa-solid fa-share-nodes"></i>Share</span>
+              </div>
+             </div>
+          <div class="reply">
+            <i class="fa-solid fa-share ms-5"></i>
+            <input style="background-color:#fdeed7d1; border: none;" type="text" class="form-control" value="Reply section here...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="user-review">
+        <img src="./img/mrs.jpeg" alt="User Image">
+        <div class="media-body">
+          <h5 class="mt-0">Mohamed shabaan </h5>
+          <span class="review-count">1 review</span>
+          <p class="review-text">Website building can be complicated and Nicepage takes that off your mind. I like the 
+            different breakpoint views where I have control over the different sizes of the site.
+             But what would Nicepage be without a great support? This makes it even better. Kudos to the Nicepage gang.</p>
+             <div class="d-flex align-items-center text-center justify-content-between" style="gap: 70px;">
+
+                 <div >
+                     <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5.0)</small></p>
+                 </div>
+              <div class="actions">
+                <span class="action-item"><i class="fas fa-thumbs-up"></i>Like</span>
+                <span class="action-item"><i class="fa-solid fa-share-nodes"></i>Share</span>
+              </div>
+             </div>
+          <div class="reply">
+            <i class="fa-solid fa-share ms-5"></i>
+            <input style="background-color:#fdeed7d1; border: none;" type="text" class="form-control" value="Reply section here...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-12">
+      <div class="user-review">
+        <img src="./img/mrs.jpeg" alt="User Image">
+        <div class="media-body">
+          <h5 class="mt-0">Mohamed shabaan </h5>
+          <span class="review-count">1 review</span>
+          <p class="review-text">Website building can be complicated and Nicepage takes that off your mind. I like the 
+            different breakpoint views where I have control over the different sizes of the site.
+             But what would Nicepage be without a great support? This makes it even better. Kudos to the Nicepage gang.</p>
+             <div class="d-flex align-items-center text-center justify-content-between" style="gap: 70px;">
+
+                 <div >
+                     <p class="stars">&#9733;&#9733;&#9733;&#9733;&#9733; <small>(5.0)</small></p>
+                 </div>
+              <div class="actions">
+                <span class="action-item"><i class="fas fa-thumbs-up"></i>Like</span>
+                <span class="action-item"><i class="fa-solid fa-share-nodes"></i>Share</span>
+              </div>
+             </div>
+          <div class="reply">
+            <i class="fa-solid fa-share ms-5"></i>
+            <input style="background-color:#fdeed7d1; border: none;" type="text" class="form-control" value="Reply section here...">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ <!--end User Review  -->
+</body>
+</html>

@@ -12,110 +12,104 @@
 
 <style>
 
-    /* :start Table of nationalities */
-  .table-striped tbody tr:nth-of-type(odd) {
-     background-color: #f8f9fa;
-    }
+/* Table of nationalities */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+}
 .Table-nationality table thead {
     color: white;
     background-color: var(--main-color);
-
-    }
+}
 .Table-nationality table {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
-    } 
+}
 .Table-nationality i {
     animation: rotate 3s steps(60, start) infinite;
-    transform-origin: center center; /* تغيير نقطة المحور */
+    transform-origin: center center;
     transition: all 0.3s;
     color: var(--main-color);
 }
-  
- /* end Table of nationalities */
 
-
-/* start animation head Table of nationalities */
+/* Animation head Table of nationalities */
 .box {
-  position: relative;
-  display: inline-block;
-  margin: 15px;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  animation: bounce 1.5s cubic-bezier(.82, .1, .14, 1.12)  infinite alternate; 
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    animation: bounce 1.5s cubic-bezier(.82, .1, .14, 1.12)  infinite alternate; 
 }
 
-.box1{
-   animation-delay: 0.1s;
-   background-color: #ADEEEF;
+.box1 {
+    animation-delay: 0.1s;
+    background-color: #ADEEEF;
 }
 
-.box2{
-   animation-delay: 0.2s;
-   background-color: #FC7F6F;
-   animation-timing-function: ease-in-out;
+.box2 {
+    animation-delay: 0.2s;
+    background-color: #FC7F6F;
+    animation-timing-function: ease-in-out;
 }
 
-.box3{
-   animation-delay: 0.3s;
-   background-color: #84CDFC;
-   animation-timing-function: ease-in;
+.box3 {
+    animation-delay: 0.3s;
+    background-color: #84CDFC;
+    animation-timing-function: ease-in;
 }
 
-.box4{
-   animation-delay: 0.4s;
-   background-color: #F0E786;
-   animation-timing-function: ease-in;
+.box4 {
+    animation-delay: 0.4s;
+    background-color: #F0E786;
+    animation-timing-function: ease-in;
 }
 
-.box5{
-   animation-delay: 0.5s;
-   background-color: #3FD1CD;
-   animation-timing-function: linear;
+.box5 {
+    animation-delay: 0.5s;
+    background-color: #3FD1CD;
+    animation-timing-function: linear;
 }
 
-.box6{
-   animation-delay: 0.6s;
-   background-color: #D8BED9;
-   animation-timing-function: ease-in-out;
+.box6 {
+    animation-delay: 0.6s;
+    background-color: #D8BED9;
+    animation-timing-function: ease-in-out;
 }
 
-.box7{
-   animation-delay: 0.7s;
-   background-color: #FC7F6F;
-   animation-timing-function: ease-in-out;
+.box7 {
+    animation-delay: 0.7s;
+    background-color: #FC7F6F;
+    animation-timing-function: ease-in-out;
 }
 
-.box8{
-   animation-delay: 0.8s;
-   background-color: #ADEEEF ;
+.box8 {
+    animation-delay: 0.8s;
+    background-color: #ADEEEF ;
 }
 
+@media (max-width: 768px) {
+    .Table-nationality h2 {
+        font-size: 24px;
+    }
+}
 
-/* end animation head Table of nationalities */
 </style>
-
 
 </head>
 <body>
     <div class="container Table-nationality mt-5">
         <div class="row d-flex">
-            <div class="col-6">
-                <h2 class="">nationality <i class="fa-brands fa-nfc-directional"></i> </h2>
+            <div class="col-12 col-md-6">
+                <h2>Nationality <i class="fa-brands fa-nfc-directional"></i> </h2>
             </div>
-            <div class="col-6 ">
+            <div class="col-12 col-md-6 text-center">
                 <div class="box box1"></div>
                 <div class="box box2"></div>
                 <div class="box box3"></div>
                 <div class="box box4"></div>
                 <div class="box box5"></div>
-                <div class="box box6"></div> 
-                <div class="box box7"></div>
-                <div class="box box8"></div>
-
             </div>
-       
-            
+        </div>
     
         <table class="table table-striped">
             <thead>
@@ -163,27 +157,10 @@
                     <td>دولار أمريكي</td>
                     <td>Factory A</td>
                 </tr>
-                <tr  class="align-items-center text-center">
-                    <td>United States</td>
-                    <td>الولايات المتحدة</td>
-                    <td>US Dollar</td>
-                    <td>دولار أمريكي</td>
-                    <td>Factory A</td>
-                </tr>
-                <tr  class="align-items-center text-center">
-                    <td>Saudi Arabia</td>
-                    <td>المملكة العربية السعودية</td>
-                    <td>Saudi Riyal</td>
-                    <td>ريال سعودي</td>
-                    <td>Factory B</td>
-                </tr>
                 <!-- Add more rows for additional nations -->
             </tbody>
         </table>
     </div>
-    
-
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

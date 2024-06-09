@@ -44,11 +44,34 @@
   a:hover {
     color: var(--color-blue1);
   }
+  .stars {
+    margin: 0;
+  }
 
 
 
 
 /* :start   animation */
+
+
+.stars{
+  animation: go-and-back infinite 5s linear both;
+}
+
+@keyframes go-and-back{
+  0%{
+    left: 0;
+    color: rgb(222, 152, 1);
+  }
+  
+  100%{
+    left: calc(100% - 20px);
+    
+    color: var(--main-color);
+  }
+  
+}
+
 @keyframes bounce{
     0%{
       transform: translateY(-15px);
