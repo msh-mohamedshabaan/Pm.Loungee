@@ -81,9 +81,6 @@ margin-top: 20px ;
 
 
 /* <!-- start Course-information --> */
-.card {
-    margin: 15px 0;
-}
 
 .fa-check {
     color: var(--main-color);
@@ -114,14 +111,16 @@ margin-top: 20px ;
    font-size: 12px;
 
 }
-
+.Course-informatio{
+  z-index: -1;
+}
 .Course-information a {
 color: var(--main-color);
 }
 .Course-information a:hover {
 color: var(--color-blue1);
 }
-/* <!-- start Course-information --> */
+/* <!-- end Course-information --> */
 
 
 
@@ -129,46 +128,74 @@ color: var(--color-blue1);
 
 
 
-   /*start card of details */
+/*start card of details */
 .details-course-card {
     transition: var(--transition-time);
+    z-index: 1;
 }
-.details-course-card:hover {
-    transform: translatex(30px);
+.details-course-card .card {
+  overflow: hidden;
+  visibility: visible;
+  transition: 0.3s;
 }
- .card {
-    margin: 15px 0;
-}
-.card {
-    max-width: 340px; 
+.details-course-card .card:hover {
+    transform: scale(1.05);
 }
 
-.card-img-top {
+.details-course-card .card {
+    max-width: 340px; 
+    margin: 15px 0;
+}
+
+.details-course-card .card-img-top {
     width: 100%;
     height: auto;
 }
-.btn-addCard {
+.details-course-card .btn-addCard {
   background-color: var(--main-color);
   color: white;
   border: none;
   padding:5px  15px;
 }
 
-.card .card-body ul {
+.details-course-card .card .card-body ul {
 margin: 0;
 padding: 0;
 }
-.card .card-body ul li  {
+.details-course-card .card .card-body ul li  {
     margin-top: 2px ;
     font-size: 14px ;
     margin-right: 5px;
 }
-.card .card-body ul li i {
+.details-course-card .card .card-body ul li i {
     margin-right: 15px;
 }
-.card .card-body ul li a {
+.details-course-card .card .card-body ul li a {
     font-size: 15px;
     color: var(--main-color);
+}
+.details-course-card .card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* ظل متوسط عند التحويل */
+}
+.details-course-card .card {
+  transition: 0.3s;
+  position: absolute;
+   top: 15%;
+   right: 5%; 
+}
+
+
+@media (max-width: 1145px) and (max-width: 1105px) and (max-width: 1055px){
+  .details-course-card .card {
+   
+    transform: translateX(40px);
+  }
+}
+@media (max-width: 1000px) {
+  .details-course-card .card {
+    position: relative;
+
+  }
 }
 
  /*end card of details */
@@ -219,9 +246,68 @@ padding: 0;
     <!-- end course-landing -->
 
 
+    <!-- start card of details course -->
+     
+
+
+  <div class="container details-course-card mt-4"   >
+    <div class="row">
+    <div class="card  col-xl-4 col-lg-4 col-md-6 col-6" > 
+        <div>
+            <img src="./img/paython cor.png" class="card-img-top" controls> 
+            </div>
+        <div class="card-body row ">
+            <h2 class="card-title">E£1,199.99</h2>
+            <p class="card-text text-center align-items-center">30-Day Money-Back Guarantee</p>
+            <button class=" btn-addCard btn-block mb-2">Add Course</button>
+            <button class=" btn-addCard btn-block mb-2 ">Buy Now</button>
+            <p><strong>This course includes:</strong></p>
+            <ul class="col-12">
+                <li> <i class="fa-solid fa-clapperboard"></i> 9 hours on-demand video</li>
+                <li><i class="fa-solid fa-download"></i>1 downloadable resource/li>
+                <li><i class="fa-solid fa-mobile-screen-button"></i>Access on mobile and TV</li>
+                <li><i class="fa-solid fa-infinity"></i>Full lifetime access</li>
+                <li><i class="fa-solid fa-trophy"></i>Certificate of completion</li>
+            </ul>
+            <ul class="d-flex text-center  col-12 mb-2 row">
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12"><a href="">share</a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12"><a href=""> Git  </a></li>
+                <li class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12"><a href=""> Apply </a></li>
+            </ul>
+            <div class="col-12" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;; display: flex; padding: 5px;">
+                <span>LETSLEARNNOW <small>is applied
+                   pm.lounge coupon</small></span>
+                    <a style="color: var(--main-color);" href="">
+                        <i class="fa-solid fa-xmark mt-3"></i>
+                    </a>
+            </div>
+            <div class="input-group  align-items-center text-center  mt-4"  >
+              <div class="row mx-2">
+
+                <input  style="padding: 5px 17px ;"  type="text" class=" align-items-center text-center col-xl-8 col-lg-8 col-md-8 col-12 " placeholder="Enter Coupon" >
+                <button style="border: none; background-color: var(--main-color); padding: 5px 17px ; color: white;" class=" col-xl-4 col-lg-4 col-md-4 col-12 " type="button" id="button-addon2">
+                    Apply</button>
+              </div>
+              </div>
+            
+            <!-- <button class="btn btn-outline-secondary btn-block mt-3">Apply</button> -->
+        </div>
+        <div  class="row align-items-center m-2 text-center">
+            <span class="col-12" style="font-size: 19px ;" >Training 5 or more people?</span>
+            <p style="font-size: 14px; margin-top: 5px;" class="col-12">Get your team access to 26,000+ top Udemy courses anytime, anywhere.</p>
+            <button style="border: 1px solid var(--main-color); padding: 10px 55px; background-color: transparent;" class=" mb-2 col-12">
+                Try pm Business</button>
+            
+        </div>
+    </div>
+</div>
+</div>
+<!-- end card of details course -->
+
+
 
     <!-- start Course-information -->
-    <section class="Course-information">
+    <section class="Course-information" >
         <div class="container mt-5" >
             <div class="row">
                 <div class="col-8 " style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;" >
@@ -235,7 +321,7 @@ padding: 0;
             </div>
           </div>
     
-        <div class="container mt-5">
+        <div class="container mt-5"style="z-index: -1;">
             <div class="row">
                 <div class="col-8 " style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
                     <div class="m-3">
@@ -250,7 +336,7 @@ padding: 0;
                         <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/beatswell 5.webp" alt=""></li>
                         <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/febella 3.png" alt=""></li>
                         <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/gamar 2.png" alt=""></li>
-                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/Holland-and-Barrett.png" alt=""></li>
+                        <li style="width: 75px ; height: 75px ; z-index: -1;"><img style="width: 100%;" src="./img/Holland-and-Barrett.png" alt=""></li>
                     </ul>
     
                     </div>
@@ -263,23 +349,23 @@ padding: 0;
            <div class="row">
             <div class="d-flex justify-content-between col-8">
                 <small>6 sections • 75 lectures • 8h 44m total length</small>
-                <a href="" > Expand all sections</a>
+                <a href="" style="z-index: -1;" > Expand all sections</a>
             </div>
           </div>
           <div>
               <div >
                 <div class="row mt-3">
-                  <div class="col-8">
+                  <div class="col-8" style="z-index: -1;">
                     <div class="intro-section d-flex justify-content-between px-3 align-items-center text-center row"  style="background-color: #f7f9fa;">
                       <h6 class="intro-title d-flex align-items-center ">
-                        <i class="fas fa-chevron-down ml-2 m-2"></i>  Introduction
+                        <i  class="fas fa-chevron-down ml-2 m-2"></i>  Introduction
                       </h6>
-                      <span class="m-2">Lectures <span class="m-2">24 Min</span></span>
+                      <span  class="m-2">Lectures <span class="m-2">24 Min</span></span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div  >
+              <div style="z-index: -1;" >
                 <div class="row mt-3">
                   <div class="col-8">
                     <div class="d-flex justify-content-between px-3 align-items-center text-center row"  >
@@ -293,7 +379,7 @@ padding: 0;
                 </div>
               </div>
               <div >
-                <div class="row mt-3">
+                <div class="row mt-3"  >
                   <div class="col-8">
                     <div class="d-flex justify-content-between px-3 align-items-center text-center row"  >
                       <h6 class=" d-flex align-items-center ">
@@ -586,67 +672,8 @@ padding: 0;
     </section>
     <!-- end Course-information -->
 
-
-
-   
-<!-- start card of details course -->
-
-  <div class="container details-course-card " style="position: absolute; top: 10%; right: -45%;"  >
-    <div class="row">
-    <div class="card  col-4">
-        <div>
-            <img src="./img/paython cor.png" class="card-img-top" controls> 
-            </div>
-        <div class="card-body row ">
-            <h2 class="card-title">E£1,199.99</h2>
-            <p class="card-text text-center align-items-center">30-Day Money-Back Guarantee</p>
-            <button class=" btn-addCard btn-block mb-2">Add Course</button>
-            <button class=" btn-addCard btn-block mb-2 ">Buy Now</button>
-            <p><strong>This course includes:</strong></p>
-            <ul class="col-12">
-                <li> <i class="fa-solid fa-clapperboard"></i> 9 hours on-demand video</li>
-                <li><i class="fa-solid fa-download"></i>1 downloadable resource/li>
-                <li><i class="fa-solid fa-mobile-screen-button"></i>Access on mobile and TV</li>
-                <li><i class="fa-solid fa-infinity"></i>Full lifetime access</li>
-                <li><i class="fa-solid fa-trophy"></i>Certificate of completion</li>
-            </ul>
-            <ul class="d-flex text-center  col-12 mb-2 row">
-                <li class="col-3"><a href="">share</a></li>
-                <li class="col-3"><a href=""> Git  </a></li>
-                <li class="col-3"><a href=""> Apply </a></li>
-            </ul>
-            <div class="col-12" style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;; display: flex; padding: 5px;">
-                <span>LETSLEARNNOW <small>is applied
-                   pm.lounge coupon</small></span>
-                    <a style="color: var(--main-color);" href="">
-                        <i class="fa-solid fa-xmark mt-3"></i>
-                    </a>
-            </div>
-            <div class="input-group  align-items-center text-center  mt-4"  >
-                <input style="padding: 5px 17px ;"  type="text" class="" placeholder="Enter Coupon" >
-                <button style="border: none; background-color: var(--main-color); padding: 5px 17px ; color: white;" class="" type="button" id="button-addon2">
-                    Apply</button>
-              </div>
-            
-            <!-- <button class="btn btn-outline-secondary btn-block mt-3">Apply</button> -->
-        </div>
-        <div style=" margin-left: 15px; ">
-            <span style="font-size: 19px ;" >Training 5 or more people?</span>
-            <p style="font-size: 14px; margin-top: 5px;" >Get your team access to 26,000+ top Udemy courses anytime, anywhere.</p>
-            <button style="border: 1px solid var(--main-color); padding: 10px 55px; background-color: transparent;" class=" mb-2 ">
-                Try pm.Lounge Business</button>
-            
-        </div>
-    </div>
-</div>
-</div>
-<!-- end card of details course -->
-
-
-
-
 <!-- start Requirements -->
- <div class="container mt-5">
+ <div class="container mt-5" style="z-index: -1;">
     <div class="row">
         <div  class="col-8">
             <span style="font-size: 24px; font-weight: 700;" >Requirements</span>
