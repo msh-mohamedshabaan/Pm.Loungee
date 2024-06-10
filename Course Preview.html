@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Course Preview</title>
+  <!-- Include Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Include FontAwesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="./css/GeneralStyle.css">
+  <style>
+   
+   .cursor-preview .list-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; 
+    }
+    .cursor-preview h3 {
+      color: rgb(208, 132, 0);
+    }
+   .cursor-preview .list-group-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: space-between;
+      
+    }
+   .cursor-preview .video-thumbnail {
+      width: 100px; 
+      height: auto;
+    }
+  
+    .list-group .list-group-item img {
+      border: 1px solid var(--main-color);
+      transition: 0.1s;
+
+    }
+  
+    .list-group .list-group-item img:hover , .stars i:hover , .fa-clock:hover {
+      transform: scale(1.1);
+    }
+
+  
+    .cursor-preview h4 {
+      color: var(--main-color);
+    }
+    .cursor-preview  h5 {
+      color: var(--main-color);
+
+    }
+    .cursor-preview .list-group-item img {
+      transition: 0.3s;
+    }
+    .list-group {
+      list-style: none;
+      padding: 0;
+    }
+    .cursor-preview .list-group-item {
+      border: none;
+      padding: 10px;
+      position: relative;
+    }
+    .cursor-preview .video-thumbnail-container {
+      position: relative;
+      display: inline-block;
+    }
+    .cursor-preview  .play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 2em;
+    }
+    .cursor-preview  .video-thumbnail {
+      width: 100px;
+    }
+    .cursor-preview .video-details {
+      margin-left: 20px;
+    }
+    .cursor-preview  .video-rating {
+      color: #9c27b0; 
+    }
+    .cursor-preview  .fa-play {
+      color: red;
+    }
+    .cursor-preview ul {
+   box-shadow: rgb(112 9 160) 5px 5px, rgb(186 110 241 / 30%) 10px 10px, rgb(188 80 255 / 20%) 15px 15px, rgb(196 19 230 / 10%) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px ;
+   margin-top: 5px;
+    }
+    .cursor-preview{
+      margin-bottom: 50px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container cursor-preview ">
+  <div class="col-10 align-items-center  ">
+    <p style="color: var(--main-color); margin-top: 50px;">Course Preview </p>
+    <h3 >Mechanical Design via SolidWorks</h3>
+  <div class="row " >
+    <div class="col-lg-12">
+      <!-- Videos Here -->
+      <div class="card mb-3" style="box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;">
+        <video controls class="card-img-top">
+          <source src="./img/20240609_073800.mp4" type="video/mp4">
+        </video>
+        <div class="card-body d-flex justify-content-between ">
+          <div>
+            <h5 class="card-title">Mechanical Design via SolidWorks </h5>
+            <p class="card-text">Created by :Ahmwd Mohamed</p>
+
+          </div>
+          <div class="text-center">
+
+            <div class="stars">
+              <!-- Star Rating -->
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+            <p class="card-text">Video Duration: 00:29:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+    <h4>Free Sample Videos:</h4>
+    <div style="box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;">
+
+      <ul class="list-group">
+     
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="video-thumbnail-container">
+            <img src="./img/Asset-30.webp" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="play-icon">
+              <a href="">
+  
+                <i class="fas fa-play"></i>
+              </a> 
+            </div>
+          </div>
+          <div class="align-items-center d-flex">
+            <span>Mechanical Design via SolidWorks</span>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 00:29:00</span>
+          <div class="stars align-items-end">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </li>
+      </ul> 
+      <ul class="list-group">
+     
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="video-thumbnail-container">
+            <img src="./img/Asset-25.webp" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="play-icon">
+             <a href="">
+  
+               <i class="fas fa-play"></i>
+             </a> 
+            </div>
+          </div>
+          <div class="align-items-center d-flex">
+            <span>Mechanical Design via SolidWorks</span>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 00:29:00</span>
+          <div class="stars align-items-end">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </li>
+      </ul>
+      <ul class="list-group">
+     
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="video-thumbnail-container">
+            <img src="./img/Asset-27.webp" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="play-icon">
+              <a href="">
+  
+                <i class="fas fa-play"></i>
+              </a> 
+            </div>
+          </div>
+          <div class="align-items-center d-flex">
+            <span>Mechanical Design via SolidWorks</span>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 00:29:00</span>
+          <div class="stars align-items-end">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </li>
+      </ul>
+      <ul class="list-group">
+     
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="video-thumbnail-container">
+            <img src="./img/Asset-28.webp" alt="Video Thumbnail" class="video-thumbnail">
+            <div class="play-icon">
+              <a href="">
+  
+                <i class="fas fa-play"></i>
+              </a> 
+            </div>
+          </div>
+          <div class="align-items-center d-flex">
+            <span>Mechanical Design via SolidWorks</span>
+          </div>
+          <span><i class="fa-regular fa-clock"></i> 00:29:00</span>
+          <div class="stars align-items-end">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Include Bootstrap and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
