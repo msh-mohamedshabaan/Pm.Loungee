@@ -15,7 +15,74 @@
   <link rel="stylesheet" href="./css/GeneralStyle.css">
   <style>
 
-/* <!--end User Review  --> */
+/* :start .select-rating */
+/* :start .select-rating */
+/* :start .select-rating */
+   .select-rating {
+      max-width: 600px;
+      margin: 50px auto;
+    }
+   .select-rating .card {
+      margin-bottom: 20px;
+      background-color: #fff;
+      border: 2px solid  #fdeed7d1;
+      border-radius: .25rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    }
+   .select-rating .card-header {
+      background-color:  #fdeed7d1;
+      color: var(--main-color);
+    }
+   .select-rating .card-body {
+      padding: 20px;
+    }
+   .select-rating .card-body p {
+      font-size: 16px;
+    }
+   .select-rating .rating {
+      direction: rtl; 
+      margin-bottom: 10px;
+    }
+   .select-rating .rating span {
+      cursor: pointer;
+      font-size: 20px;
+    }
+   .select-rating .rating span:hover,
+   .select-rating .rating span:hover ~ span {
+      color: orange;
+    }
+   .select-rating .rating input[type="radio"] {
+      display: none;
+    }
+   .select-rating .rating input[type="radio"]:checked ~ span {
+      color: orange;
+    }
+    .select-rating .review-textarea {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+   .select-rating .btn-select-rating{
+      background-color: transparent;
+      color: var(--main-color);
+      border: 1px solid var(--main-color);
+      padding: 7px 10px;
+    }
+    .btn-select-rating:hover {
+      background-color: var(--main-color);
+      color: white;
+
+    }
+   /* end .select-rating */
+   /* end .select-rating */
+   /* end .select-rating */
+
+
+
+    /* :start .user-review */
+    /* :start .user-review */
+    /* :start .user-review */
     .user-review {
       background-color: #fdeed7d1;
       border-radius: 10px;
@@ -40,33 +107,33 @@
       font-size: 16px;
     }
   
-    .stars {
+  .user-review  .stars {
       color: var( --main-color);
       font-size: 25px;
     }
-    .actions {
+  .user-review  .actions {
       display: flex;
       align-items: center;
     }
-    .actions .action-item:hover {
+  .user-review  .actions .action-item:hover {
         color: var(--main-color);
     }
-    .action-item {
+  .user-review  .action-item {
       margin-right: 20px;
       color: #333;
       transition: 0.3s;
     }
-    .action-item i {
+  .user-review  .action-item i {
       margin-right: 5px;
     }
-    .reply {
+   .user-review .reply {
       color: #666;
       margin-top: 10px;
       display: flex;
       align-items: center;
-      border: none; /* Remove border */
+      border: none; 
     }
-    .reply-item {
+   .user-review .reply-item {
       margin-right: 20px;
     }
     .text-head {
@@ -75,22 +142,53 @@
     }
 
     /* <!--end User Review  --> */
+    /* <!--end User Review  --> */
+    /* <!--end User Review  --> */
+    /* <!--end User Review  --> */
   </style>
 </head>
 <body>
+
+  
+  <!--start .select-rating */
+  /*  start .select-rating */
+  /*  start .select-rating */ -->
+  <div class="container select-rating">
+    <div class="card">
+      <div class="card-header">Course Rating</div>
+      <div class="card-body">
+        <div class="rating">
+          <span class="star">&#9733;</span><input type="radio" id="star5" name="rating" value="5">
+          <span class="star">&#9733;</span><input type="radio" id="star4" name="rating" value="4">
+          <span class="star">&#9733;</span><input type="radio" id="star3" name="rating" value="3">
+          <span class="star">&#9733;</span><input type="radio" id="star2" name="rating" value="2">
+          <span class="star">&#9733;</span><input type="radio" id="star1" name="rating" value="1">
+        </div>
+        <textarea class="form-control review-textarea" placeholder="Write your review here..."></textarea>
+        <button class="btn-select-rating">Submit Review</button>
+      </div>
+    </div>
+  </div>
+<!--end .select-rating */
+/*  end .select-rating */
+/*  end .select-rating */ -->
+
+
+
 <!--start User Review  -->
 <div class="container mt-5">
   <h6 class="text-center text-head mb-4"><a href=""> Reviews</a></h6> 
   <div class="row"> 
-    <div class="col-lg-12">
+    <div class="col-lg-12" style="overflow: hidden;">
       <div class="user-review">
         <img src="./img/mrs.jpeg" alt="User Image">
         <div class="media-body">
           <h5 class="mt-0">Mohamed shabaan </h5>
           <span class="review-count"><a href="">1 Review</a></span>
-          <p class="review-text">Website building can be complicated and Nicepage takes that off your mind. I like the 
-            different breakpoint views where I have control over the different sizes of the site.
-             But what would Nicepage be without a great support? This makes it even better. Kudos to the Nicepage gang.</p>
+          <div class="row">
+            <p class="review-text ">
+               </p>
+          </div>
              <div class="d-flex align-items-center text-center justify-content-between" style="gap: 70px;">
 
                  <div >

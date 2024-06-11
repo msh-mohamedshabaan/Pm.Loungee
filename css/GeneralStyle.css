@@ -21,6 +21,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      transition: var(--transition-time);
   }
   
   a {
@@ -30,7 +31,6 @@
   ul li {
       list-style: none;
   }
-  
   .clearfix {
       clear: both;
   }
@@ -47,8 +47,6 @@
   .stars {
     margin: 0;
   }
-
-
 
 
 /* :start   animation */
