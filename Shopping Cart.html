@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/GeneralStyle.css">
+    <style>
+        h2 {
+            margin-bottom: 20px;
+        }
+
+       .shopping-list .cart-item {
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .shopping-list .action-buttons {
+            text-align: right;
+        }
+        .shopping-list .action-buttons button:hover {
+            color: var(--color-blue1);
+
+        }
+        .shopping-list .cart-item img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover; 
+        }
+
+        .shopping-list .cart-item h5 {
+            margin-top: 0;
+        }
+
+        .shopping-list .cart-item p {
+            margin-bottom: 5px;
+        }
+
+        .shopping-list .btn-link {
+            padding: 0;
+        }
+
+        .Checkout .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+       .Checkout .form-group input {
+            flex-grow: 1;
+        }
+
+      .Checkout  .form-group button {
+            margin-left: 10px;
+            padding: 0;
+        }
+
+      
+       
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Shopping Cart</h2>
+        <p>4 Courses in Cart</p>
+        <div class="row">
+            <div class="col-md-8 shopping-list">
+                <div class="cart-item mb-3 p-3 "  style="box-shadow: var(--box-shadow5);">
+                    <div class="row w-100">
+                        <div class="col-md-2">
+                            <img src="./img/paython cor.png" alt="SolidWorks Course" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>Mechanical Design via SolidWorks</h5>
+                            <p>By Ahmed Aboul Fotouh</p>
+                            <p><span class="badge badge-success">New</span> <span class="text-warning">★★★★☆</span> (193 ratings)</p>
+                            <p>7 total hours • 25 lectures • Beginner</p>
+                            <p><strong>£249.99</strong> <del>£609.99</del></p>
+                        </div>
+                        <div class="col-md-2 action-buttons text-center">
+                            <button class="btn btn-link text-danger">Remove</button>
+                            <button class="btn btn-link " style="color: var(--main-color);">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item mb-3 p-3 border"  style="box-shadow: var(--box-shadow5);">
+                    <div class="row w-100">
+                        <div class="col-md-2">
+                            <img src="./img/paython cor.png" alt="JavaScript Course" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>The Modern JavaScript Bootcamp Course</h5>
+                            <p>By Colt Steele and 1 other</p>
+                            <p><span class="badge badge-info">Updated Recently</span> <span class="text-warning">★★★★☆</span> (12,405 ratings)</p>
+                            <p>52 total hours • 484 lectures • All Levels</p>
+                            <p><strong>£349.99</strong> <del>£1,999.99</del></p>
+                        </div>
+                        <div class="col-md-2 action-buttons text-center">
+                            <button class="btn btn-link text-danger">Remove</button>
+                            <button class="btn btn-link " style="color: var(--main-color);">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item mb-3 p-3 border"  style="box-shadow: var(--box-shadow5);">
+                    <div class="row w-100">
+                        <div class="col-md-2">
+                            <img src="./img/paython cor.png" alt="JavaScript Course" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>The Modern JavaScript Bootcamp Course</h5>
+                            <p>By Colt Steele and 1 other</p>
+                            <p><span class="badge badge-info">Updated Recently</span> <span class="text-warning">★★★★☆</span> (12,405 ratings)</p>
+                            <p>52 total hours • 484 lectures • All Levels</p>
+                            <p><strong>£349.99</strong> <del>£1,999.99</del></p>
+                        </div>
+                        <div class="col-md-2 action-buttons text-center">
+                            <button class="btn btn-link text-danger">Remove</button>
+                            <button class="btn btn-link " style="color: var(--main-color);">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item mb-3 p-3 border"  style="box-shadow: var(--box-shadow5);">
+                    <div class="row w-100">
+                        <div class="col-md-2">
+                            <img src="./img/paython cor.png" alt="JavaScript Course" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>The Modern JavaScript Bootcamp Course</h5>
+                            <p>By Colt Steele and 1 other</p>
+                            <p><span class="badge badge-info">Updated Recently</span> <span class="text-warning">★★★★☆</span> (12,405 ratings)</p>
+                            <p>52 total hours • 484 lectures • All Levels</p>
+                            <p><strong>£349.99</strong> <del>£1,999.99</del></p>
+                        </div>
+                        <div class="col-md-2 action-buttons text-center">
+                            <button class="btn btn-link text-danger">Remove</button>
+                            <button class="btn btn-link " style="color: var(--main-color);">Save for Later</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 Checkout">
+                <div class=" p-3" style="box-shadow: var(--box-shadow5);">
+                    <h4>Total: £599.98</h4>
+                    <p><del>£2,609.98</del></p>
+                    <p>78% off</p>
+                    <button  style="background-color: var(--main-color); border: none; border-radius: 0;" class="btn btn-secondary btn-block py-2">Checkout</button>
+                    <hr>
+                    <div class="Promotions">
+                        <p>Promotions</p>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="ST21MT61124">
+                            <button class="btn btn-link text-danger">&times;</button>
+                        </div>
+                        <button style="background-color: var(--main-color); border: none; border-radius: 0;" class="btn btn-secondary py-2 btn-block">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
