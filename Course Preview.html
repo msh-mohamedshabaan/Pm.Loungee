@@ -11,11 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/GeneralStyle.css">
     <style>
-       .Course-preview h1, h2 {
+        .Course-preview h1, h2 {
             font-size: 1.5rem;
             font-weight: bold;
         }
@@ -25,7 +25,6 @@
         }
         .Course-preview ul li:hover {
             color: var(--main-color);
-            
         }
         .Course-preview .embed-responsive {
             border: 1px solid #ddd;
@@ -34,32 +33,31 @@
         }
         .Course-preview .active {
             color: white;
-            border:1PX solid var(--main-color);
-            background-color:var(--main-color);
+            border: 1px solid var(--main-color);
+            background-color: var(--main-color);
             padding: 10px 20px;
             margin-left: 10px;
-            transition: var( --transition-time);
+            transition: var(--transition-time);
         }
-        .Course-preview  button:not(.active){
+        .Course-preview button:not(.active) {
             color: var(--main-color);
-            border:1PX solid var(--main-color);
+            border: 1px solid var(--main-color);
             background-color: transparent;
             padding: 10px 20px;
             margin-left: 10px;
-            transition: var( --transition-time);
+            transition: var(--transition-time);
         }
-        .Course-preview  button:hover{
+        .Course-preview button:hover {
             color: white;
-            background-color:var(--main-color);
+            background-color: var(--main-color);
         }
         .Course-preview .card-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
-            background-color:var(--main-color);
+            background-color: var(--main-color);
             color: white;
-          
         }
         .Course-preview .card-header span:last-child {
             font-size: 1.2rem;
@@ -78,78 +76,70 @@
         .Course-preview .rotated {
             transform: rotate(180deg);
         }
+
+
     </style>
 </head>
 <body>
-    <div class="Course-preview"> 
-    <div class="container  mt-4">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <h1>1-Course Intro | difference between HTML and CSS</h1>
-        </div>
-        <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
-        </div>
-        <div class="d-flex justify-content-between align-items-center mt-3">
-            <div class="btn-group" role="group">
-                <button type="button" class="active">Course content</button>
-                <button type="button" class="">Important Links</button>
-                <button type="button" class="">Ask a Question</button>
-                <button type="button" class="">Notes</button>
-                <button type="button" class="">Previous Exams</button>
+    <div class="Course-preview">
+        <div class="container mt-4">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <h1>1-Course Intro | difference between HTML and CSS</h1>
+                <button class=""><i class="fa-solid fa-bars mx-2"></i>Menu</button>
+            </div>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                <div class="btn-group" role="group">
+                    <button type="button" class="active">Course content</button>
+                    <button type="button">Important Links</button>
+                    <button type="button">Ask a Question</button>
+                    <button type="button">Notes</button>
+                    <button type="button">Previous Exams</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="container mt-4">
-        <h2 class="mb-3">What You Will Learn</h2>
-        <div class="card">
-            <div class="card-header">
-                <span>Practical Website Project 1</span>
-                <span class="toggle-arrow">&#x25BC;</span>
+        <div class="container mt-4">
+            <h2 class="mb-3">What You Will Learn</h2>
+            <div class="card">
+                <div class="card-header">
+                    <span>Practical Website Project 1</span>
+                    <span class="toggle-arrow">&#x25BC;</span>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 1-Course Intro | difference between HTML and CSS</span>
+                        <span>00:13:12</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 2-First Page | dealing with Audio, Video, images</span>
+                        <span>00:21:11</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 3- HTML Page Structure | Head Body Title</span>
+                        <span>00:18:23</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 4-Iframe | insert Google maps, pdf files</span>
+                        <span>00:17:06</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 5-Hyper links | download images from website</span>
+                        <span>00:01:58</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 6-Visual studio code extensions</span>
+                        <span>00:08:21</span>
+                    </li>
+                    <li class="list-group-item">
+                        <span><i class="fa-solid fa-lock"></i> 7-First Practical Example</span>
+                        <span>00:17:26</span>
+                    </li>
+                </ul>
             </div>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> 1-Course Intro | difference between html and css</span>
-                    <span>00:13:12</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i>2-First Page | dealing with Audio, Video, images</span>
-                    <span>00:21:11</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> 3- HTML Page Structure | Head Body Title</span>
-                    <span>00:18:23</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> Iframe | insert Google maps, pdf files-4</span>
-                    <span>00:17:06</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> 5- hyper links | download images from website</span>
-                    <span>00:01:58</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> 6-visual studio code extensions</span>
-                    <span>00:08:21</span>
-                </li>
-                <li class="list-group-item">
-                    <span><i class="fa-solid fa-lock"></i> 7_First Practical Example</span>
-                    <span>00:17:26</span>
-                </li>
-            </ul>
         </div>
     </div>
-   </div>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.card-header').click(function() {
-                $(this).next('.list-group').slideToggle();
-                $(this).find('.toggle-arrow').toggleClass('rotated');
-            });
-        });
-    </script>
 </body>
 </html>
