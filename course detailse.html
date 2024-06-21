@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn SOLIDWORKS From Scratch To Professionalism</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+            <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="./css/GeneralStyle.css">
+    <style>
+        .course-landing {
+            color: white;
+            position: relative;
+        }
+        .course-landing a {
+            color: #c0c4fc ;
+        }
+        .course-landing i {
+            color: rgb(230, 184, 15);
+        }
+        .course-header {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .course-sidebar {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        color: #333;
+            
+        }
+        .course-sidebar i , .course-sidebar a{
+            color: rgb(75, 73, 73);
+        }
+        .course-price {
+            font-size: 2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .btn-block {
+            margin-bottom: 10px;
+        }
+        .course-include i {
+            margin-right: 5px;
+        }
+        .course-include li {
+            margin-bottom: 10px;
+        }
+        .preview-video, .course-introduction {
+            margin-bottom: 20px;
+        }
+       .preview-video {
+          color: #333;
+          position: absolute;
+          top: 28%;
+
+       }
+       .preview-video a  , .preview-video i{
+         color: var(--main-color);
+    
+       }
+       .scrollable-paragraph {
+          max-height: 200px; /* يمكنك ضبط هذا القيمة حسب الحاجة */
+          overflow-y: auto;
+               }
+       @media (max-width: 770px) {
+        .preview-video {
+           position: static !important;
+          top: auto; 
+           }
+       }
+
+   </style>
+</head>
+<body>
+
+<div class="course-landing  container mt-5">
+    <div class="row">
+        <div class="col-md-8">
+            <div class=" bg-dark p-4">
+                <span><a href="">Development</a> > <a href="">Programming Languages</a> > <a href="">Python</a></span>
+                <h2>The Python and Django Learning Guide</h2>
+                <p>تعلم لغة بايثون باللغة العربية من الصفر</p>
+                <div class="star-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star" ></i> <span>(5)</span> <a class="students-number" href="" > 79,494 students</a>
+                    
+                  </div>
+                  <div class="mt-3 mb-3">
+                      <span style="margin-top: 5px;">Created by <a href="">Mr/ mohamed Ahmed</a></span>
+                  </div>
+                  <div class="d-flex ">
+                    <div>
+                        <span><i class="fa-solid fa-pen-to-square mx-2"></i>Last updated 10/2021</span>
+                    </div>
+                    <div>
+                        <span><i class="fa-solid fa-globe mx-2"></i>Arabic</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- start card of details course -->
+        <div class="col-md-4 ">
+            <div class="course-sidebar">
+                <img src="./img/paython cor.png" class="img-fluid mb-3 align-items-center text-center" alt="Course Preview">
+                <div class="course-price">£3,099.99</div>
+                <button class="btn  btn-block" style="background-color: var(--main-color); color: white ;">Add to cart</button>
+                <button class="btn btn-secondary btn-block">Buy now</button>
+                <p class="mt-3">This course includes:</p>
+                <ul class="course-include" style="color: black;">
+                    <li><i class="fa-solid fa-clapperboard"></i> 9 hours on-demand video</li>
+                    <li><i class="fa-solid fa-download"></i>1 downloadable resource/li>
+                    <li><i class="fa-solid fa-mobile-screen-button"></i>Access on mobile and TV</li>
+                    <li><i class="fa-solid fa-infinity"></i>Full lifetime access</li>
+                    <li><i class="fa-solid fa-trophy"></i>Certificate of completion</li>    
+                </ul>
+                <input  style="padding: 5px 17px ;"  type="text" class="my-3 col-12 " placeholder="Enter Coupon" >
+                <button class="btn btn-light btn-block">Apply Coupon</button>
+                <button class="btn btn-light btn-block">Share</button>
+                <button class="btn btn-light btn-block">Gift this course</button>
+                <h5>Training 5 or more people?</h5>
+                <button class="btn btn-dark btn-block">Try Udemy Business</button>
+            </div>
+        </div>
+        <!-- end card of details course -->   
+         
+        
+        <div class="preview-video col-xl-8 col-lg-8 col-md-6 col-12" >
+
+         <!-- start Course-information -->
+          <section class="Course-information" >
+        <div class="container mt-5" >
+            <div class="row">
+                <div class="col-12 " style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;" >
+                    <div class="m-3">
+                        <h5 >What you'll learn</h5>
+                      <p ><i class="fa fa-check" aria-hidden="true"></i> ستتمكن من فهم لغة بايثون</p>
+    
+                    </div>
+    
+                </div>
+            </div>
+          </div>
+    
+        <div class="container mt-5"style="z-index: -1;">
+            <div class="row">
+                <div class="col-12 " style="box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;">
+                    <div class="m-3">
+                        <h5 >Top companies offer this course to their employees</h5>
+                      <p >
+                        <i class="fa fa-check" aria-hidden="true"></i> This course was selected for our collection of top-rated courses trusted by businesses worldwide. 
+                        <a href="">. Learn more</a>
+                    </p>
+                    <ul class="d-flex justify-content-between">
+                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/carmex2 11.webp" alt=""></li>
+                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/foreo 8.webp" alt=""></li>
+                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/beatswell 5.webp" alt=""></li>
+                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/febella 3.png" alt=""></li>
+                        <li style="width: 75px ; height: 75px ;"><img style="width: 100%;" src="./img/gamar 2.png" alt=""></li>
+                        <li style="width: 75px ; height: 75px ; z-index: -1;"><img style="width: 100%;" src="./img/Holland-and-Barrett.png" alt=""></li>
+                    </ul>
+    
+                    </div>
+    
+                </div>
+            </div>
+          </div>
+          <div class="container mt-5" >
+            <h6 style="font-size: 24px ;">Course Content</h6>
+           <div class="row">
+            <div class="d-flex justify-content-between col-12">
+                <small>6 sections • 75 lectures • 8h 44m total length</small>
+                <a href="" style="z-index: -1;" > Expand all sections</a>
+            </div>
+          </div>
+          <div>
+              <div >
+                <div class="row mt-3">
+                  <div class="col-12" style="z-index: -1;">
+                    <div class="intro-section d-flex justify-content-between px-3 align-items-center text-center row"  style="background-color: #f7f9fa;">
+                      <h6 class="intro-title d-flex align-items-center ">
+                        <i  class="fas fa-chevron-down ml-2 m-2"></i>  Introduction
+                      </h6>
+                      <span  class="m-2">Lectures <span class="m-2">24 Min</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="z-index: -1;" >
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <div class="d-flex justify-content-between px-3 align-items-center text-center row"  >
+                      <h6 class=" d-flex align-items-center ">
+                        
+                        <a href=""><i class="fas fa-video mr-2"></i>Setuo the Environment</a>
+                      </h6>
+                      <span  class="m-2"> <a href="">preview</a> <span class="m-2">24 Min</span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </section> 
+         <!-- end Course-information -->
+
+
+         <!-- start Requirements -->
+          <div class="container mt-5" style="z-index: -1;">
+    <div class="row">
+        <div  class="col-12">
+            <span style="font-size: 24px; font-weight: 700;" >Requirements</span>
+    <p style="list-style: circle; margin-top: 10px; font-size: 16px; color: #000000b5;">لا تحتاج لاي مؤهلات، هذا الكورس مخصص للاشخاص الذين لا يعرفون شي عن البرمجة</p>
+
+        </div>
+
+    </div>
+    
+           </div>
+          <!-- end Requirements -->
+
+
+
+         <!-- start Description -->
+      
+         <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <span style="font-size: 24px; font-weight: 700;">Description</span>
+                    <p class="scrollable-paragraph" style="font-size: 16px; margin: 10px 0; color: #000000b5;">
+                        هذه الدورة المفصلة في المستوى الاول والثاني من بايثون حيث افترض الشخص الذي امامي لا يعرف اي شي عن عالم البرمجة
+                        ستتمكن من خلال هذه الدورة من الدخول الى عالم البرمجة وفهم اساسيات اللغات البرمجية. لا تحتاج الى اي مؤهلات للدخول الى هذه الدورة،
+                        تتميز هذه الدورة بأنها مفصلة ولكن ليس فيها تشعبات وتفاصيل غير اساسية.
+                        Become a Python Programmer and learn one of employer's most requested skills of 2022!
+                        This is the most yet straightforward course for the Python programming language on Udemy!
+                        Whether you have never programmed before, already know basic syntax, or want to learn about the advanced features of Python, 
+                        this course is for you! In this course, we will teach you Python 3.
+                        Become a Python Programmer and learn one of employer's most requested skills of 2022!
+                        This is the most yet straightforward course for the Python programming language on Udemy!
+                        Whether you have never programmed before, already know basic syntax, or want to learn about the advanced features of Python, 
+                        this course is for you! In this course, we will teach you Python 3.
+                        Become a Python Programmer and learn one of employer's most requested skills of 2022!
+                        This is the most yet straightforward course for the Python programming language on Udemy!
+                        Whether you have never programmed before, already know basic syntax, or want to learn about the advanced features of Python, 
+                        this course is for you! In this course, we will teach you Python 3.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+          <!-- end Description -->
+
+        </div>
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
