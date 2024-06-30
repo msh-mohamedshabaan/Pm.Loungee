@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Design</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .card {
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .blockquote {
+      font-size: 1rem;
+      line-height: 1.5;
+      height: 8rem; /* Set a fixed height for the blockquote */
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 3; /* Limit the number of lines to 3 */
+      -webkit-box-orient: vertical;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .avatar-container {
+      text-align: center;
+    }
+
+    .video-link {
+      color: #6c63ff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+    }
+    .video-link span {
+        font-weight: 600;
+    }
+    .video-link:hover {
+      color: #5144c1;
+      text-decoration: underline;
+    }
+
+    .video-icon {
+        width: 35px;
+    height: 35px;
+    min-width: 35px; /* إضافة حد أدنى للعرض */
+    min-height: 35px; /* إضافة حد أدنى للارتفاع */
+    background-color: #7b0475;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 20px;
+    overflow: hidden; /* لمنع تجاوز المحتوى */
+    flex-shrink: 0; /* لمنع الانكماش */
+}
+    
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h2 class=" mb-4">How Learners Like You Are Achieving Their Goals</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="avatar-container mb-3">
+              <div class="avatar bg-dark text-white rounded-circle">WA</div>
+            </div>
+            <blockquote class="blockquote mb-0">
+              <p>"I am proud to say that after a few months of being a bit unsure, I passed my exam and am now an AWS Certified Cloud Practitioner. This content was clear, concise and the CGP exam readiness."</p>
+            </blockquote>
+            <hr>
+            <a href="#" class="video-link mt-auto">
+              <div class="video-icon me-2">
+                <i class="fas fa-video"></i>
+              </div>
+              <span>NEW! Ultimate AWS Certified Cloud Practitioner: 2023</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="avatar-container mb-3">
+              <div class="avatar bg-dark text-white rounded-circle">BF</div>
+            </div>
+            <blockquote class="blockquote mb-0">
+              <p>"This course helped me freshen up on my product manager skills and land a job at Facebook! Thanks guys :)"</p>
+            </blockquote>
+            <hr>
+            <a href="#" class="video-link mt-auto">
+              <div class="video-icon me-2">
+                <i class="fas fa-video"></i>
+              </div>
+              <span>Become a Product Manager | Learn the Skills & Get the Job</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="avatar-container mb-3">
+              <div class="avatar bg-dark text-white rounded-circle">PW</div>
+            </div>
+            <blockquote class="blockquote mb-0">
+              <p>"One of the best courses on management and leadership I have come across on the Udemy platform. Highly relatable. Would help anyone become a better manager."</p>
+            </blockquote>
+            <hr>
+            <a href="#" class="video-link mt-auto">
+              <div class="video-icon me-2">
+                <i class="fas fa-video"></i>
+              </div>
+              <span>Leadership: Practical Leadership Skills</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 mb-4">
+        <div class="card h-100">
+          <div class="card-body d-flex flex-column">
+            <div class="avatar-container mb-3">
+              <div class="avatar bg-dark text-white rounded-circle">SG</div>
+            </div>
+            <blockquote class="blockquote mb-0">
+              <p>"I highly benefited from this course and would recommend it to anyone who wants to become..."</p>
+            </blockquote>
+            <hr>
+            <a href="#" class="video-link mt-auto">
+              <div class="video-icon me-2">
+                <i class="fas fa-video"></i>
+              </div>
+              <span>TJ</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
