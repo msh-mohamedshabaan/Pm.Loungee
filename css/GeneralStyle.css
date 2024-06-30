@@ -48,6 +48,7 @@
   }
   .stars {
     margin: 0;
+    color: #f0ad4e;
   }
 
 
@@ -58,7 +59,7 @@
   animation: go-and-back infinite 5s linear both;
 }
 
-@keyframes go-and-back{
+/* @keyframes go-and-back{
   0%{
     left: 0;
     color: rgb(222, 152, 1);
@@ -70,7 +71,7 @@
     color: var(--main-color);
   }
   
-}
+} */
 
 @keyframes bounce{
     0%{

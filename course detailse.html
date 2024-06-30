@@ -23,6 +23,25 @@
             color: white;
             position: relative;
         }
+        .course-landing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 300px;
+            background-color: #343a40;
+            z-index:-1;
+        }
+        .course-content {
+            position: relative;
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            z-index: 2;
+            color: white;
+        }
         .course-landing a {
             color: #c0c4fc ;
         }
@@ -38,10 +57,11 @@
         }
         .course-sidebar {
             background-color: #fff;
+            margin-top: 150px;
+            margin-right: 25px;
             padding: 20px;
-            border-radius: 10px;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        color: #333;
+            color: #333;
             
         }
         .course-sidebar i , .course-sidebar a{
@@ -68,7 +88,7 @@
        .preview-video {
           color: #333;
           position: absolute;
-          top: 28%;
+          top: 35%;
 
        }
        .preview-video a  , .preview-video i{
@@ -76,7 +96,7 @@
     
        }
        .scrollable-paragraph {
-          max-height: 200px; /* يمكنك ضبط هذا القيمة حسب الحاجة */
+          max-height: 200px; 
           overflow-y: auto;
                }
        @media (max-width: 770px) {
@@ -189,7 +209,7 @@
            <div class="row">
             <div class="d-flex justify-content-between col-12">
                 <small>6 sections • 75 lectures • 8h 44m total length</small>
-                <a href="" style="z-index: -1;" > Expand all sections</a>
+                <a href="" > Expand all sections</a>
             </div>
           </div>
           <div>
@@ -278,3 +298,51 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+\\\
+
+
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+  .content {
+    flex: 1;
+  }
+
+  .footer {
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    display: none; 
+    z-index: 999; 
+  }
+
+/
+  html, body {
+    overflow-x: hidden;
+    height: 100%;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+  body::after {
+    content: '';
+    display: block;
+    height: 150px; 
+  }
+
+  .footer.visible {
+    display: block;
+  }
