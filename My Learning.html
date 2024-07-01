@@ -7,101 +7,79 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/GeneralStyle.css">
     <style>
-h1 {
+        body {
+    font-family: Arial, sans-serif;
+}
+
+header h1 {
     font-size: 2.5rem;
-    color: #ffffff;
+    font-weight: 600;
 }
-.nav-tabs .nav-link {
-  color: #d2d0d0;
+
+nav .nav-link.active {
+    border-bottom: 2px solid white;
 }
-.nav-tabs .nav-link:hover {
-  color: white;
-}
-.card {
-    border: 1px solid var(--main-color);
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
-    width: 260px;
-}
+
 .card-img-top {
-    height: 150px;
+    height: 200px;
     object-fit: cover;
 }
+
 .card-title {
-    font-size: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 3rem; 
+    line-height: 1.5rem;
+    cursor: pointer;
 }
-.card-text {
-    color: #6c757d;
+a:hover{
+text-decoration: none;
 }
-.btn {
-    color: var(--main-color);
+
+header{
+    background-color: #2d2f31;
 }
-.btn:hover {
-    border: 1px solid var(--main-color);
-    color: var(--color-blue1);
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
+
+h1 {
+    animation: slideInLeft 1s ease-out;
+}
+
     </style>
 </head>
 <body>
-    <div >
-        <div class="row by-4 bg-dark pb-5">
-            <div class="col-12 mt-4">
-                <div class="container">
-
-               
-                <h1>My learning</h1> 
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link " href="#">All courses</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">My Lists</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Wishlist</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Archived</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Learning tools</a>
-                    </li>
-                </ul>
-            </div>
-            </div>
+    <header class=" text-white p-5 ">
+        <div class="container">
+            <h1 class="mb-0">My learning</h1>
         </div>
-        <div class="row mt-4 " style="gap: 5px; justify-content: center;">
-            <div class="col-xl-3 col-lg-3 col-md-4 col-6  m-2">
-                <div class="card" >
-                    <img src="./img/python.jpg" class="card-img-top" alt="Introduction To Python Programming">
-                    <div class="card-body">
+    </header>
+    <main class="container my-4">
+        <div class="row">
+            <a class="col-md-4 mb-4 mt-3">
+                <div class="card">
+                    <img src="./img/paython cor.png" class="card-img-top" alt="Introduction To Python Programming">
+                    <div class="card-body ">
                         <h5 class="card-title">Introduction To Python Programming</h5>
-                        <p class="card-text">Avinash Jain, The Codex</p>
-                        <a href="#" class="btn ">START COURSE</a>
+                        <p class="card-text text-dark">Avinash Jain, The Codex</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-6 m-2 ">
-                <div class="card" >
-                    <img src="./img/python.jpg" class="card-img-top" alt="Introduction To Python Programming">
-                    <div class="card-body">
-                        <h5 class="card-title">Introduction To Python Programming</h5>
-                        <p class="card-text">Avinash Jain, The Codex</p>
-                        <a href="#" class="btn ">START COURSE</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-4 col-6 m-2">
-                <div class="card" >
-                    <img src="./img/python.jpg" class="card-img-top" alt="Introduction To Python Programming">
-                    <div class="card-body">
-                        <h5 class="card-title">Introduction To Python Programming</h5>
-                        <p class="card-text">Avinash Jain, The Codex</p>
-                        <a href="#" class="btn ">START COURSE</a>
-                    </div>
-                </div>
-            </div>
+            </a>    
         </div>
-    </div>
-
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
+</html> 
