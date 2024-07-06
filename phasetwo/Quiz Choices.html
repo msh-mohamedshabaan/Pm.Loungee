@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Maker</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+
+    .quiz-container {
+      border: 1px solid #dee2e6;
+    }
+
+    .quiz-container .form-check-label {
+      padding: 10px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      display: block;
+    }
+
+    .quiz-container .form-check-input:checked + .form-check-label {
+      background-color: #f8d7da;
+    }
+
+    .quiz-container .btn {
+      width: 100px;
+      transition: all 0.3s ease;
+    }
+
+    .quiz-container .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .quiz-container .btn:active {
+      transform: scale(0.9);
+    }
+
+    .progress-bar {
+      background-color: #ff6666;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+    <a class="navbar-brand" href="#">Quiz </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Demo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Blog</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <div class="text-center mb-4">
+      <h2>English language test, first level</h2>
+      <p>The duration of the exam is 15 minutes.</p>
+      <button class="btn btn-warning">start now</button>
+    </div>
+
+    <div class="quiz-container bg-light p-4 rounded">
+      <div class="progress mb-3" style="height: 10px;">
+        <div class="progress-bar" role="progressbar" style="width: 7%;" aria-valuenow="7" aria-valuemin="0" aria-valuemax="100"></div>
+      </div>
+      <div class="d-flex justify-content-between mb-3">
+        <span>Category: English A</span>
+        <span>04:54</span>
+        <span>1 / 14</span>
+      </div>
+      <h5>I have Flamenco classes .....</h5>
+      <form>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer" id="option1">
+          <label class="form-check-label" for="option1">A) in Saturday afternoons</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer" id="option2">
+          <label class="form-check-label" for="option2">B) by Saturday afternoons</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer" id="option3">
+          <label class="form-check-label" for="option3">C) on Saturday afternoons</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="answer" id="option4">
+          <label class="form-check-label" for="option4">D) at Saturday afternoons</label>
+        </div>
+      </form>
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn btn-danger mr-2">Finish</button>
+        <button class="btn btn-warning">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
