@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .question-type {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            background-color: #ffffff;
+        }
+
+        .question-type h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Exam Builder</h1>
+        
+        <div class="mb-4">
+            <label for="questionTypeSelect" class="form-label">Select Question Type:</label>
+            <select class="form-select" id="questionTypeSelect">
+                <option value="drag-and-drop">Drag and Drop</option>
+                <option value="multiple-choice">Multiple Choice</option>
+                <option value="checkbox">Checkbox</option>
+            </select>
+        </div>
+        
+        <!-- Drag and Drop Section -->
+        <div id="drag-and-drop" class="question-type">
+            <h2>Drag and Drop Question</h2>
+            <div class="form-group">
+                <label for="dragQuestion1">Question 1</label>
+                <input type="text" class="form-control" id="dragQuestion1" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <label for="dragAnswer1">Answer 1</label>
+                <input type="text" class="form-control" id="dragAnswer1" placeholder="Enter the answer">
+            </div>
+            <div class="form-group">
+                <label for="dragQuestion2">Question 2</label>
+                <input type="text" class="form-control" id="dragQuestion2" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <label for="dragAnswer2">Answer 2</label>
+                <input type="text" class="form-control" id="dragAnswer2" placeholder="Enter the answer">
+            </div>
+            <button class="btn btn-info mb-3">Add More</button>
+        </div>
+        
+        <!-- Multiple Choice Section -->
+        <div id="multiple-choice" class="question-type">
+            <h2>Multiple Choice Question</h2>
+            <div class="form-group">
+                <label for="mcQuestion">Question</label>
+                <input type="text" class="form-control" id="mcQuestion" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 1">
+                <input type="radio" name="correctOption" class="ml-2"> Correct
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 2">
+                <input type="radio" name="correctOption" class="ml-2"> Correct
+            </div>
+            <button class="btn btn-info mb-3">Add Option</button>
+        </div>
+        
+        <!-- Checkbox Section -->
+        <div id="checkbox" class="question-type">
+            <h2>Checkbox Question</h2>
+            <div class="form-group">
+                <label for="cbQuestion">Question</label>
+                <input type="text" class="form-control" id="cbQuestion" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 1">
+                <input type="checkbox" class="ml-2"> Correct
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 2">
+                <input type="checkbox" class="ml-2"> Correct
+            </div>
+            <button class="btn btn-info mb-3">Add Option</button>
+        </div>
+        
+        <button class="btn btn-warning mt-4">Add Question</button>
+        <button class="btn btn-dark mt-4">Question Bank</button>
+        <button class="btn btn-success mt-4">Show Exam</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

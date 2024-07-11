@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, textarea, select, button {
+            padding: 10px;
+            margin-top: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .question {
+            background-color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .question h2 {
+            margin-top: 0;
+        }
+
+        .question-bank, .exam-view {
+            display: none;
+        }
+
+        .draggable {
+            padding: 5px;
+            background-color: #e0e0e0;
+            border: 1px solid #ccc;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+
+        .droppable {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border: 1px dashed #ccc;
+            min-height: 50px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add Exam Questions</h1>
+    <form id="question-form">
+        <label for="question-type">Question Type:</label>
+        <select id="question-type">
+            <option value="multiple-choice">Multiple Choice</option>
+            <option value="multiple-correct">Multiple Correct Answers</option>
+            <option value="drag-drop">Drag and Drop</option>
+        </select>
+
+        <label for="question-text">Question Text:</label>
+        <textarea id="question-text" required></textarea>
+
+        <div id="options-container">
+            <label for="option-1">Option 1:</label>
+            <input type="text" id="option-1" class="option-input">
+            <label>
+                <input type="checkbox" class="correct-answer"> Correct Answer
+            </label>
+            <button type="button" onclick="addOption()">Add Option</button>
+        </div>
+
+        <div id="drag-drop-container" style="display:none;">
+            <label for="question-1">Question 1:</label>
+            <input type="text" id="drag-question-1" class="drag-question-input">
+            <label for="answer-1">Answer 1:</label>
+            <input type="text" id="drag-answer-1" class="drag-answer-input">
+            <button type="button" onclick="addDragDrop()">Add Drag and Drop Pair</button>
+        </div>
+
+        <button type="submit">Add Question</button>
+    </form>
+
+    <button onclick="viewQuestionBank()">Question Bank</button>
+    <button onclick="viewExam()">View Exam</button>
+
+    <h1>Question Bank</h1>
+    <div id="questions-container" class="question-bank"></div>
+
+    <h1>Exam View</h1>
+    <div id="exam-container" class="exam-view"></div>
+
+    <script>
+        let optionCount = 1;
+        let dragDropCount = 1;
+
+        document.getElementById('question-type').addEventListener('change', function () {
+            const selectedType = this.value;
+            const optionsContainer = document.getElementById('options-container');
+            const dragDropContainer = document.getElementById('drag-drop-container');
+
+            if (selectedType === 'drag-drop') {
+                optionsContainer.style.display = 'none';
+                dragDropContainer.style.display = 'block';
+            } else {
+                optionsContainer.style.display = 'block';
+                dragDropContainer.style.display = 'none';
+            }
+        });
+
+        function addOption() {
+            optionCount++;
+            const optionsContainer = document.getElementById('options-container');
+            const newOption = document.createElement('div');
+            newOption.innerHTML = `
+                <label for="option-${optionCount}">Option ${optionCount}:</label>
+                <input type="text" id="option-${optionCount}" class="option-input">
+                <label>
+                    <input type="checkbox" class="correct-answer"> Correct Answer
+                </label>
+            `;
+            optionsContainer.insertBefore(newOption, optionsContainer.children[optionsContainer.children.length - 1]);
+        }
+
+        function addDragDrop() {
+            dragDropCount++;
+            const dragDropContainer = document.getElementById('drag-drop-container');
+            const newPair = document.createElement('div');
+            newPair.innerHTML = `
+                <label for="drag-question-${dragDropCount}">Question ${dragDropCount}:</label>
+                <input type="text" id="drag-question-${dragDropCount}" class="drag-question-input">
+                <label for="drag-answer-${dragDropCount}">Answer ${dragDropCount}:</label>
+                <input type="text" id="drag-answer-${dragDropCount}" class="drag-answer-input">
+            `;
+            dragDropContainer.insertBefore(newPair, dragDropContainer.children[dragDropContainer.children.length - 1]);
+        }
+
+        document.getElementById('question-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const questionType = document.getElementById('question-type').value;
+            const questionText = document.getElementById('question-text').value;
+            let options = [];
+            let correctAnswers = [];
+
+            if (questionType === 'drag-drop') {
+                options = Array.from(document.getElementsByClassName('drag-question-input')).map(input => input.value);
+                correctAnswers = Array.from(document.getElementsByClassName('drag-answer-input')).map(input => input.value);
+            } else {
+                options = Array.from(document.getElementsByClassName('option-input')).map(input => input.value);
+                correctAnswers = Array.from(document.getElementsByClassName('correct-answer')).map(input => input.checked);
+            }
+
+            const question = {
+                type: questionType,
+                text: questionText,
+                options: options,
+                correctAnswers: correctAnswers
+            };
+
+            let questions = JSON.parse(localStorage.getItem('questions')) || [];
+            questions.push(question);
+            localStorage.setItem('questions', JSON.stringify(questions));
+
+            alert('Question added successfully!');
+            document.getElementById('question-form').reset();
+            optionCount = 1;
+            dragDropCount = 1;
+            document.getElementById('options-container').innerHTML = `
+                <label for="option-1">Option 1:</label>
+                <input type="text" id="option-1" class="option-input">
+                <label>
+                    <input type="checkbox" class="correct-answer"> Correct Answer
+                </label>
+                <button type="button" onclick="addOption()">Add Option</button>
+            `;
+            document.getElementById('drag-drop-container').innerHTML = `
+                <label for="drag-question-1">Question 1:</label>
+                <input type="text" id="drag-question-1" class="drag-question-input">
+                <label for="drag-answer-1">Answer 1:</label>
+                <input type="text" id="drag-answer-1" class="drag-answer-input">
+                <button type="button" onclick="addDragDrop()">Add Drag and Drop Pair</button>
+            `;
+
+            loadQuestionBank();
+        });
+
+        function viewQuestionBank() {
+            document.getElementById('questions-container').style.display = 'block';
+            document.getElementById('exam-container').style.display = 'none';
+            loadQuestionBank();
+        }
+
+        function loadQuestionBank() {
+            const questions = JSON.parse(localStorage.getItem('questions')) || [];
+            const container = document.getElementById('questions-container');
+            container.innerHTML = '';
+
+            questions.forEach((question, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('question');
+                questionElement.innerHTML = `
+                    <h2>Question ${index + 1}</h2>
+                    <p><strong>Type:</strong> ${question.type}</p>
+                    <p><strong>Text:</strong> ${question.text}</p>
+                    <p><strong>Options:</strong></p>
+                    <ul>
+                        ${question.options.map((option, i) => `
+                            <li class="${question.correctAnswers[i] ? 'correct' : 'incorrect'}">
+                                ${option} ${question.correctAnswers[i] ? '(Correct)' : '(Incorrect)'}
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+                container.appendChild(questionElement);
+            });
+        }
+
+        function viewExam() {
+            document.getElementById('questions-container').style.display = 'none';
+            document.getElementById('exam-container').style.display = 'block';
+            loadExamView();
+        }
+
+        function loadExamView() {
+            const questions = JSON.parse(localStorage.getItem('questions')) || [];
+            const container = document.getElementById('exam-container');
+            container.innerHTML = '';
+
+            questions.forEach((question, index) => {
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('question');
+                questionElement.innerHTML = `
+                    <h2>Question ${index + 1}</h2>
+                    <p><strong>Type:</strong> ${question.type}</p>
+                    <p><strong>Text:</strong> ${question.text}</p>
+                    <div class="answers"></div>
+                `;
+                container.appendChild(questionElement);
+
+                const answersContainer = questionElement.querySelector('.answers');
+
+                if (question.type === 'multiple-choice' || question.type === 'multiple-correct') {
+                    question.options.forEach((option, i) => {
+                        const answerElement = document.createElement('label');
+                        answerElement.innerHTML = `
+                            <input type="${question.type === 'multiple-choice' ? 'radio' : 'checkbox'}" name="answer-${index}" value="${option}">
+                            ${option}
+                        `;
+                        answersContainer.appendChild(answerElement);
+
+                        answerElement.addEventListener('change', function () {
+                            if (question.correctAnswers[i]) {
+                                answerElement.classList.add('correct');
+                            } else {
+                                answerElement.classList.add('incorrect');
+                            }
+                        });
+                    });
+                } else if (question.type === 'drag-drop') {
+                    const draggableItems = question.options.map((option, i) => ({ id: `drag-${index}-${i}`, content: option }));
+                    const droppableItems = question.correctAnswers.map((answer, i) => ({ id: `drop-${index}-${i}`, content: answer }));
+
+                    draggableItems.forEach(item => {
+                        const draggable = document.createElement('div');
+                        draggable.classList.add('draggable');
+                        draggable.setAttribute('id', item.id);
+                        draggable.setAttribute('draggable', true);
+                        draggable.textContent = item.content;
+                        answersContainer.appendChild(draggable);
+
+                        draggable.addEventListener('dragstart', function (e) {
+                            e.dataTransfer.setData('text/plain', item.id);
+                        });
+                    });
+
+                    droppableItems.forEach(item => {
+                        const droppable = document.createElement('div');
+                        droppable.classList.add('droppable');
+                        droppable.setAttribute('id', item.id);
+                        droppable.textContent = item.content;
+                        answersContainer.appendChild(droppable);
+
+                        droppable.addEventListener('dragover', function (e) {
+                            e.preventDefault();
+                        });
+
+                        droppable.addEventListener('drop', function (e) {
+                            e.preventDefault();
+                            const data = e.dataTransfer.getData('text/plain');
+                            const draggedElement = document.getElementById(data);
+                            if (draggedElement) {
+                                droppable.appendChild(draggedElement);
+                                if (item.content === draggedElement.textContent.trim()) {
+                                    droppable.classList.add('correct');
+                                } else {
+                                    droppable.classList.add('incorrect');
+                                }
+                            }
+                        });
+                    });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
