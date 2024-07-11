@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #28a745;
+            /* Green */
+            --secondary-color: #6c757d;
+            /* Gray */
+            --accent-color: #ff8c00;
+            /* Orange */
+            --background-color: #f8f9fa;
+            /* Light Gray */
+            --text-color: #343a40;
+            /* Dark Gray */
+            --button-hover-color: #218838;
+            /* Darker Green */
+        }
+        .fa-database {
+            color: var(--accent-color);
+        }
+        .fa-tv {
+            color: var(--accent-color);
+        }
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+        }
+
+        .container {
+            max-width: 800px;
+        }
+
+        h1,
+        h2 {
+            color: var(--primary-color);
+        }
+
+        .form-select,
+        .form-control {
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        .question-type {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid var(--secondary-color);
+            border-radius: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .question-type:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-custom {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-weight: bold;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .btn-custom:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+        }
+
+        .btn-secondary-custom {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-accent-custom {
+            background-color: var(--accent-color);
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--button-hover-color);
+        }
+         .btn  {
+            color: white;
+         }
+         .btn:hover  {
+            color: white;
+         }
+
+        .form-select {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #ffffff;
+            border: 2px solid var(--primary-color);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 10px rgba(255, 140, 0, 0.3);
+        }
+
+
+.Bank {
+    background-color: rgb(212, 214, 214) ;
+    color: black;
+}
+.Bank:hover {
+    background-color: rgb(212, 214, 214) ;
+    color: black;
+}
+
+
+    .add-exam{
+    /* transform: translateX(20vw); */
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 30px;
+    color: rgb(255, 60, 0);
+    background-color: rgb(212, 214, 214);
+    box-shadow: 0 0 30px rgb(212, 214, 214);
+    -webkit-box-reflect: below 0px linear-gradient(transparent 10%, #ffffff55);
+}
+
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5 ">
+        <div class="text-center">
+            <button  class="add-exam mb-5 ">Add Exam</button>
+            <h1 class="text-center mb-4 mt-5">Exam Builder</h1>
+        </div>
+
+        <div class="mb-4 text-center">
+            <label for="questionTypeSelect" class="form-label">Select Question Type:</label>
+            <br>
+            <select class="form-select" id="questionTypeSelect">
+                <option value="drag-and-drop">Drag and Drop</option>
+                <option value="multiple-choice">Multiple Choice</option>
+                <option value="checkbox">Checkbox</option>
+            </select>
+        </div>
+
+        <!-- Drag and Drop Section -->
+        <div id="drag-and-drop" class="question-type">
+            <h2>Drag and Drop Question
+                <i class="icon fas fa-list-ol" title="الاختيارات 1"></i>
+            </h2>
+            <div class="form-group">
+                <label for="dragQuestion1">Question 1</label>
+                <input type="text" class="form-control" id="dragQuestion1" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <label for="dragAnswer1">Answer 1</label>
+                <input type="text" class="form-control" id="dragAnswer1" placeholder="Enter the answer">
+            </div>
+            <div class="form-group">
+                <label for="dragQuestion2">Question 2</label>
+                <input type="text" class="form-control" id="dragQuestion2" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <label for="dragAnswer2">Answer 2</label>
+                <input type="text" class="form-control" id="dragAnswer2" placeholder="Enter the answer">
+            </div>
+            <button class="btn btn-accent-custom">Add Option</button>
+            <button class="btn btn-primary-custom">Add Question</button>
+        </div>
+
+        <!-- Multiple Choice Section -->
+        <div id="multiple-choice" class="question-type">
+            <h2>Multiple Choice Question
+                <i class="icon fas fa-list-ul" title="الاختيارات 2"></i>
+            </h2>
+            <div class="form-group">
+                <label for="mcQuestion">Question</label>
+                <input type="text" class="form-control" id="mcQuestion" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 1">
+                <input type="radio" name="correctOption" class="ml-2"> Correct
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 2">
+                <input type="radio" name="correctOption" class="ml-2"> Correct
+            </div>
+            <button class="btn btn-accent-custom">Add Option</button>
+            <button class="btn btn-primary-custom">Add Question</button>
+        </div>
+
+        <!-- Checkbox Section -->
+        <div id="checkbox" class="question-type">
+            <h2>Checkbox Question 
+                <i class="icon fas fa-tasks" title="الاختيارات 3"></i>
+            </h2>
+            <div class="form-group">
+                <label for="cbQuestion">Question</label>
+                <input type="text" class="form-control" id="cbQuestion" placeholder="Enter your question">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 1">
+                <input type="checkbox" class="ml-2"> Correct
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control mb-2" placeholder="Option 2">
+                <input type="checkbox" class="ml-2"> Correct
+            </div>
+            <button class="btn btn-accent-custom">Add Option</button>
+            <button class="btn btn-primary-custom">Add Question</button>
+        </div>
+        <div class="row">
+
+            
+            <button class="btn btn-secondary-custom mt-4 Bank col-12"> <i class="icon fas fa-database mx-2 " title="بنك الأسئلة"></i> Question Bank</button>
+            <hr>
+            <button class="btn btn-primary-custom mt-4 col-12 "><i class="icon fas fa-tv mx-2" title="العرض"></i> Show Exam</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
