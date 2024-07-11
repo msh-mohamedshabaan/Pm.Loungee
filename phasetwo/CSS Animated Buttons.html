@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animated Buttons</title>
+    <style>
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            position: relative; /* لتمكين الخلفية المتحركة */
+            overflow: hidden; 
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .button.button1:hover {
+            background-color: #28a745;
+        }
+
+        .button.button2:hover {
+            background-color: #dc3545;
+        }
+
+        .button.button3:hover {
+            background-color: #ffc107;
+        }
+
+        .button.button4:hover {
+            background-color: #17a2b8;
+            color: #fff;
+            box-shadow: 0 0 20px rgba(23, 162, 184, 0.7);
+        }
+
+        .button.button5:hover {
+            background-color: #6610f2;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 50%;
+        }
+
+        .button.button6:hover {
+            background-color: #6c757d;
+            color: #fff;
+            transform: rotate(360deg);
+        }
+
+        .button.button7:hover {
+            background-color: #fd7e14;
+            color: #fff;
+            box-shadow: 0 0 10px #fd7e14, 0 0 20px #fd7e14, 0 0 30px #fd7e14;
+        }
+
+        .button.button8:hover {
+            background-color: #dc3545;
+            color: #fff;
+            animation: shake 0.5s ease;
+        }
+
+        .button.button9:hover {
+            background-color: #28a745;
+            color: #fff;
+            animation: glow 1s infinite alternate;
+        }
+
+        .button.button10:hover {
+            background-color: #ffc107;
+            color: #000;
+            animation: color-change 1s infinite alternate;
+        }
+
+        /* تحريك الخلفية من اليسار إلى اليمين */
+        .button.button11 {
+            background-color: #6f42c1;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .button.button11::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: #28a745;
+            transition: left 0.3s ease;
+            z-index: -1;
+        }
+
+        .button.button11:hover::before {
+            left: 0;
+        }
+
+        /* تحريك الخلفية من الأسفل إلى الأعلى */
+        .button.button12 {
+            background-color: #fd7e14;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .button.button12::before {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #6610f2;
+            transition: top 0.3s ease;
+            z-index: -1;
+        }
+
+        .button.button12:hover::before {
+            top: 0;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0); }
+            25% { transform: translate(-5px, 0); }
+            50% { transform: translate(5px, 0); }
+            75% { transform: translate(-5px, 0); }
+            100% { transform: translate(0); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 10px #28a745; }
+            50% { box-shadow: 0 0 20px #28a745; }
+            100% { box-shadow: 0 0 10px #28a745; }
+        }
+
+        @keyframes color-change {
+            0% { background-color: #ffc107; }
+            50% { background-color: #dc3545; }
+            100% { background-color: #ffc107; }
+        }
+    </style>
+</head>
+<body>
+
+<button class="button button1">Button 1</button>
+<button class="button button2">Button 2</button>
+<button class="button button3">Button 3</button>
+<button class="button button4">Button 4</button>
+<button class="button button5">Button 5</button>
+<button class="button button6">Button 6</button>
+<button class="button button7">Button 7</button>
+<button class="button button8">Button 8</button>
+<button class="button button9">Button 9</button>
+<button class="button button10">Button 10</button>
+<button class="button button11">Button 11</button>
+
+<!-- زر جديد مع تحريك الخلفية من الأسفل إلى الأعلى -->
+<button class="button button12">Button 12</button>
+
+</body>
+</html>
