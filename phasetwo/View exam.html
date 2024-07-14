@@ -5,21 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Exam Maker</title>
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     :root {
       --bg-color: #f8f9fa;
       --border-color: #dee2e6;
       --correct-bg: #d4edda;
       --correct-border: #c3e6cb;
-      --incorrect-bg: #f8d7da;
+      --incorrect-bg: #4fe67a9b;
       --incorrect-border: #f5c6cb;
       --correct-hover: #ff6666;
-    }
-    .navbar-brand {
-      font-weight: bold;
+      --main-color: #28a745; /* الأخضر */
+      --hover-color: #218838; /* أخضر داكن للهوفر */
+      --text-color: #ffffff; /* اللون الأبيض للنص */
     }
     .quiz-container {
-      border: 1px solid #dee2e6;
+      border: 1px solid var(--border-color);
+    }
+    .quiz-container .form-check {
+      position: relative;
+      padding-left: 2.5rem; /* Adjust this value to your needs */
+      margin-bottom: 10px;
     }
     .quiz-container .form-check-label {
       padding: 10px;
@@ -27,16 +33,36 @@
       border-radius: 5px;
       display: block;
     }
+    .quiz-container .form-check-input {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px; /* Adjust this value to your needs */
+    }
     .quiz-container .form-check-input:checked + .form-check-label {
       background-color: var(--incorrect-bg);
     }
     .quiz-container .btn {
       width: 100px;
       transition: all 0.3s ease;
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  
+    }
+
+    .quiz-container .btn i {
+      margin: 0 5px;
+
     }
     .quiz-container .btn:hover {
       transform: scale(1.1);
       box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background-color: var(--hover-color);
+      border-color: var(--hover-color);
     }
     .quiz-container .btn:active {
       transform: scale(0.9);
@@ -74,24 +100,60 @@
     .progress {
       height: 20px;
     }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: var(--main-color);
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .sidebar h5 {
+      color: var(--text-color);
+      text-align: center;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px 0;
+      text-align: center;
+      transition: transform 0.3s;
+      color: var(--text-color);
+    }
+    .sidebar ul li:hover {
+      transform: scale(1.1);
+    }
+    .sidebar ul li a {
+      color: var(--text-color);
+      text-decoration: none;
+    }
+    .main-content {
+      margin-left: 220px; /* Adjust according to sidebar width */
+    }
   </style>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand" href="#">Quiz</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-      </ul>
-    </div>
-  </nav>
 
-  <div class="container mt-5">
+
+  <div class="sidebar">
+    <h5><i class="fas fa-question-circle"></i> Questions</h5>
+    <ul>
+      <li><a href="#question1"><i class="fas fa-list-alt"></i> Question 1</a></li>
+      <li><a href="#question2"><i class="fas fa-check-square"></i> Question 2</a></li>
+      <li><a href="#question3"><i class="fas fa-arrows-alt"></i> Question 3</a></li>
+      <li><a href="#question4"><i class="fas fa-list-alt"></i> Question 4</a></li>
+      <!-- Add more questions as needed -->
+    </ul>
+  </div>
+
+  <div class="container main-content mt-5">
     <div class="text-center mb-4">
       <h2>English language test, first level</h2>
-      <p>The duration of the exam is 15 minutes.</p>
+      <p><i class="far fa-clock"></i> The duration of the exam is 15 minutes.</p>
       <button class="btn btn-warning">Start now</button>
     </div>
 
@@ -101,12 +163,12 @@
       </div>
       <div class="d-flex justify-content-between mb-3">
         <span>Category: English A</span>
-        <span>04:54</span>
+        <span><i class="far fa-clock"></i> 04:54</span>
         <span>1 / 14</span>
       </div>
     </div>
 
-    <div class="quiz-container bg-light p-4 rounded">
+    <div class="quiz-container bg-light p-4 rounded" id="question1">
       <h5>I have Flamenco classes .....</h5>
       <form>
         <div class="form-check">
@@ -127,12 +189,12 @@
         </div>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-warning text mr-2">Finish</button>
-        <button class="btn btn-warning text">Next</button>
+        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
       </div>
     </div>
 
-    <div class="quiz-container bg-light p-4 rounded">
+    <div class="quiz-container bg-light p-4 rounded" id="question2">
       <h5>Select all the correct statements:</h5>
       <form>
         <div class="form-check">
@@ -153,39 +215,39 @@
         </div>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-warning text mr-2">Finish</button>
-        <button class="btn btn-warning text">Next</button>
+        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
+      </div>
+    </div>
+
+    <div class="quiz-container bg-light p-4 rounded" id="question3">
+      <h5>Drag the answers to the correct drop zones:</h5>
+      <form>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="answers" class="d-flex flex-column">
+              <div class="answer" data-answer="1">Answer 1</div>
+              <div class="answer" data-answer="2">Answer 2</div>
+              <div class="answer" data-answer="3">Answer 3</div>
+              <div class="answer" data-answer="4">Answer 4</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="dropzone" data-correct="1">Question 1</div>
+            <div class="dropzone" data-correct="2">Question 2</div>
+            <div class="dropzone" data-correct="3">Question 3</div>
+            <div class="dropzone" data-correct="4">Question 4</div>
+          </div>
+        </div>
+      </form>
+      <div class="d-flex justify-content-end mt-4">
+        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
       </div>
     </div>
   </div>
 
-  <div class="container quiz-container">
-    <div class="row mt-2">
-      <div class="col-md-6">
-        <h5>Drag the answers to the correct drop zones:</h5>
-        <div id="answers" class="d-flex flex-column">
-          <div class="answer" data-answer="1">Answer 1</div>
-          <div class="answer" data-answer="2">Answer 2</div>
-          <div class="answer" data-answer="3">Answer 3</div>
-          <div class="answer" data-answer="4">Answer 4</div>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <h5>Questions:</h5>
-        <div class="mt-3">
-          <div class="dropzone" data-correct="1">Question 1</div>
-          <div class="dropzone" data-correct="2">Question 2</div>
-          <div class="dropzone" data-correct="3">Question 3</div>
-          <div class="dropzone" data-correct="4">Question 4</div>
-        </div>
-      </div>
-    </div>
-    <div class="d-flex justify-content-end mt-4">
-      <button class="btn btn-warning text mr-2">Finish</button>
-      <button class="btn btn-warning text">Next</button>
-    </div>
-  </div>
-
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
