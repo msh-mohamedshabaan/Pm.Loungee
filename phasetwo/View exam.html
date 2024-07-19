@@ -8,16 +8,19 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
     :root {
-      --bg-color: #f8f9fa;
+      --bg-color: #ffffff; /* اللون الأبيض */
+      --sidebar-bg-color: #f3f6f7; /* لون السايدبار */
       --border-color: #dee2e6;
       --correct-bg: #d4edda;
       --correct-border: #c3e6cb;
-      --incorrect-bg: #4fe67a9b;
+      --incorrect-bg: #d2d9d2aa;
       --incorrect-border: #f5c6cb;
       --correct-hover: #ff6666;
       --main-color: #28a745; /* الأخضر */
+      --main-color2: #818383; /* جري فاتح  */
       --hover-color: #218838; /* أخضر داكن للهوفر */
       --text-color: #ffffff; /* اللون الأبيض للنص */
+      --sidebar-text-color: #000000; /* لون النص في السايدبار */
     }
     .quiz-container {
       border: 1px solid var(--border-color);
@@ -51,12 +54,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-  
     }
-
     .quiz-container .btn i {
       margin: 0 5px;
-
     }
     .quiz-container .btn:hover {
       transform: scale(1.1);
@@ -106,12 +106,12 @@
       left: 0;
       height: 100%;
       width: 200px;
-      background-color: var(--main-color);
+      background-color: var(--sidebar-bg-color);
       padding: 20px;
       overflow-y: auto;
     }
     .sidebar h5 {
-      color: var(--text-color);
+      color: var(--sidebar-text-color);
       text-align: center;
     }
     .sidebar ul {
@@ -122,39 +122,64 @@
       padding: 10px 0;
       text-align: center;
       transition: transform 0.3s;
-      color: var(--text-color);
+      color: var(--sidebar-text-color);
     }
     .sidebar ul li:hover {
       transform: scale(1.1);
     }
     .sidebar ul li a {
-      color: var(--text-color);
+      color: var(--sidebar-text-color);
       text-decoration: none;
     }
     .main-content {
       margin-left: 220px; /* Adjust according to sidebar width */
+      padding-top: 60px; /* Space for the navbar */
     }
+    .navbar-custom {
+      background-color: var(--main-color);
+    }
+    .navbar-custom .navbar-brand {
+      color: var(--text-color);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .btn-start {
+      background-color: transparent;
+      border-color: var(--main-color);
+    }
+    .btn-start:hover {
+      background-color: var(--main-color);
+      color: var(--text-color);
+    }
+
   </style>
 </head>
 <body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <span class="navbar-brand mx-auto">Exam Session 1</span>
+    </div>
+  </nav>
 
+  <div class="sidebar " style="z-index: -1;">
+    <div class="mt-5">
 
-  <div class="sidebar">
-    <h5><i class="fas fa-question-circle"></i> Questions</h5>
-    <ul>
-      <li><a href="#question1"><i class="fas fa-list-alt"></i> Question 1</a></li>
-      <li><a href="#question2"><i class="fas fa-check-square"></i> Question 2</a></li>
-      <li><a href="#question3"><i class="fas fa-arrows-alt"></i> Question 3</a></li>
-      <li><a href="#question4"><i class="fas fa-list-alt"></i> Question 4</a></li>
-      <!-- Add more questions as needed -->
-    </ul>
+      <h5><i class="fas fa-question-circle"></i> Questions</h5>
+      <ul>
+        <li><a href="#question1"><i class="fas fa-list-alt"></i> Question 1</a></li>
+        <li><a href="#question2"><i class="fas fa-check-square"></i> Question 2</a></li>
+        <li><a href="#question3"><i class="fas fa-arrows-alt"></i> Question 3</a></li>
+        <li><a href="#question4"><i class="fas fa-list-alt"></i> Question 4</a></li>
+        <!-- Add more questions as needed -->
+      </ul>
+    </div>
   </div>
 
-  <div class="container main-content mt-5">
+  <div class="container main-content">
     <div class="text-center mb-4">
       <h2>English language test, first level</h2>
       <p><i class="far fa-clock"></i> The duration of the exam is 15 minutes.</p>
-      <button class="btn btn-warning">Start now</button>
+      <button class="btn  btn-start">Start now</button>
     </div>
 
     <div>
@@ -163,7 +188,7 @@
       </div>
       <div class="d-flex justify-content-between mb-3">
         <span>Category: English A</span>
-        <span><i class="far fa-clock"></i> 04:54</span>
+        <span><i class="far fa-clock"></i> 04:54 <button class="btn btn-warning btn-sm ml-2"><i class="fas fa-pause"></i></button></span>
         <span>1 / 14</span>
       </div>
     </div>
@@ -189,7 +214,7 @@
         </div>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button  class="btn btn-prev text mr-2"><i class="fas fa-arrow-left"></i> Previous</button >
         <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
       </div>
     </div>
@@ -215,7 +240,7 @@
         </div>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-prev text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
         <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
       </div>
     </div>
@@ -241,7 +266,7 @@
         </div>
       </form>
       <div class="d-flex justify-content-end mt-4">
-        <button class="btn btn-warning text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
+        <button class="btn btn-prev text mr-2"><i class="fas fa-arrow-left"></i> Previous</button>
         <button class="btn btn-warning text"><i class="fas fa-arrow-right"></i> Next</button>
       </div>
     </div>
