@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exam Maker</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    :root {
+      --bg-color: #ffffff; /* اللون الأبيض */
+      --sidebar-bg-color: #f3f6f7; /* لون السايدبار */
+      --border-color: #dee2e6;
+      --correct-bg: #d4edda;
+      --correct-border: #c3e6cb;
+      --incorrect-bg: #d2d9d2aa;
+      --incorrect-border: #f5c6cb;
+      --correct-hover: #ff6666;
+      --main-color: #28a745; /* الأخضر */
+      --main-color2: #818383; /* جري فاتح  */
+      --hover-color: #218838; /* أخضر داكن للهوفر */
+      --text-color: #ffffff; /* اللون الأبيض للنص */
+      --sidebar-text-color: #000000; /* لون النص في السايدبار */
+    }
+    .quiz-container {
+      border: 1px solid var(--border-color);
+    }
+    .quiz-container .form-check {
+      position: relative;
+      padding-left: 2.5rem; /* Adjust this value to your needs */
+      margin-bottom: 10px;
+    }
+    .quiz-container .form-check-label {
+      padding: 10px;
+      border: 1px solid #dee2e6;
+      border-radius: 5px;
+      display: block;
+    }
+    .quiz-container .form-check-input {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 10px; /* Adjust this value to your needs */
+    }
+    .quiz-container .form-check-input:checked + .form-check-label {
+      background-color: var(--incorrect-bg);
+    }
+    .quiz-container .btn {
+      width: 100px;
+      transition: all 0.3s ease;
+      background-color: var(--main-color);
+      border-color: var(--main-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .quiz-container .btn i {
+      margin: 0 5px;
+    }
+    .quiz-container .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      background-color: var(--hover-color);
+      border-color: var(--hover-color);
+    }
+    .quiz-container .btn:active {
+      transform: scale(0.9);
+    }
+    .progress-bar {
+      background-color: var(--correct-hover);
+    }
+    body {
+      background-color: var(--bg-color);
+    }
+    .quiz-container {
+      margin-top: 50px;
+    }
+    .answer, .dropzone {
+      padding: 10px;
+      margin: 10px;
+      border: 1px solid var(--border-color);
+      border-radius: 5px;
+      background-color: #ffffff;
+    }
+    .dropzone {
+      min-height: 50px;
+    }
+    .answer {
+      cursor: pointer;
+    }
+    .correct {
+      background-color: var(--correct-bg);
+      border-color: var(--correct-border);
+    }
+    .incorrect {
+      background-color: var(--incorrect-bg);
+      border-color: var(--incorrect-border);
+    }
+    .progress {
+      height: 20px;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 200px;
+      background-color: var(--sidebar-bg-color);
+      padding: 20px;
+      overflow-y: auto;
+    }
+    .sidebar h5 {
+      color: var(--sidebar-text-color);
+      text-align: center;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px 0;
+      text-align: center;
+      transition: transform 0.3s;
+      color: var(--sidebar-text-color);
+    }
+    .sidebar ul li:hover {
+      transform: scale(1.1);
+    }
+    .sidebar ul li a {
+      color: var(--sidebar-text-color);
+      text-decoration: none;
+    }
+    .main-content {
+      margin-left: 220px; /* Adjust according to sidebar width */
+      padding-top: 60px; /* Space for the navbar */
+    }
+    .navbar-custom {
+      background-color: var(--main-color);
+      z-index: 1;
+    }
+    .navbar-custom .navbar-brand {
+      color: var(--text-color);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .btn-start {
+      background-color: transparent;
+      border-color: var(--main-color);
+      padding: 10px 30px ;
+      font-weight: 600;
+      font-size: 20px;
+    }
+    .btn-start:hover {
+      background-color: var(--main-color);
+      color: var(--text-color);
+    }
+    @media (max-width: 768px) {
+      .main-content {
+        margin-left: 0;
+      }
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <span class="navbar-brand mx-auto">Exam Session 1</span>
+    </div>
+  </nav>
+
+  <div class="sidebar " >
+    <div class="mt-5">
+      <h5><i class="fas fa-question-circle"></i> Questions</h5>
+      <ul>
+        <li><a href="#question1"><i class="fas fa-list-alt"></i> Question 1</a></li>
+        <li><a href="#question2"><i class="fas fa-check-square"></i> Question 2</a></li>
+        <li><a href="#question3"><i class="fas fa-arrows-alt"></i> Question 3</a></li>
+        <li><a href="#question4"><i class="fas fa-list-alt"></i> Question 4</a></li>
+        <!-- Add more questions as needed -->
+      </ul>
+    </div>
+  </div>
+
+  <div class="container main-content">
+    <div class="text-center mb-4">
+      <h2>English language test, first level</h2>
+      <p><i class="far fa-clock"></i> The duration of the exam is 15 minutes.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-12 col-md-8 offset-md-2">
+        <div class="quiz-container bg-light p-4 rounded mb-4" id="question1">
+          <h5>I have Flamenco classes .....</h5>
+          <form>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="q1a" value="a">
+              <label class="form-check-label correct" for="q1a">A) in Saturday afternoons</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="q1b" value="b">
+              <label class="form-check-label" for="q1b">B) by Saturday afternoons</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="q1c" value="c">
+              <label class="form-check-label correct" for="q1c">C) on Saturday afternoons</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question1" id="q1d" value="d">
+              <label class="form-check-label" for="q1d">D) at Saturday afternoons</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="quiz-container bg-light p-4 rounded mb-4" id="question2">
+          <h5>Select all the correct statements:</h5>
+          <form>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="q2a" value="a">
+              <label class="form-check-label correct" for="q2a">A) Statement 1</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="q2b" value="b">
+              <label class="form-check-label correct" for="q2b">B) Statement 2</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="q2c" value="c">
+              <label class="form-check-label" for="q2c">C) Statement 3</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="q2d" value="d">
+              <label class="form-check-label" for="q2d">D) Statement 4</label>
+            </div>
+          </form>
+        </div>
+
+        <div class="quiz-container bg-light p-4 rounded mb-4" id="question3">
+          <h5>Drag the answers to the correct place:</h5>
+          <form>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="answer" draggable="true" data-answer="1">Answer 1</div>
+                <div class="answer" draggable="true" data-answer="2">Answer 2</div>
+                <div class="answer" draggable="true" data-answer="3">Answer 3</div>
+                <div class="answer" draggable="true" data-answer="4">Answer 4</div>
+              </div>
+              <div class="col-md-6">
+                <div class="dropzone mb-2" data-correct="1">Question 1</div>
+                <div class="dropzone mb-2" data-correct="2">Question 2</div>
+                <div class="dropzone mb-2" data-correct="3">Question 3</div>
+                <div class="dropzone mb-2" data-correct="4">Question 4</div>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="quiz-container bg-light p-4 rounded" id="question4">
+          <h5>I am a doctor, ...... ?</h5>
+          <form>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question4" id="q4a" value="a">
+              <label class="form-check-label" for="q4a">A) aren't I</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question4" id="q4b" value="b">
+              <label class="form-check-label correct" for="q4b">B) am not I</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question4" id="q4c" value="c">
+              <label class="form-check-label" for="q4c">C) isn't I</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="question4" id="q4d" value="d">
+              <label class="form-check-label" for="q4d">D) am I</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
