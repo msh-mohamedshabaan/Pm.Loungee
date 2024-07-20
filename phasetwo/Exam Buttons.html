@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam Buttons</title>
+    <style>
+        :root {
+            --primary-color: #4caf50; /* Green */
+            --primary-hover-color: #45a049;
+            --full-width-color: #ff9800; /* Orange */
+            --full-width-hover-color: #e68900;
+            --text-color: white;
+            --background-color: #f0f8ff;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: var(--background-color);
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .button-container .button {
+            flex: 1;
+            padding: 15px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: var(--primary-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container .button:hover {
+            background-color: var(--primary-hover-color);
+        }
+        .full-width-button {
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-color);
+            background-color: var(--full-width-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .full-width-button:hover {
+            background-color: var(--full-width-hover-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="#" class="button">Exam Section 1</a>
+        <a href="#" class="button">Exam Section 2</a>
+    </div>
+    <div class="button-container">
+        <a href="#" class="button">Exam Section 3</a>
+        <a href="#" class="button">Exam Section 4</a>
+    </div>
+    <div class="button-container">
+        <a href="#" class="button">Exam Section 5</a>
+        <a href="#" class="button">Exam Section 6</a>
+    </div>
+    <a href="#" class="full-width-button">Exam for All Sections</a>
+</body>
+</html>
