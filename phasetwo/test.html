@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Video and PDF</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            
+            font-family: "DM Serif Display", serif;
+            font-weight: 500;
+           font-style: normal;
+
+        }
+
+        .dm-serif-display-regular {
+  
+}
+
+.dm-serif-display-regular-italic {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+        #dropZone {
+            background-color: #e9ecef;
+            cursor: pointer;
+            height: 200px;
+        }
+
+        #dropZone.dragover {
+            background-color: #d4edda;
+            border-color: #28a745;
+        }
+
+        .btn-orange {
+            background-color: #ff8800;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background-color: #e67600;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Add Video</h2>
+        <form id="uploadForm">
+            <div class="form-group">
+                <label for="fileInput" class="d-block">Choose a video or PDF to upload</label>
+                <div id="dropZone" class="border border-success rounded p-3 text-center">
+                    Drag and drop file here
+                </div>
+                <input type="file" id="fileInput" accept="video/*,application/pdf" class="d-none">
+                <button type="button" class="btn btn-orange btn-block mt-3">Browse Files</button>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

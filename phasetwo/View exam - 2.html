@@ -18,13 +18,13 @@
             --warning-color: #ffc107;
         }
 
-        body {
+        .exam {
             font-size: 16px;
             font-weight: 600;
             font-family: Arial, sans-serif;
         }
 
-        .sidebar {
+       .exam .sidebar {
             position: fixed;
             top: 0;
             bottom: 0;
@@ -34,7 +34,7 @@
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
         }
 
-        .sidebar-sticky {
+       .exam .sidebar-sticky {
             position: -webkit-sticky;
             position: sticky;
             top: 48px;
@@ -44,16 +44,16 @@
             overflow-y: auto;
         }
 
-        .sidebar .nav-link {
+       .exam .sidebar .nav-link {
             font-weight: 500;
             color: #333;
         }
 
-        .sidebar .nav-link.active {
+       .exam .sidebar .nav-link.active {
             color: var(--primary-color);
         }
 
-        .sidebar-heading {
+       .exam .sidebar-heading {
             font-size: .75rem;
             text-transform: uppercase;
         }
@@ -62,25 +62,25 @@
             padding-top: 20px;
         }
 
-        .progress {
+       .exam .progress {
             height: 10px;
         }
 
-        .progress-bar {
+       .exam .progress-bar {
             background-color: var(--primary-color);
         }
 
-        .btn-outline-secondary {
+       .exam .btn-outline-secondary {
             border-color: var(--primary-color);
             color: var(--primary-color);
         }
 
-        .btn-outline-secondary:hover {
+       .exam .btn-outline-secondary:hover {
             background-color: var(--primary-color);
             color: #fff;
         }
 
-        .form-check {
+       .exam .form-check {
             border: 1px solid var(--border-color);
             padding: 10px;
             margin-bottom: 10px;
@@ -88,105 +88,107 @@
             display: flex;
             align-items: center;
             justify-content: space-between; /* توزيع المساحة بين العناصر */
+            cursor: pointer;
         }
 
-        .form-check:hover {
+       .exam .form-check:hover {
             background-color: var(--hover-bg-color);
         }
 
-        .form-check-input {
+       .exam .form-check-input {
             margin-left: 10px;
         }
 
-        .form-check-label {
-            margin-right: auto; /* دفع التسمية إلى اليمين */
+        .exam .form-check-label {
+            margin-right: auto; 
+            width: 100%;
         }
 
-        .card-body {
+       .exam .card-body {
             font-size: 18px;
             background-color: #f9f9f9;
         }
 
-        .card-body p {
+        .exam .card-body p {
             margin-bottom: 20px;
         }
 
-        .btn-secondary {
+       .exam .btn-secondary {
             background-color: var(--secondary-color);
             border-color: #343a40;
         }
 
-        .btn-primary {
+       .exam .btn-primary {
             background-color: var(--primary-color);
             border-color: var(--primary-color);
         }
 
-        .sidebar .nav-link.active {
+        .exam .sidebar .nav-link.active {
             color: var(--primary-color);
             font-weight: bold;
         }
 
-        .sidebar .nav-link {
+        .exam .sidebar .nav-link {
             color: #000;
         }
 
-        .sidebar .nav-link:hover {
+      .exam  .sidebar .nav-link:hover {
             color: var(--primary-color);
         }
 
-        .sidebar-heading {
+       .exam .sidebar-heading {
             color: #6c757d;
             text-transform: uppercase;
             font-size: 14px;
             font-weight: 700;
         }
 
-        .d-flex.justify-content-between button + button {
+       .exam .d-flex.justify-content-between button + button {
             margin-left: 10px;
         }
 
-        .draggable {
+       .exam .draggable {
             border: 1px solid var(--border-color);
             padding: 10px;
             margin-bottom: 10px;
             cursor: grab;
         }
 
-        .droppable {
+       .exam .droppable {
             border: 2px dashed var(--border-color);
             padding: 10px;
             min-height: 50px;
             margin-bottom: 10px;
         }
 
-        .btn-success {
+       .exam .btn-success {
             background-color: var(--success-color);
             border-color: var(--success-color);
         }
 
-        .btn-success:hover {
+        .exam .btn-success:hover {
             background-color: #218838;
             border-color: #1e7e34;
         }
 
-        .btn-warning {
+        .exam .btn-warning {
             background-color: var(--warning-color);
             border-color: var(--warning-color);
         }
 
-        .btn-warning:hover {
+       .exam .btn-warning:hover {
             background-color: #e0a800;
             border-color: #d39e00;
         }
 
         @media (max-width: 770px) {
-            .sidebar {
+            .exam .sidebar {
                 position: relative;
                 height: auto;
                 width: 100%;
             }
 
-            .sidebar-sticky {
+            .exam .sidebar-sticky {
                 position: relative;
                 top: 0;
                 height: auto;
@@ -198,23 +200,23 @@
                 padding-top: 0;
             }
 
-            .progress {
+            .exam .progress {
                 width: 100%;
             }
 
-            .d-flex.justify-content-between {
+            .exam .d-flex.justify-content-between {
                 flex-direction: column;
                 align-items: flex-start;
             }
 
-            .d-flex.justify-content-between span {
+            .exam .d-flex.justify-content-between span {
                 margin-bottom: 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container-fluid">
+    <div class="container-fluid exam">
         <div class="row">
             <!-- Sidebar -->
             <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
@@ -231,57 +233,6 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Project Framework Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Agile Exam</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Scope Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Schedule Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Cost Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Quality Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Communications Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Stakeholder Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Risk Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Procurement Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Scope Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Schedule Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Cost Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Quality Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Communications Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Stakeholder Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Risk Management</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Project Procurement Management</a>
                         </li>
                     </ul>
                 </div>
@@ -390,5 +341,18 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // لتفعيل الإختيار عند النقر على أي مكان في مستطيل form-check
+        document.querySelectorAll('.form-check').forEach(function(element) {
+            element.addEventListener('click', function(event) {
+                var input = this.querySelector('.form-check-input');
+                if(input.type === 'radio') {
+                    input.checked = true;
+                } else {
+                    input.checked = !input.checked;
+                }
+            });
+        });
+    </script>
 </body>
 </html>

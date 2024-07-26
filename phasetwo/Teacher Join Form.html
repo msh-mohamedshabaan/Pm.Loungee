@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Join Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            border-color: green;
+        }
+        .form-control:focus {
+            border-color: green;
+            box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25);
+        }
+        .form-control:invalid {
+            border-color: #dc3545;
+        }
+        .form-control:invalid:focus {
+            box-shadow: none;
+        }
+        .form-control:invalid ~ .invalid-feedback {
+            display: block;
+        }
+        .form-control:valid ~ .invalid-feedback {
+            display: none;
+        }
+        .custom-select {
+            border-color: green;
+        }
+        .custom-select:focus {
+            border-color: green;
+            box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25);
+        }
+        .custom-select:invalid {
+            border-color: #dc3545;
+        }
+        .custom-select:invalid:focus {
+            box-shadow: none;
+        }
+        .custom-select:invalid ~ .invalid-feedback {
+            display: block;
+        }
+        .custom-select:valid ~ .invalid-feedback {
+            display: none;
+        }
+        .submit-btn {
+            background-color:green;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Join Us as a Teacher</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">First Name *</label>
+                    <input type="text" class="form-control" id="firstName" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Last Name *</label>
+                    <input type="text" class="form-control" id="lastName" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="workEmail">Work Email *</label>
+                <input type="email" class="form-control" id="workEmail" required>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number *</label>
+                <input type="tel" class="form-control" id="phoneNumber" required>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="location">Where are you located? *</label>
+                <input type="text" class="form-control" id="location" required>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="companySize">Company Size *</label>
+                    <select class="custom-select" id="companySize" required>
+                        <option value="" disabled selected>Select...</option>
+                        <option value="1-10">1-10</option>
+                        <option value="11-50">11-50</option>
+                        <option value="51-200">51-200</option>
+                        <option value="201-500">201-500</option>
+                        <option value="500+">500+</option>
+                    </select>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="numOfPeople">Number of people to train *</label>
+                    <select class="custom-select" id="numOfPeople" required>
+                        <option value="" disabled selected>Select...</option>
+                        <option value="1-5">1-5</option>
+                        <option value="6-20">6-20</option>
+                        <option value="21-50">21-50</option>
+                        <option value="51-100">51-100</option>
+                        <option value="100+">100+</option>
+                    </select>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="jobTitle">Job Title *</label>
+                <input type="text" class="form-control" id="jobTitle" required>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="jobLevel">Job Level *</label>
+                <select class="custom-select" id="jobLevel" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="Entry Level">Entry Level</option>
+                    <option value="Mid Level">Mid Level</option>
+                    <option value="Senior Level">Senior Level</option>
+                </select>
+                <div class="invalid-feedback">This field is required.</div>
+            </div>
+            <div class="form-group">
+                <label for="notes">Notes (Optional)</label>
+                <textarea class="form-control" id="notes" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn submit-btn btn-block">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
