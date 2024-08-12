@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font Test</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            margin: 20px;
+        }
+
+        .course-content {
+            width: 300px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .course-content h2 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .section-details {
+            font-size: 14px;
+            font-weight: 400;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="course-content">
+        <h2>Course Content</h2>
+
+        <div class="section">
+            <div class="section-title">Section 1: Introduction to HTML</div>
+            <div class="section-details">10 / 15 | 2hr 30min</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Section 2: CSS Basics</div>
+            <div class="section-details">8 / 12 | 1hr 45min</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Section 3: JavaScript Essentials</div>
+            <div class="section-details">5 / 10 | 3hr 00min</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Section 4: Advanced CSS Techniques</div>
+            <div class="section-details">7 / 9 | 2hr 15min</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Section 5: Responsive Design</div>
+            <div class="section-details">6 / 10 | 1hr 50min</div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar with My Learning Dropdown on Hover</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar .dropdown-menu {
+      width: 300px;
+      padding: 10px;
+      display: none; /* إخفاء القائمة افتراضيًا */
+    }
+
+    .navbar-nav .nav-item:hover .dropdown-menu {
+      display: block; /* إظهار القائمة عند التمرير */
+    }
+
+    .course-image {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 10px;
+      float: left;
+    }
+
+    .course-info {
+      overflow: hidden;
+    }
+
+    .course-info strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .course-info p {
+      font-size: 12px;
+      color: #666;
+      margin: 0;
+    }
+
+    .dropdown-item {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .dropdown-item:hover {
+      background-color: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="#" id="myLearningDropdown" role="button">
+          My Learning
+        </a>
+        <div class="dropdown-menu" aria-labelledby="myLearningDropdown">
+          <a class="dropdown-item" href="#">
+            <img src="../img/cisco.png" alt="Course 1" class="course-image">
+            <div class="course-info">
+              <strong>Spring Boot 3, Spring 6 & Hibernate for Beginners Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat nobis adipisci dolor atque laborum possimus facere recusandae laudantium aliquam, tenetur ut quas repellat itaque quasi eveniet blanditiis, reiciendis consectetur voluptatibus.</strong>
+              <p>Instructor: John Doe</p>
+            </div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+    <style>
+        :root {
+            --main-bg-color: #f4f4f9;
+            --sidebar-bg-color: rgba(255, 255, 255, 0.95);
+            --sidebar-open-bg-color: #005eb8;
+            --sidebar-close-bg-color: #e4002b;
+            --description-bg-color: #e8e8e8;
+            --review-card-bg-color: #f3f6f7;
+            --star-color: #ffcc00;
+            --button-bg-color: #005eb8;
+            --button-hover-bg-color: #004a9e;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--main-bg-color);
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .video-container {
+            position: relative;
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        video {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: var(--sidebar-open-bg-color);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            z-index: 1001;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1);
+        }
+
+        .menu-toggle.open {
+            background-color: var(--sidebar-close-bg-color);
+        }
+
+        .sidebar {
+            position: fixed;
+            right: -350px;
+            top: 0;
+            width: 350px;
+            height: 100%;
+            background-color: var(--sidebar-bg-color);
+            box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            overflow-y: auto;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #f7e400;
+        }
+
+        .sidebar .video-section {
+            margin-bottom: 20px;
+        }
+
+        .sidebar .video-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #005eb8;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar ul li:hover {
+            transform: translateX(-10px);
+        }
+
+        .sidebar ul li img {
+            width: 60px;
+            height: 60px;
+            margin-right: 15px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .close-sidebar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--sidebar-close-bg-color);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease;
+        }
+
+        .close-sidebar:hover {
+            transform: scale(1.1);
+        }
+
+        .description {
+            background-color: var(--description-bg-color);
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .reviews {
+            background-color: #fff;
+            padding: 30px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-form {
+            margin-bottom: 20px;
+        }
+
+        .review-form textarea {
+            width: 100%;
+            height: 100px;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .review-form button {
+            background-color: var(--button-bg-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .review-form button:hover {
+            background-color: var(--button-hover-bg-color);
+        }
+
+        .star-rating {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--star-color);
+        }
+
+        .review-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .review-card {
+            background-color: var(--review-card-bg-color);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .review-card img {
+            width: 50px;
+            height: 50px;
+            margin-right: 15px;
+            border-radius: 50%;
+            background-color: #005eb8;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .review-card .star-rating {
+            margin-bottom: 5px;
+            color: var(--star-color);
+        }
+
+        .review-card .review-text {
+            font-size: 16px;
+        }
+
+        .review-card .course-date {
+            margin-top: 5px;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="video-container">
+        <video controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support video playback.
+        </video>
+        <button class="menu-toggle" id="toggleSidebar">☰</button>
+    </div>
+
+    <div class="sidebar">
+        <button class="close-sidebar " id="closeSidebar">✖</button>
+        <h2>Current Video Title</h2>
+        <div class="video-section">
+            <h3>Video 1</h3>
+            <ul>
+                <li>
+                    <img src="https://via.placeholder.com/60" alt="Video 1">
+                    <p>Next Video 1 Description</p>
+                </li>
+            </ul>
+        </div>
+        <div class="video-section">
+            <h3>Video 2</h3>
+            <ul>
+                <li>
+                    <img src="https://via.placeholder.com/60" alt="Video 2">
+                    <p>Next Video 2 Description</p>
+                </li>
+            </ul>
+        </div>
+        <!-- More video sections -->
+    </div>
+
+    <div class="description">
+        <h2>Video Description</h2>
+        <p>This is the description of the current video. Here you can write more details about the video content, what it covers, and any important notes.</p>
+    </div>
+
+    <div class="reviews">
+        <h2>User Reviews</h2>
+        <form class="review-form">
+            <div class="star-rating">
+                ⭐⭐⭐⭐⭐
+            </div>
+            <textarea placeholder="Write your review here..."></textarea>
+            <button type="submit">Submit</button>
+        </form>
+        <div class="review-cards">
+            <div class="review-card">
+                <img src="https://via.placeholder.com/50" alt="User Avatar"> <!-- Avatar -->
+                <div>
+                    <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                    <div class="review-text">User 1's review goes here. It can include their feedback and thoughts about the video.</div>
+                    <div class="course-date">Reviewed on: 2024-08-12</div>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/50" alt="User Avatar"> <!-- Avatar -->
+                <div>
+                    <div class="star-rating">⭐⭐⭐⭐</div>
+                    <div class="review-text">User 2's review goes here. It can include their feedback and thoughts about the video.</div>
+                    <div class="course-date">Reviewed on: 2024-08-10</div>
+                </div>
+            </div>
+            <!-- More reviews -->
+        </div>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleSidebar');
+        const closeButton = document.getElementById('closeSidebar');
+        const sidebar = document.querySelector('.sidebar');
+
+        function toggleSidebar() {
+            const isSidebarOpen = sidebar.style.right === '0px';
+            sidebar.style.right = isSidebarOpen ? '-350px' : '0px';
+            toggleButton.classList.toggle('open', !isSidebarOpen);
+        }
+
+        toggleButton.addEventListener('click', toggleSidebar);
+        closeButton.addEventListener('click', toggleSidebar);
+    </script>
+</body>
+</html>

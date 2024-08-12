@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .question-box {
+            background-color: #e6e6e6;
+            border: 1px solid #cccccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .choices {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+
+        .choices p {
+            margin: 0 0 5px;
+        }
+
+        .form-check {
+            margin-bottom: 10px;
+        }
+
+        .form-check input[type="checkbox"],
+        .form-check input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .form-check-label {
+            font-size: 16px;
+        }
+
+        .explanation-box {
+            background-color: #f2f2f2;
+            border: 1px solid #cccccc;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .explanation-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .explanation-box p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .explanation-box .reference {
+            font-size: 12px;
+            color: #666666;
+            margin-top: 10px;
+        }
+
+        /* Arabic Styling */
+        .arabic-question {
+            direction: rtl;
+            
+        }
+        .english-question{
+            direction: ltr;
+        }
+        .arabic-question .question {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .arabic-question .form-check input[type="checkbox"],
+        .arabic-question .form-check input[type="radio"] {
+            margin-left: 10px;
+            margin-right: 0;
+        }
+
+        .arabic-question .form-check-label {
+            font-size: 16px;
+        }
+
+        .arabic-question .choices {
+            border: 1px solid #cccccc;
+            padding: 10px;
+            background-color: #f2f2f2;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="">
+        <!-- English Question with Checkboxes -->
+        <div class="question-box english-question">
+            <div class="question">
+                You are managing a construction project to install new door frames in an office building. Currently, you are about to start the development of the assumption log for the project. What should you do first?
+            </div>
+            <div class="choices">
+                <div class="form-check">
+                    <input type="checkbox" id="englishChoiceA">
+                    <label class="form-check-label" for="englishChoiceA">A. Review the project scope statement</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arabic Question with Checkboxes -->
+        <div class="question-box arabic-question">
+            <div class="question">
+                أنت تدير مشروع بناء لتثبيت إطارات أبواب جديدة في مبنى مكاتب. حاليًا، أنت على وشك بدء تطوير سجل الافتراضات للمشروع. ما الذي يجب عليك فعله أولاً؟
+            </div>
+            <div class="choices">
+                <div class="form-check">
+                    <input type="checkbox" id="arabicChoiceA">
+                    <label class="form-check-label" for="arabicChoiceA">أ. مراجعة بيان نطاق المشروع</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="explanation-box" style="margin-bottom: 20px;">
+            <div class="explanation-title">Description</div>
+            <p>The assumption log is a project document used to record all assumptions and constraints throughout the project life cycle...</p>
+        </div>
+      </div>
+
+      <div class="">
+        <!-- English Question with Radio Buttons -->
+        <div class="question-box english-question">
+            <div class="question">
+                You are managing a construction project to install new door frames in an office building. Currently, you are about to start the development of the assumption log for the project. What should you do first?
+            </div>
+            <div class="choices">
+                <div class="form-check">
+                    <input type="radio" name="englishRadio" id="englishRadioA">
+                    <label class="form-check-label" for="englishRadioA">A. Review the project scope statement</label>
+                </div>
+              
+            </div>
+        </div>
+
+        <!-- Arabic Question with Radio Buttons -->
+        <div class="question-box arabic-question">
+            <div class="question">
+                أنت تدير مشروع بناء لتثبيت إطارات أبواب جديدة في مبنى مكاتب. حاليًا، أنت على وشك بدء تطوير سجل الافتراضات للمشروع. ما الذي يجب عليك فعله أولاً؟
+            </div>
+            <div class="choices">
+               
+                <div class="form-check">
+                    <input type="radio" name="arabicRadio" id="arabicRadioD">
+                    <label class="form-check-label" for="arabicRadioD">د. مراجعة خطة إدارة المشروع</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Explanation Box -->
+        <div class="explanation-box">
+            <div class="explanation-title">Description</div>
+            <p>The assumption log is a project document used to record all assumptions and constraints throughout the project life cycle...</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

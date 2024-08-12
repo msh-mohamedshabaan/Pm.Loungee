@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us as a Teacher</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .form-container {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #fff;
+            border: 1px solid green;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-control {
+            border-color: green;
+            border-radius: 5px;
+        }
+        .form-control:focus {
+            border-color: green;
+            box-shadow: 0 0 0 0.2rem rgba(0, 128, 0, 0.25);
+        }
+        .form-control:invalid {
+            border-color: #dc3545;
+        }
+        .form-control:invalid:focus {
+            box-shadow: none;
+        }
+        .form-control:invalid ~ .invalid-feedback {
+            display: block;
+        }
+        .form-control:valid ~ .invalid-feedback {
+            display: none;
+        }
+        .submit-btn {
+            background-color: rgb(8, 193, 82);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .invalid-feedback {
+            display: none;
+            color: #dc3545;
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5" style="max-width: 600px;">
+        <div class="form-container">
+            <h1>Join Us as a Teacher</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" class="form-control" id="name" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" class="form-control" id="email" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number *</label>
+                    <input type="tel" class="form-control" id="phoneNumber" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Location *</label>
+                    <input type="text" class="form-control" id="location " required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="courseName">Course Name *</label>
+                    <input type="text" class="form-control" id="courseName" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="numberOfPeople">Number of People Trained *</label>
+                    <input type="number" class="form-control" id="numberOfPeople" required>
+                    <div class="invalid-feedback">This field is required.</div>
+                </div>
+                <div class="form-group">
+                    <label for="notes">Notes (Optional)</label>
+                    <textarea class="form-control" id="notes" rows="4"></textarea>
+                </div>
+                
+                <button type="submit" class="btn  submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

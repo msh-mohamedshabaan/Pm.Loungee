@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحة فيديو مع شريط جانبي</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #2c2f33;
+            color: white;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            height: 60vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-container iframe, .video-container video {
+            width: 100%;
+            height: 100%;
+        }
+        .navigation-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 24px;
+        }
+        .left-arrow {
+            left: 10px;
+        }
+        .right-arrow {
+            right: 10px;
+        }
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background-color: #d3d3d3; /* لون رمادي فاتح */
+            transition: left 0.3s;
+            z-index: 1000;
+            padding: 20px;
+        }
+        .sidebar.active {
+            left: 0;
+        }
+        .sidebar h4 {
+            color: black; /* لون النص داخل الشريط الجانبي */
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+            color: black; /* لون النص للعناصر */
+        }
+        .menu-toggle {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            z-index: 1100;
+            transition: all 0.3s;
+        }
+        .menu-toggle span {
+            margin-left: 10px;
+            font-size: 16px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        .video-container:hover .menu-toggle span {
+            opacity: 1;
+            visibility: visible;
+        }
+        .video-title {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-toggle">
+        <i class="fa fa-chevron-right"></i>
+        <span>Course Content</span>
+    </div>
+
+    <div class="sidebar">
+        <h4>Course Content</h4>
+        <ul>
+            <li>Lecture 1: Introduction</li>
+            <li>Lecture 2: Setting Up the Environment</li>
+            <li>Lecture 3: Basic Concepts</li>
+            <li>Lecture 4: Advanced Techniques</li>
+        </ul>
+    </div>
+
+    <div class="video-container">
+        <div class="navigation-arrows left-arrow">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+        <!-- YouTube Video -->
+        <iframe src="../img/20240609_073800.mp4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- Local Video -->
+        <!-- Uncomment this block to display a local video -->
+        <!--
+        <video controls>
+            <source src="../img/20240609_073800.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        -->
+        <div class="navigation-arrows right-arrow">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="video-title">
+                    242. Release 3.0 - Security - Handling Browser Refresh - Running the Application
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('active');
+            this.querySelector('i').classList.toggle('fa-chevron-right');
+            this.querySelector('i').classList.toggle('fa-chevron-left');
+        });
+    </script>
+</body>
+</html>

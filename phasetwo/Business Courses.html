@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Courses</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .course-card {
+            max-width: 18rem;
+            margin: 15px;
+        }
+        .course-card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        .bestseller-badge {
+            background-color: #ffd700;
+            color: black;
+        }
+        .course-title {
+            font-weight: bold;
+        }
+        .course-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: grey;
+        }
+        .nav-item {
+          color: var(min-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-left font-weight-bold">Business Courses</h1>
+        <h3 class="text-left ">Courses to get you started</h3>
+        <p class="text-left">Explore courses from experienced, real-world experts.</p>
+        
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" href="#">Most popular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">New</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Trending</a>
+            </li>
+        </ul>
+        
+        <div class="d-flex flex-wrap">
+            
+            <div class="card course-card">
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Course Image">
+                <div class="card-body">
+                    <h5 class="card-title course-title">How to Budget and Forecast for Your Business</h5>
+                    <p class="card-text">Bplans School of Business, Tim Berry</p>
+                    <div class="d-flex align-items-center mb-2">
+                        <span class="badge badge-warning">4.3</span>
+                        <span class="ml-2">(410)</span>
+                    </div>
+                    <div class="course-price">£249.99 <span class="original-price">£699.99</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
+
