@@ -213,10 +213,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Drag and Drop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-   
+    <style>
+        .drag-item, .drop-item {
+            min-height: 150px;
+            max-height: 300px;
+            min-width: 100px;
+            max-width: 100%;
+            border: 2px solid #cccccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 10px;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            overflow-y: auto;
+            padding: 10px;
+        }
+
+        .drag-item {
+            background-color: #e6e6e6;
+        }
+
+        .drop-item {
+            background-color: #ddffdd;
+        }
+
+        .gap-sm {
+            margin-bottom: 20px;
+        }
+
+        .question-box, .explanation-box {
+            background-color: #e6e6e6;
+            border: 1px solid #cccccc;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .question, .explanation-title {
+            font-weight: bold;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .explanation-box p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .text-center.mt-4 {
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
 
+<div class="container">
+    <!-- Question Box -->
+    <div class="question-box">
+        <div class="question">
+            Please drag the item to the correct drop area:
+        </div>
+    </div>
+    
+    <!-- Drag and Drop Area -->
+    <div class="row justify-content-center mt-5 gap-sm">
+        <div class="col-12 col-md-6 mb-4">
+            <div class="drag-item">
+                Drag Item with a lot of text that will cause the container to grow until it reaches the max height. After that, the text will be scrollable within the container to keep the content within bounds.
+            </div>
+        </div>
+        <div class="col-12 col-md-6 mb-4">
+            <div class="drop-item">
+                Drop Here with a lot of text that will cause the container to grow until it reaches the max height. After that, the text will be scrollable within the container to keep the content within bounds.
+            </div>
+        </div>
+    </div>
+    
+    <!-- Description Box -->
+    <div class="explanation-box">
+        <div class="explanation-title">Description</div>
+        <p>This section explains the task or provides additional information regarding the drag and drop activity. The text will grow with the content, and any overflow will be managed by scrolling.</p>
+    </div>
+
+    
+</div>
 
 </body>
 </html>
