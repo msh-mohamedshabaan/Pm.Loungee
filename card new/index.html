@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI/UX Design Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* أو لتطبيقه على جميع العناصر */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+        .body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #28A745;
+            color: white;
+            padding: 20px;
+        }
+
+        .course-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .teacher-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .teacher-info img {
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+
+
+        .course-image {
+    width: 100%;
+    max-height: 350px; /* Adjust the height to your preference */
+    object-fit: cover; /* Ensures the image covers the area without stretching */
+}
+
+        .course-info div {
+            text-align: center;
+        }
+
+        .course-info div strong {
+            color: #CECECE;
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 23.44px;
+            letter-spacing: 0.03em;
+            text-align: left;
+            
+
+
+        }
+
+        .course-card {
+            
+
+            background-color: white;
+            color: black;
+            border-radius: 20px;
+            padding: 12px;
+            margin-top: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.667);
+            transform: translateY(100px);
+        }
+
+        .price {
+           
+            color: #000000;
+          
+
+
+
+font-family: Roboto;
+font-size: 40px;
+font-weight: 700;
+line-height: 75px;
+letter-spacing: 0.03em;
+text-align: left;
+
+        }
+
+        .discount {
+            width: 144px;
+height: 47px;
+border-radius: 6px ;
+border: 1px solid #ff4800;
+opacity: 0px;
+color:  #FF4800;
+padding: 5px 10px;
+
+        }
+        .text-decoration-line-through {
+            font-family: Roboto;
+font-size: 20px;
+font-weight: 400;
+
+
+text-align: left;
+color: #7C7C7C;
+        }
+
+        .btn-green {
+            background-color: #28A745;
+            color: white;
+            box-shadow: 0px 0px 5px 4px #0000001A inset;
+
+        }
+        
+        .btn-white {
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            border: 1px solid #DCDCDC;
+            box-shadow: 0px 0px 5px 4px #0000001A inset;
+
+
+        }
+        .btn-white:hover {
+            background-color: transparent;
+            color: rgb(0, 0, 0);
+            border: 1px solid #DCDCDC;
+
+        }
+        .btn-green:hover {
+            background-color: #23913c;
+            color: white;
+        }
+
+        .course-details {
+            margin-top: 20px;
+        }
+
+        .course-details ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .course-details ul li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+
+        .course-details ul li span:first-child {
+            flex: 1;
+            text-align: left;
+        }
+
+        .course-details ul li span:last-child {
+            flex: 1;
+            text-align: right;
+        }
+
+        .course-details ul li::after {
+            content: "<i class="fa-solid fa-check"></i>";
+            color: white;
+            margin-left: 10px;
+        }
+        h1.mb-4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 1.5; /* Adjust as needed to match your design */
+    letter-spacing: 0.03em;
+    text-align: left;
+    max-width: 850px; /* Maximum width to control text wrapping */
+    
+    /* Limit to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    border-radius: 50%;
+    background-color: #A6A6A6; /* لون الخلفية */
+    color: white; /* لون النص */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif; /* يمكنك تغيير الخط إذا كنت ترغب */
+    
+}
+
+
+    </style>
+</head>
+
+<body>
+    <section class="body">
+
+        <div class="container">
+            <div class="row">
+                <!-- Left Side (Course Info) -->
+                <div class="col-md-8">
+                    <h1 class="mb-4">UI/UX Design Course For Beginners</h1>
+                    <div class="container">
+                        <div class="row course-info">
+                            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                                <div class="teacher-info d-flex align-items-center">
+                                    <div class="avatar me-2">
+                                        <span>DN</span> <!-- استبدل "DN" بالحروف التي ترغب في عرضها -->
+                                    </div>
+                                    <div>
+                                        <div style="text-align: left;"><strong>Teacher:</strong><br> Donald Norman</div>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                                <div><strong>Category:</strong><br> Data Science</div>
+                            </div>
+                    
+                            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                                <div><strong>Last Updated:</strong><br> July 15th, 2024</div>
+                            </div>
+                    
+                            <div class="col-6 col-md-4 col-lg-3 mb-3">
+                                <div><strong>
+                                    <svg width="137" height="22" viewBox="0 0 137 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16.6782 6.69036L16.7023 6.73546L16.753 6.74224L24.0136 7.71374L24.0268 7.61462L24.0136 7.71374C24.4079 7.76645 24.7299 8.01993 24.8501 8.3603C24.9696 8.69928 24.8711 9.07323 24.5899 9.32555L24.5898 9.32556L19.336 14.0416L19.2942 14.0791L19.3044 14.1343L20.5344 20.7377L20.5343 20.7377L20.5357 20.7434C20.5524 20.8108 20.5612 20.8811 20.5612 20.9533C20.5612 21.4681 20.1059 21.8992 19.5261 21.9C19.3586 21.8994 19.1905 21.8637 19.0379 21.7898L18.9943 21.8798L19.0378 21.7898L12.5435 18.6455L12.4999 18.6244L12.4563 18.6455L5.96193 21.7898L6.0055 21.8798L5.96192 21.7898C5.80968 21.8635 5.64302 21.9 5.4767 21.9C5.25987 21.9 5.0449 21.8379 4.86417 21.717L4.80855 21.8001L4.86416 21.717C4.54506 21.5034 4.38943 21.1454 4.45473 20.7946L5.69548 14.1343L5.70577 14.0791L5.66397 14.0415L0.410074 9.32556L0.343276 9.39998L0.410071 9.32556C0.12894 9.07324 0.0303714 8.69928 0.149954 8.36022C0.269985 8.01994 0.592063 7.76644 0.986424 7.71367L8.24719 6.74217L8.29791 6.73539L8.32208 6.69029L11.5689 0.630742L11.5689 0.630734C11.7415 0.30858 12.1011 0.1 12.5 0.1C12.8988 0.1 13.2584 0.308575 13.4311 0.630745L16.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                                        <path d="M44.6782 6.69036L44.7023 6.73546L44.753 6.74224L52.0136 7.71374L52.0268 7.61462L52.0136 7.71374C52.4079 7.76645 52.7299 8.01993 52.8501 8.3603C52.9696 8.69928 52.8711 9.07323 52.5899 9.32555L52.5898 9.32556L47.336 14.0416L47.2942 14.0791L47.3044 14.1343L48.5344 20.7377L48.5343 20.7377L48.5357 20.7434C48.5524 20.8108 48.5612 20.8811 48.5612 20.9533C48.5612 21.4681 48.1059 21.8992 47.5261 21.9C47.3586 21.8994 47.1905 21.8637 47.0379 21.7898L46.9943 21.8798L47.0378 21.7898L40.5435 18.6455L40.4999 18.6244L40.4563 18.6455L33.9619 21.7898L34.0055 21.8798L33.9619 21.7898C33.8097 21.8635 33.643 21.9 33.4767 21.9C33.2599 21.9 33.0449 21.8379 32.8642 21.717L32.8085 21.8001L32.8642 21.717C32.5451 21.5034 32.3894 21.1454 32.4547 20.7946L33.6955 14.1343L33.7058 14.0791L33.664 14.0415L28.4101 9.32556L28.3433 9.39998L28.4101 9.32556C28.1289 9.07324 28.0304 8.69928 28.15 8.36022C28.27 8.01994 28.5921 7.76644 28.9864 7.71367L36.2472 6.74217L36.2979 6.73539L36.3221 6.69029L39.5689 0.630742L39.5689 0.630734C39.7415 0.30858 40.1011 0.1 40.5 0.1C40.8988 0.1 41.2584 0.308575 41.4311 0.630745L44.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                                        <path d="M72.6782 6.69036L72.7023 6.73546L72.753 6.74224L80.0136 7.71374L80.0268 7.61462L80.0136 7.71374C80.4079 7.76645 80.7299 8.01993 80.8501 8.3603C80.9696 8.69928 80.8711 9.07323 80.5899 9.32555L80.5898 9.32556L75.336 14.0416L75.2942 14.0791L75.3044 14.1343L76.5344 20.7377L76.5343 20.7377L76.5357 20.7434C76.5524 20.8108 76.5612 20.8811 76.5612 20.9533C76.5612 21.4681 76.1059 21.8992 75.5261 21.9C75.3586 21.8994 75.1905 21.8637 75.0379 21.7898L74.9943 21.8798L75.0378 21.7898L68.5435 18.6455L68.4999 18.6244L68.4563 18.6455L61.9619 21.7898L62.0055 21.8798L61.9619 21.7898C61.8097 21.8635 61.643 21.9 61.4767 21.9C61.2599 21.9 61.0449 21.8379 60.8642 21.717L60.8085 21.8001L60.8642 21.717C60.5451 21.5034 60.3894 21.1454 60.4547 20.7946L61.6955 14.1343L61.7058 14.0791L61.664 14.0415L56.4101 9.32556L56.3433 9.39998L56.4101 9.32556C56.1289 9.07324 56.0304 8.69928 56.15 8.36022C56.27 8.01994 56.5921 7.76644 56.9864 7.71367L64.2472 6.74217L64.2979 6.73539L64.3221 6.69029L67.5689 0.630742L67.5689 0.630734C67.7415 0.30858 68.1011 0.1 68.5 0.1C68.8988 0.1 69.2584 0.308575 69.4311 0.630745L72.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                                        <path d="M100.678 6.69036L100.702 6.73546L100.753 6.74224L108.014 7.71374L108.027 7.61462L108.014 7.71374C108.408 7.76645 108.73 8.01993 108.85 8.3603C108.97 8.69928 108.871 9.07323 108.59 9.32555L108.59 9.32556L103.336 14.0416L103.294 14.0791L103.304 14.1343L104.534 20.7377L104.534 20.7377L104.536 20.7434C104.552 20.8108 104.561 20.8811 104.561 20.9533C104.561 21.4681 104.106 21.8992 103.526 21.9C103.359 21.8994 103.19 21.8637 103.038 21.7898L102.994 21.8798L103.038 21.7898L96.5435 18.6455L96.4999 18.6244L96.4563 18.6455L89.9619 21.7898L90.0055 21.8798L89.9619 21.7898C89.8097 21.8635 89.643 21.9 89.4767 21.9C89.2599 21.9 89.0449 21.8379 88.8642 21.717L88.8085 21.8001L88.8642 21.717C88.5451 21.5034 88.3894 21.1454 88.4547 20.7946L89.6955 14.1343L89.7058 14.0791L89.664 14.0415L84.4101 9.32556L84.3433 9.39998L84.4101 9.32556C84.1289 9.07324 84.0304 8.69928 84.15 8.36022C84.27 8.01994 84.5921 7.76644 84.9864 7.71367L92.2472 6.74217L92.2979 6.73539L92.3221 6.69029L95.5689 0.630742L95.5689 0.630734C95.7415 0.30858 96.1011 0.1 96.5 0.1C96.8988 0.1 97.2584 0.308575 97.4311 0.630745L100.678 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                                        <path d="M128.678 6.69036L128.702 6.73546L128.753 6.74224L136.014 7.71374L136.027 7.61462L136.014 7.71374C136.408 7.76645 136.73 8.01993 136.85 8.3603C136.97 8.69928 136.871 9.07323 136.59 9.32555L136.59 9.32556L131.336 14.0416L131.294 14.0791L131.304 14.1343L132.534 20.7377L132.534 20.7377L132.536 20.7434C132.552 20.8108 132.561 20.8811 132.561 20.9533C132.561 21.4681 132.106 21.8992 131.526 21.9C131.359 21.8994 131.19 21.8637 131.038 21.7898L130.994 21.8798L131.038 21.7898L124.544 18.6455L124.5 18.6244L124.456 18.6455L117.962 21.7898L118.006 21.8798L117.962 21.7898C117.81 21.8635 117.643 21.9 117.477 21.9C117.26 21.9 117.045 21.8379 116.864 21.717L116.809 21.8001L116.864 21.717C116.545 21.5034 116.389 21.1454 116.455 20.7946L117.695 14.1343L117.706 14.0791L117.664 14.0415L112.41 9.32556L112.343 9.39998L112.41 9.32556C112.129 9.07324 112.03 8.69928 112.15 8.36022C112.27 8.01994 112.592 7.76644 112.986 7.71367L120.247 6.74217L120.298 6.73539L120.322 6.69029L123.569 0.630742L123.569 0.630734C123.742 0.30858 124.101 0.1 124.5 0.1C124.899 0.1 125.258 0.308575 125.431 0.630745L128.678 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                                        </svg>      
+                                    </strong><br> Rating
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                    <!-- Replaced Course Details Section -->
+                    <div class="course-details">
+                        <ul>
+                            <li>
+                                <span>All Courses Available Online</span>
+                                <span<i class="fa-solid fa-check"></i></span>
+                            </li>
+                            <li>
+                                <span>Hours of Classes</span>
+                                <span>63</span>
+                            </li>
+                            <li>
+                                <span>Level</span>
+                                <span>Beginner</span>
+                            </li>
+                            <li>
+                                <span>Certificate after Completing</span>
+                                <span><i class="fa-solid fa-check"></i></span>
+                            </li>
+                            <li>
+                                <span>Duration</span>
+                                <span>12 Weeks</span>
+                            </li>
+                            <li>
+                                <span>Lifetime Access</span>
+                                <span><i class="fa-solid fa-check"></i></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Right Side (Course Card) -->
+                <div class="col-md-4">
+                    <div class="course-card">
+                        <img src="../img/python.jpg" class="img-fluid rounded mb-3 course-image" alt="Course Image">
+                        <div class="price">
+                            $28.00 
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div class="text-decoration-line-through mb-3">$56.00</div>
+                            <div class=" mb-3 text-center "><span class="discount">-50% OFF</span></div>
+                            <div class=" mb-3 text-center "><span class=""></span></div>
+                        </div>
+                        <button class="btn btn-white btn-lg w-100 mb-2">Add to Cart</button>
+                        <button class="btn btn-green btn-lg w-100">Buy Course</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <style>
+      
+
+        .about-course-details h2 , .course-curriculum-section h2  , .review-details h2 , .reviews-section h2{
+            color: #5D5D5D;
+            font-family: Roboto;
+font-size: 24px;
+font-weight: 600;
+line-height: 42.19px;
+letter-spacing: 0.01em;
+text-align: left;
+
+        }
+
+        .about-course-details p, .about-course-details li {
+            color: #7C7C7C;
+            font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 35px;
+text-align: left;
+
+        }
+
+        .btn-success {
+            background-color: #28A745;
+            border-color: #28A745;
+            font-weight: 700;
+            padding: 5px 20px;
+        }
+        
+        .btn-outline-success {
+            padding: 5px 20px;
+            color: #28A745;
+            border-color: #28A745;
+            font-weight: 700;
+            border: none;
+        }
+
+        .btn-outline-success:hover {
+            background-color: #28A745;
+            color: white;
+        }
+        .btn-course-info {
+            padding: 10px 0;
+            
+            gap: 35px;
+            box-shadow: 0px 0px 4px 0px #0000001A;
+            border: 1px solid #D9D9D9 ;
+        }
+        ul {
+    list-style-type: none; /* يزيل النقط أو الرموز */
+    margin: 0; /* يزيل المسافات الخارجية */
+    padding: 0; /* يزيل المسافات الداخلية */
+}
+
+li {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 770px) {
+    .course-details-res {
+        margin-top: 50px;
+    }
+}
+@media (max-width: 576px) {
+    .btn-course-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn-course-info button {
+        width: 100%; /* Make buttons full width */
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+    </style>
+   <section class=" container course-details-res">
+    <div class=" row ">
+
+  
+    <div class=" col-md-8 my-5">
+        <!-- Navigation Buttons -->
+        <div class="d-flex flex-wrap justify-content-between btn-course-info mb-4">
+            <button class="btn btn-success mx-2 my-1">Course Info</button>
+            <button class="btn btn-outline-success mx-2 my-1">Curriculum</button>
+            <button class="btn btn-outline-success mx-2 my-1">Instructors</button>
+            <button class="btn btn-outline-success mx-2 my-1">Reviews</button>
+        </div>
+        
+
+        <!-- About Course Section -->
+         <section class="about-course-details">
+            <h2 class="">About Course</h2>
+            <p class="text-muted mt-4">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                 </p>
+            <p class="text-muted mt-5">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting.
+              </p>
+         </section>
+
+        <!-- What will you Learn Section -->
+         <section class="about-course-details text-left">
+            <h2 class="">What will you Learn?</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="text-muted">
+                        <li>Become a UX designer.</li>
+                        <li>Learn to design websites.</li>
+                        <li>How to plan for a video idea.</li>
+                        <li>Differences between ads, trailers, vlogs, etc.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="text-muted">
+                        <li>Learn to design websites.</li>
+                        <li>Learn to design websites.</li>
+                        <li>How to plan for a video idea.</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-muted mt-4">
+                With this course, you also have access to a whole lot of resources not only for reference but also free media like aerial video shots, background music, fonts, and more.
+            </p>
+         </section>
+
+
+
+
+
+
+
+       <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+       
+        .course-curriculum-section .module {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0px 0px 5px 1px #00000026;
+
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .course-curriculum-section .module:hover {
+            background-color: #f9f9f9;
+        }
+
+        .course-curriculum-section .module.active {
+            background-color: #f8f8f8;
+        }
+
+        .course-curriculum-section .module-title{
+            font-weight: bold;
+            color:  #444444;
+            font-family: Roboto;
+font-size: 18px;
+font-weight: 600;
+line-height: 36px;
+letter-spacing: 0.01em;
+text-align: left;
+
+
+            
+
+
+        }
+
+        .course-curriculum-section .module-details {
+            font-size: 14px;
+            color: #7C7C7C;
+            padding: 0 10px;
+
+
+            font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 36px;
+letter-spacing: 0.01em;
+text-align: left;
+border: 1px solid #D9D9D9 ;
+border-radius: 20px;
+
+        }
+
+        .course-curriculum-section .lesson {
+            padding-left: 30px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            color: #5D5D5D;
+        }
+
+        .course-curriculum-section .lesson .preview {
+            background-color: #e6f9ea;
+            color: #28A745;
+            padding: 2px 10px;
+            border-radius: 15px;
+            font-size: 12px;
+        }
+
+        .course-curriculum-section .lesson i {
+            font-size: 18px;
+            margin-right: 10px;
+            color: #5D5D5D;
+        }
+
+        .course-curriculum-section .instructor-section h2 {
+            color: #5D5D5D;
+        }
+
+        .course-curriculum-section .instructor-name {
+            
+            color: #28A745;
+
+
+            font-family: Roboto;
+font-size: 20px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+
+        }
+
+        .course-curriculum-section .instructor-title {
+         
+            color: #444444;
+
+            font-family: Roboto;
+font-size: 16px;
+font-weight: 400;
+line-height: 36px;
+text-align: left;
+margin-top: 10px;
+
+            
+        }
+        .instructor-p {
+            font-family: Roboto;
+font-size: 14px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+color: #7C7C7C;
+        }
+
+
+
+
+
+
+
+        .social-icons i {
+    font-size: 24px;
+    color: #28A745;
+    border: 2px solid #28A745;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.course-curriculum-section .social-icons i:hover {
+    color: #0b8828;
+    border: 2px solid #0b8828;
+        }
+
+
+       </style>
+
+      <div class="container my-5 course-curriculum-section">
+        <!-- Course Curriculum Section -->
+        <h2>Course Curriculum</h2>
+
+        <!-- Module 1 -->
+        <div class="module ">
+            <div class="module-title"><svg width="24" height="24" style="margin-right: 5px;"  viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12H22M12 2V22" stroke="#444444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Introduction to Course</div>
+            <div class="module-details">4 Lessons · 40m 24s</div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="module">
+            <div class="module-title"><svg width="24" height="24" style="margin-right: 5px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 12H22M12 2V22" stroke="#444444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Introduction to Course</div>
+            <div class="module-details">4 Lessons · 40m 24s</div>
+        </div>
+
+        <!-- Module 3 (Expanded) -->
+         <div style=" box-shadow: 0px 0px 5px 1px #00000026;">
+
+      
+        <div class="module active" >
+            <div class="module-title" style="color: #28A745;"><svg width="24" height="4"  style="margin-right: 5px;"  viewBox="0 0 24 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 2H22" stroke="#444444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                 Introduction to Course</div>
+            <div class="module-details">4 Lessons · 40m 24s</div>
+        </div>
+        <!-- Lessons inside the expanded module -->
+        <div class="lesson">
+            <div> <i class="fa-solid fa-circle-play"></i> Video: Course Intro</div>
+            <div>20 min <span class="preview"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11C13.6569 11 15 9.88071 15 8.5C15 7.11929 13.6569 6 12 6C10.3431 6 9 7.11929 9 8.5C9 9.88071 10.3431 11 12 11Z" stroke="#28A745" stroke-linejoin="round"/>
+                <path d="M12 1C6.61396 1 2.5865 5.56056 1.23345 7.31947C0.922184 7.72407 0.922184 8.27593 1.23345 8.68053C2.5865 10.4394 6.61396 15 12 15C17.3859 15 21.4134 10.4394 22.7665 8.68053C23.0778 8.27593 23.0778 7.72407 22.7665 7.31947C21.4134 5.56056 17.3859 1 12 1Z" stroke="#28A745" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Preview</span></div>
+        </div>
+        <div class="lesson">
+            <div><i class="fa-solid fa-circle-play"></i> Video: Course Intro</div>
+            <div>20 min <span class="preview"><svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 11C13.6569 11 15 9.88071 15 8.5C15 7.11929 13.6569 6 12 6C10.3431 6 9 7.11929 9 8.5C9 9.88071 10.3431 11 12 11Z" stroke="#28A745" stroke-linejoin="round"/>
+                <path d="M12 1C6.61396 1 2.5865 5.56056 1.23345 7.31947C0.922184 7.72407 0.922184 8.27593 1.23345 8.68053C2.5865 10.4394 6.61396 15 12 15C17.3859 15 21.4134 10.4394 22.7665 8.68053C23.0778 8.27593 23.0778 7.72407 22.7665 7.31947C21.4134 5.56056 17.3859 1 12 1Z" stroke="#28A745" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Preview</span></div>
+        </div>
+        <div class="lesson">
+            <div><i class="fas fa-file-alt"></i> Reading: Course Intro</div>
+            <div><i class="fas fa-lock"></i></div>
+        </div>
+    </div>
+
+        <!-- Instructor Section -->
+        <div class="mt-5 instructor-section">
+            <h2>Your Instructors</h2>
+            <div class="instructor-name">Donald Norman</div>
+            <div class="instructor-title">The father of UX Design</div>
+            <p class="instructor-p">Donald Norman is a cognitive scientist and usability engineer, widely regarded as the father of user experience (UX) design. He is best known for his work on the design of everyday things, where he emphasizes the importance of designing products that are intuitive and user-friendly.</p>
+            <div class="social-icons">
+                   <svg width="312" height="48" viewBox="0 0 312 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23.5" fill="white" stroke="#28A745"/>
+                    <path d="M25.3927 15.6104C25.3927 15.9382 25.3927 17.0064 25.3927 18.5241H30.6107L30.045 23.1756H25.3927C25.3927 30.3491 25.3927 39.9618 25.3927 39.9618H19.2176C19.2176 39.9618 19.2176 30.4763 19.2176 23.1756H16V18.5241H19.2176C19.2176 16.6794 19.2176 15.3678 19.2176 15.0025C19.2176 13.2625 19.0865 12.4368 19.8259 11.0884C20.5657 9.74009 22.6523 7.95785 26.2612 8.00076C29.871 8.04523 31.3926 8.3925 31.3926 8.3925L30.6107 13.3498C30.6107 13.3498 28.3056 12.7412 27.1742 12.9581C26.0443 13.1751 25.3927 13.8711 25.3927 15.6104Z" fill="#28A745"/>
+                    <g filter="url(#filter0_i_666_167)">
+                    <circle cx="288" cy="24" r="24" fill="white"/>
+                    </g>
+                    <circle cx="288" cy="24" r="23.5" stroke="#28A745"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M298.55 34.1914H294.35V26.8424C294.35 24.8264 293.46 23.7017 291.866 23.7017C290.13 23.7017 289.1 24.8737 289.1 26.8424V34.1914H284.9V20.5414H289.1V22.0764C289.1 22.0764 290.418 19.7642 293.387 19.7642C296.357 19.7642 298.55 21.5768 298.55 25.3274V34.1914ZM280.114 18.3583C278.697 18.3583 277.55 17.2013 277.55 15.7744C277.55 14.3485 278.697 13.1914 280.114 13.1914C281.529 13.1914 282.677 14.3485 282.677 15.7744C282.678 17.2013 281.529 18.3583 280.114 18.3583ZM277.55 34.1914H282.8V20.5414H277.55V34.1914Z" fill="#28A745"/>
+                    <circle cx="112" cy="24" r="23.5" fill="white" stroke="#28A745"/>
+                    <path d="M112.5 11C105.056 11 99 17.0582 99 24.5019C99 31.9446 105.055 38 112.5 38C119.945 38 126 31.9446 126 24.5019C126 17.0582 119.944 11 112.5 11ZM112.5 12.3733C115.48 12.3733 118.212 13.4542 120.325 15.2437C120.31 15.2632 120.295 15.2856 120.281 15.306C120.267 15.3274 119 17.3282 115.945 19.2108C115.279 19.6195 114.493 20.0431 113.583 20.4463C111.653 16.7333 109.531 14.1888 108.492 13.0557C109.747 12.6144 111.096 12.3733 112.5 12.3733ZM107.141 13.6237C107.883 14.4001 110.213 16.994 112.302 20.9649C109.44 22.0244 105.567 22.8037 100.528 22.556C101.164 18.628 103.691 15.3293 107.141 13.6237ZM103.775 32.9184C101.669 30.7333 100.371 27.767 100.371 24.5019C100.371 24.3073 100.375 24.1146 100.385 23.9228C101.072 23.9591 101.736 23.9749 102.382 23.9749C106.786 23.9749 110.264 23.2003 112.92 22.2003C113.129 22.6379 113.333 23.0913 113.532 23.5597C113.676 23.8967 113.815 24.2365 113.947 24.5726C109.239 25.9087 105.732 28.7697 103.798 32.8635C103.79 32.883 103.783 32.8989 103.775 32.9184ZM112.5 36.6286C109.533 36.6286 106.811 35.557 104.702 33.7806C104.845 33.7163 104.967 33.6027 105.04 33.451C106.815 29.6905 110.063 27.0697 114.437 25.8593C116.28 30.9325 116.88 35.2106 116.955 35.7813C115.575 36.3288 114.072 36.6286 112.5 36.6286ZM118.256 35.1743C118.057 33.8318 117.403 30.0387 115.787 25.5558C119.568 24.8985 123.548 25.7057 124.544 25.9329C124.071 29.9298 121.647 33.3383 118.256 35.1743ZM115.296 24.2496C115.137 23.8418 114.969 23.4349 114.795 23.0224C114.599 22.5597 114.397 22.111 114.192 21.678C115.178 21.2386 116.027 20.7759 116.745 20.3299C119.55 18.5842 120.944 16.7622 121.334 16.2008C123.374 18.371 124.629 21.2926 124.629 24.5019C124.629 24.5168 124.628 24.5298 124.628 24.5447C123.236 24.2393 119.199 23.5038 115.296 24.2496Z" fill="#28A745"/>
+                    <circle cx="200" cy="24" r="23.5" fill="white" stroke="#28A745"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M203.975 17.7686H210.629V15.8633H203.975V17.7686ZM207.255 21.5953C205.771 21.5953 204.643 22.5148 204.535 24.2139H209.86C209.499 22.1974 208.603 21.5953 207.255 21.5953ZM207.463 29.4759C208.833 29.4759 209.839 28.6102 210.044 27.8809H212.926C212.102 30.5186 210.401 32 207.346 32C203.448 32 201.26 29.2274 201.26 25.5484C201.26 16.8843 213.762 16.5736 213.134 26.3574H204.535C204.619 28.3441 205.438 29.4759 207.463 29.4759ZM194.493 29.0947C196.066 29.0947 197.167 28.4896 197.167 26.8567C197.167 25.1631 196.194 24.4284 194.561 24.4284H190.62V29.0947H194.493ZM194.285 21.8813C195.594 21.8813 196.498 21.272 196.498 19.8566C196.498 18.3655 195.446 17.9053 194.009 17.9053H190.62V21.8813H194.285ZM194.747 15C197.847 15 200.002 16.0248 200.002 19.2136C200.002 20.7925 199.368 21.9691 197.766 22.7619C199.817 23.371 200.787 24.9704 200.787 27.0719C200.787 30.4079 198.142 32 194.977 32H187V15H194.747Z" fill="#28A745"/>
+                    <defs>
+                    <filter id="filter0_i_666_167" x="264" y="0" width="48" height="52" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="3.9"/>
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_666_167"/>
+                    </filter>
+                    </defs>
+                    </svg>
+                    
+            </div>
+            
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <section>
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .review-details .progress-bar {
+            height: 1.5rem;
+            background-color: #FFE923;
+        }
+
+        .featured-reviews h3 {
+            color: #444444;
+        }
+
+        .review-details .media-body h5 {
+            color: #444444;
+        }
+
+        .review-details .media-body p {
+            color: #A6A6A6;
+        }
+
+        .review-details .text-muted {
+            color: #A6A6A6;
+        }
+
+        .review-details a.text-primary {
+            color: #FFE923;
+        }
+
+        .review-details button.btn-outline-secondary {
+            border-color: #A6A6A6;
+            color: #444444;
+        }
+        .progress-box {
+            border-radius: 10px ;
+            border: 1px solid #A6A6A6 ;
+        }
+    </style>
+
+
+    <div class="container mt-5 review-details">
+    <div class="row justify-content-centet gap-2 ">
+        <h2 class="mb-2">Rating & Reviews</h2>
+        <div class="col-md-4 progress-box  text-center  py-3" style="border: 1px solid black;">
+            <h1 class="display-4 font-weight-bold">4.5</h1>
+            <span>
+                <svg width="137" height="22" viewBox="0 0 137 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.6782 6.69036L16.7023 6.73546L16.753 6.74224L24.0136 7.71374L24.0268 7.61462L24.0136 7.71374C24.4079 7.76645 24.7299 8.01993 24.8501 8.3603C24.9696 8.69928 24.8711 9.07323 24.5899 9.32555L24.5898 9.32556L19.336 14.0416L19.2942 14.0791L19.3044 14.1343L20.5344 20.7377L20.5343 20.7377L20.5357 20.7434C20.5524 20.8108 20.5612 20.8811 20.5612 20.9533C20.5612 21.4681 20.1059 21.8992 19.5261 21.9C19.3586 21.8994 19.1905 21.8637 19.0379 21.7898L18.9943 21.8798L19.0378 21.7898L12.5435 18.6455L12.4999 18.6244L12.4563 18.6455L5.96193 21.7898L6.0055 21.8798L5.96192 21.7898C5.80968 21.8635 5.64302 21.9 5.4767 21.9C5.25987 21.9 5.0449 21.8379 4.86417 21.717L4.80855 21.8001L4.86416 21.717C4.54506 21.5034 4.38943 21.1454 4.45473 20.7946L5.69548 14.1343L5.70577 14.0791L5.66397 14.0415L0.410074 9.32556L0.343276 9.39998L0.410071 9.32556C0.12894 9.07324 0.0303714 8.69928 0.149954 8.36022C0.269985 8.01994 0.592063 7.76644 0.986424 7.71367L8.24719 6.74217L8.29791 6.73539L8.32208 6.69029L11.5689 0.630742L11.5689 0.630734C11.7415 0.30858 12.1011 0.1 12.5 0.1C12.8988 0.1 13.2584 0.308575 13.4311 0.630745L16.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                <path d="M44.6782 6.69036L44.7023 6.73546L44.753 6.74224L52.0136 7.71374L52.0268 7.61462L52.0136 7.71374C52.4079 7.76645 52.7299 8.01993 52.8501 8.3603C52.9696 8.69928 52.8711 9.07323 52.5899 9.32555L52.5898 9.32556L47.336 14.0416L47.2942 14.0791L47.3044 14.1343L48.5344 20.7377L48.5343 20.7377L48.5357 20.7434C48.5524 20.8108 48.5612 20.8811 48.5612 20.9533C48.5612 21.4681 48.1059 21.8992 47.5261 21.9C47.3586 21.8994 47.1905 21.8637 47.0379 21.7898L46.9943 21.8798L47.0378 21.7898L40.5435 18.6455L40.4999 18.6244L40.4563 18.6455L33.9619 21.7898L34.0055 21.8798L33.9619 21.7898C33.8097 21.8635 33.643 21.9 33.4767 21.9C33.2599 21.9 33.0449 21.8379 32.8642 21.717L32.8085 21.8001L32.8642 21.717C32.5451 21.5034 32.3894 21.1454 32.4547 20.7946L33.6955 14.1343L33.7058 14.0791L33.664 14.0415L28.4101 9.32556L28.3433 9.39998L28.4101 9.32556C28.1289 9.07324 28.0304 8.69928 28.15 8.36022C28.27 8.01994 28.5921 7.76644 28.9864 7.71367L36.2472 6.74217L36.2979 6.73539L36.3221 6.69029L39.5689 0.630742L39.5689 0.630734C39.7415 0.30858 40.1011 0.1 40.5 0.1C40.8988 0.1 41.2584 0.308575 41.4311 0.630745L44.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                <path d="M72.6782 6.69036L72.7023 6.73546L72.753 6.74224L80.0136 7.71374L80.0268 7.61462L80.0136 7.71374C80.4079 7.76645 80.7299 8.01993 80.8501 8.3603C80.9696 8.69928 80.8711 9.07323 80.5899 9.32555L80.5898 9.32556L75.336 14.0416L75.2942 14.0791L75.3044 14.1343L76.5344 20.7377L76.5343 20.7377L76.5357 20.7434C76.5524 20.8108 76.5612 20.8811 76.5612 20.9533C76.5612 21.4681 76.1059 21.8992 75.5261 21.9C75.3586 21.8994 75.1905 21.8637 75.0379 21.7898L74.9943 21.8798L75.0378 21.7898L68.5435 18.6455L68.4999 18.6244L68.4563 18.6455L61.9619 21.7898L62.0055 21.8798L61.9619 21.7898C61.8097 21.8635 61.643 21.9 61.4767 21.9C61.2599 21.9 61.0449 21.8379 60.8642 21.717L60.8085 21.8001L60.8642 21.717C60.5451 21.5034 60.3894 21.1454 60.4547 20.7946L61.6955 14.1343L61.7058 14.0791L61.664 14.0415L56.4101 9.32556L56.3433 9.39998L56.4101 9.32556C56.1289 9.07324 56.0304 8.69928 56.15 8.36022C56.27 8.01994 56.5921 7.76644 56.9864 7.71367L64.2472 6.74217L64.2979 6.73539L64.3221 6.69029L67.5689 0.630742L67.5689 0.630734C67.7415 0.30858 68.1011 0.1 68.5 0.1C68.8988 0.1 69.2584 0.308575 69.4311 0.630745L72.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                <path d="M100.678 6.69036L100.702 6.73546L100.753 6.74224L108.014 7.71374L108.027 7.61462L108.014 7.71374C108.408 7.76645 108.73 8.01993 108.85 8.3603C108.97 8.69928 108.871 9.07323 108.59 9.32555L108.59 9.32556L103.336 14.0416L103.294 14.0791L103.304 14.1343L104.534 20.7377L104.534 20.7377L104.536 20.7434C104.552 20.8108 104.561 20.8811 104.561 20.9533C104.561 21.4681 104.106 21.8992 103.526 21.9C103.359 21.8994 103.19 21.8637 103.038 21.7898L102.994 21.8798L103.038 21.7898L96.5435 18.6455L96.4999 18.6244L96.4563 18.6455L89.9619 21.7898L90.0055 21.8798L89.9619 21.7898C89.8097 21.8635 89.643 21.9 89.4767 21.9C89.2599 21.9 89.0449 21.8379 88.8642 21.717L88.8085 21.8001L88.8642 21.717C88.5451 21.5034 88.3894 21.1454 88.4547 20.7946L89.6955 14.1343L89.7058 14.0791L89.664 14.0415L84.4101 9.32556L84.3433 9.39998L84.4101 9.32556C84.1289 9.07324 84.0304 8.69928 84.15 8.36022C84.27 8.01994 84.5921 7.76644 84.9864 7.71367L92.2472 6.74217L92.2979 6.73539L92.3221 6.69029L95.5689 0.630742L95.5689 0.630734C95.7415 0.30858 96.1011 0.1 96.5 0.1C96.8988 0.1 97.2584 0.308575 97.4311 0.630745L100.678 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                <path d="M128.678 6.69036L128.702 6.73546L128.753 6.74224L136.014 7.71374L136.027 7.61462L136.014 7.71374C136.408 7.76645 136.73 8.01993 136.85 8.3603C136.97 8.69928 136.871 9.07323 136.59 9.32555L136.59 9.32556L131.336 14.0416L131.294 14.0791L131.304 14.1343L132.534 20.7377L132.534 20.7377L132.536 20.7434C132.552 20.8108 132.561 20.8811 132.561 20.9533C132.561 21.4681 132.106 21.8992 131.526 21.9C131.359 21.8994 131.19 21.8637 131.038 21.7898L130.994 21.8798L131.038 21.7898L124.544 18.6455L124.5 18.6244L124.456 18.6455L117.962 21.7898L118.006 21.8798L117.962 21.7898C117.81 21.8635 117.643 21.9 117.477 21.9C117.26 21.9 117.045 21.8379 116.864 21.717L116.809 21.8001L116.864 21.717C116.545 21.5034 116.389 21.1454 116.455 20.7946L117.695 14.1343L117.706 14.0791L117.664 14.0415L112.41 9.32556L112.343 9.39998L112.41 9.32556C112.129 9.07324 112.03 8.69928 112.15 8.36022C112.27 8.01994 112.592 7.76644 112.986 7.71367L120.247 6.74217L120.298 6.73539L120.322 6.69029L123.569 0.630742L123.569 0.630734C123.742 0.30858 124.101 0.1 124.5 0.1C124.899 0.1 125.258 0.308575 125.431 0.630745L128.678 6.69036Z" fill="#CECECE" stroke="#444444" stroke-width="0.2"/>
+                </svg>
+            </span>
+            <p class="text-muted">Rated 4.5 out of 5</p>
+        </div>
+        <div class="col-md-7 progress-box" style="border: 1px solid black;padding-top: 30px; ">
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 93%; background-color: #FFE923;" aria-valuenow="93" aria-valuemin="0" aria-valuemax="100"></div> 
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 33%; background-color: #FFE923;" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 15%; background-color: #FFE923;" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 6%; background-color: #FFE923;" aria-valuenow="6" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+            <div class="progress mb-2">
+                <div class="progress-bar" role="progressbar" style="width: 10%; background-color: #FFE923;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+     </div> 
+
+
+      
+
+     </div>
+
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+    
+        .reviews-section {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            direction: ltr;
+            color: #7C7C7C;
+        }
+    
+        .review-container {
+            border-bottom: 1px solid #ddd;
+            padding: 15px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+    
+        .review-container:last-child {
+            border-bottom: none;
+        }
+    
+        .review-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #CECECE;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 15px;
+            text-transform: uppercase;
+        }
+    
+        .review-content {
+            max-width: 600px; /* This ensures the content doesn't exceed a certain width */
+        }
+    
+        .review-author {
+            margin-bottom: 5px;
+            color: #7C7C7C;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 35.16px;
+            letter-spacing: 0.01em;
+            text-align: left;
+        }
+    
+        .review-stars {
+            color: #FFE923;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+    
+        .review-text {
+            margin-bottom: 10px;
+            color: #7C7C7C;
+            font-family: Roboto;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: left;
+        }
+    
+        .review-helpful {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #7C7C7C;
+            font-family: Roboto;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 35px;
+            text-align: left;
+        }
+    
+        .like-dislike-container {
+            display: flex;
+            border: 2px solid #CECECE;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 100px;
+        }
+    
+        .like-button, .dislike-button {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            cursor: pointer;
+            border-right: 1px solid #CECECE;
+            background-color: white;
+        }
+    
+        .dislike-button {
+            border-right: none;
+        }
+    
+        .like-button:hover, .dislike-button:hover {
+            background-color: #f0f0f0;
+        }
+    
+        .like-button i, .dislike-button i {
+            font-size: 20px;
+            color: #7C7C7C;
+        }
+    
+        .review-time {
+            font-family: Roboto;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 23.44px;
+            letter-spacing: 0.01em;
+            text-align: left;
+            color: #7C7C7C;
+            margin-left: 20px;
+        }
+    </style>
+    
+    <div class="reviews-section">
+        <h2>Featured Reviews</h2>
+        <div class="review-container">
+            <div class="review-avatar">
+                JD
+            </div>
+            <div class="review-content " style="margin-left: 15px;">
+                <div class="review-author">Jane Doe</div>
+                <div class="review-stars">
+                    <svg width="141" height="22" viewBox="0 0 141 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.6782 6.69036L16.7023 6.73546L16.753 6.74224L24.0136 7.71374L24.0268 7.61462L24.0136 7.71374C24.4079 7.76645 24.7299 8.01993 24.8501 8.3603C24.9696 8.69928 24.8711 9.07323 24.5899 9.32555L24.5898 9.32556L19.336 14.0416L19.2942 14.0791L19.3044 14.1343L20.5344 20.7377L20.5343 20.7377L20.5357 20.7434C20.5524 20.8108 20.5612 20.8811 20.5612 20.9533C20.5612 21.4681 20.1059 21.8992 19.5261 21.9C19.3586 21.8994 19.1905 21.8637 19.0379 21.7898L18.9943 21.8798L19.0378 21.7898L12.5435 18.6455L12.4999 18.6244L12.4563 18.6455L5.96193 21.7898L6.0055 21.8798L5.96192 21.7898C5.80968 21.8635 5.64302 21.9 5.4767 21.9C5.25987 21.9 5.0449 21.8379 4.86417 21.717L4.80855 21.8001L4.86416 21.717C4.54506 21.5034 4.38943 21.1454 4.45473 20.7946L5.69548 14.1343L5.70577 14.0791L5.66397 14.0415L0.410074 9.32556L0.343276 9.39998L0.410071 9.32556C0.12894 9.07324 0.0303714 8.69928 0.149954 8.36022C0.269985 8.01994 0.592063 7.76644 0.986424 7.71367L8.24719 6.74217L8.29791 6.73539L8.32208 6.69029L11.5689 0.630742L11.5689 0.630734C11.7415 0.30858 12.1011 0.1 12.5 0.1C12.8988 0.1 13.2584 0.308575 13.4311 0.630745L16.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                        <path d="M45.6782 6.69036L45.7023 6.73546L45.753 6.74224L53.0136 7.71374L53.0268 7.61462L53.0136 7.71374C53.4079 7.76645 53.7299 8.01993 53.8501 8.3603C53.9696 8.69928 53.8711 9.07323 53.5899 9.32555L53.5898 9.32556L48.336 14.0416L48.2942 14.0791L48.3044 14.1343L49.5344 20.7377L49.5343 20.7377L49.5357 20.7434C49.5524 20.8108 49.5612 20.8811 49.5612 20.9533C49.5612 21.4681 49.1059 21.8992 48.5261 21.9C48.3586 21.8994 48.1905 21.8637 48.0379 21.7898L47.9943 21.8798L48.0378 21.7898L41.5435 18.6455L41.4999 18.6244L41.4563 18.6455L34.9619 21.7898L35.0055 21.8798L34.9619 21.7898C34.8097 21.8635 34.643 21.9 34.4767 21.9C34.2599 21.9 34.0449 21.8379 33.8642 21.717L33.8085 21.8001L33.8642 21.717C33.5451 21.5034 33.3894 21.1454 33.4547 20.7946L34.6955 14.1343L34.7058 14.0791L34.664 14.0415L29.4101 9.32556L29.3433 9.39998L29.4101 9.32556C29.1289 9.07324 29.0304 8.69928 29.15 8.36022C29.27 8.01994 29.5921 7.76644 29.9864 7.71367L37.2472 6.74217L37.2979 6.73539L37.3221 6.69029L40.5689 0.630742L40.5689 0.630734C40.7415 0.30858 41.1011 0.1 41.5 0.1C41.8988 0.1 42.2584 0.308575 42.4311 0.630745L45.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                        <path d="M74.6782 6.69036L74.7023 6.73546L74.753 6.74224L82.0136 7.71374L82.0268 7.61462L82.0136 7.71374C82.4079 7.76645 82.7299 8.01993 82.8501 8.3603C82.9696 8.69928 82.8711 9.07323 82.5899 9.32555L82.5898 9.32556L77.336 14.0416L77.2942 14.0791L77.3044 14.1343L78.5344 20.7377L78.5343 20.7377L78.5357 20.7434C78.5524 20.8108 78.5612 20.8811 78.5612 20.9533C78.5612 21.4681 78.1059 21.8992 77.5261 21.9C77.3586 21.8994 77.1905 21.8637 77.0379 21.7898L76.9943 21.8798L77.0378 21.7898L70.5435 18.6455L70.4999 18.6244L70.4563 18.6455L63.9619 21.7898L64.0055 21.8798L63.9619 21.7898C63.8097 21.8635 63.643 21.9 63.4767 21.9C63.2599 21.9 63.0449 21.8379 62.8642 21.717L62.8085 21.8001L62.8642 21.717C62.5451 21.5034 62.3894 21.1454 62.4547 20.7946L63.6955 14.1343L63.7058 14.0791L63.664 14.0415L58.4101 9.32556L58.3433 9.39998L58.4101 9.32556C58.1289 9.07324 58.0304 8.69928 58.15 8.36022C58.27 8.01994 58.5921 7.76644 58.9864 7.71367L66.2472 6.74217L66.2979 6.73539L66.3221 6.69029L69.5689 0.630742L69.5689 0.630734C69.7415 0.30858 70.1011 0.1 70.5 0.1C70.8988 0.1 71.2584 0.308575 71.4311 0.630745L74.6782 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                        <path d="M103.678 6.69036L103.702 6.73546L103.753 6.74224L111.014 7.71374L111.027 7.61462L111.014 7.71374C111.408 7.76645 111.73 8.01993 111.85 8.3603C111.97 8.69928 111.871 9.07323 111.59 9.32555L111.59 9.32556L106.336 14.0416L106.294 14.0791L106.304 14.1343L107.534 20.7377L107.534 20.7377L107.536 20.7434C107.552 20.8108 107.561 20.8811 107.561 20.9533C107.561 21.4681 107.106 21.8992 106.526 21.9C106.359 21.8994 106.19 21.8637 106.038 21.7898L105.994 21.8798L106.038 21.7898L99.5435 18.6455L99.4999 18.6244L99.4563 18.6455L92.9619 21.7898L93.0055 21.8798L92.9619 21.7898C92.8097 21.8635 92.643 21.9 92.4767 21.9C92.2599 21.9 92.0449 21.8379 91.8642 21.717L91.8085 21.8001L91.8642 21.717C91.5451 21.5034 91.3894 21.1454 91.4547 20.7946L92.6955 14.1343L92.7058 14.0791L92.664 14.0415L87.4101 9.32556L87.3433 9.39998L87.4101 9.32556C87.1289 9.07324 87.0304 8.69928 87.15 8.36022C87.27 8.01994 87.5921 7.76644 87.9864 7.71367L95.2472 6.74217L95.2979 6.73539L95.3221 6.69029L98.5689 0.630742L98.5689 0.630734C98.7415 0.30858 99.1011 0.1 99.5 0.1C99.8988 0.1 100.258 0.308575 100.431 0.630745L103.678 6.69036Z" fill="#FFE923" stroke="#444444" stroke-width="0.2"/>
+                        <path d="M132.678 6.69036L132.702 6.73546L132.753 6.74224L140.014 7.71374L140.027 7.61462L140.014 7.71374C140.408 7.76645 140.73 8.01993 140.85 8.3603C140.97 8.69928 140.871 9.07323 140.59 9.32555L140.59 9.32556L135.336 14.0416L135.294 14.0791L135.304 14.1343L136.534 20.7377L136.534 20.7377L136.536 20.7434C136.552 20.8108 136.561 20.8811 136.561 20.9533C136.561 21.4681 136.106 21.8992 135.526 21.9C135.359 21.8994 135.19 21.8637 135.038 21.7898L134.994 21.8798L135.038 21.7898L128.544 18.6455L128.5 18.6244L128.456 18.6455L121.962 21.7898L122.006 21.8798L121.962 21.7898C121.81 21.8635 121.643 21.9 121.477 21.9C121.26 21.9 121.045 21.8379 120.864 21.717L120.809 21.8001L120.864 21.717C120.545 21.5034 120.389 21.1454 120.455 20.7946L121.695 14.1343L121.706 14.0791L121.664 14.0415L116.41 9.32556L116.343 9.39998L116.41 9.32556C116.129 9.07324 116.03 8.69928 116.15 8.36022C116.27 8.01994 116.592 7.76644 116.986 7.71367L124.247 6.74217L124.298 6.73539L124.322 6.69029L127.569 0.630742L127.569 0.630734C127.742 0.30858 128.101 0.1 128.5 0.1C128.899 0.1 129.258 0.308575 129.431 0.630745L132.678 6.69036Z" fill="#CECECE" stroke="#444444" stroke-width="0.2"/>
+                        </svg>
+                        
+                    <span class="review-time ">2 weeks ago</span>
+                </div>
+                <div class="review-text">I love the way the instructor goes about the course. So easy to follow, even though a little bit challenging as expected.</div>
+                <div class="review-helpful">
+                    Helpful?
+                    <div class="like-dislike-container">
+                        <div class="like-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.68294 2.07328L9.68289 2.07383L9.68027 2.09906C9.61965 2.68332 9.54428 3.40986 9.37985 4.26133L9.68294 2.07328ZM9.68294 2.07328C9.71781 1.73358 9.74665 1.45431 9.784 1.2181C9.82169 0.979783 9.86347 0.817956 9.91169 0.70692C9.95659 0.603501 9.99672 0.567797 10.0243 0.550422C10.0554 0.530875 10.1264 0.5 10.2889 0.5C10.8009 0.5 11.4221 0.726977 11.9144 1.14503C12.3999 1.55725 12.7222 2.12098 12.7222 2.77778C12.7222 3.58141 12.614 4.80778 12.5028 5.85088C12.4476 6.36866 12.3924 6.83491 12.351 7.17174C12.3303 7.34009 12.313 7.47597 12.301 7.56962L12.287 7.67716L12.2834 7.70486L12.2824 7.71179L12.2822 7.71348L12.2822 7.71387L12.2822 7.71396L12.7778 7.78L9.68294 2.07328ZM6.06 16.6667V16.6676C6.05783 17.8903 6.2679 18.5101 6.73415 18.8785C7.24438 19.2817 8.19159 19.5 10 19.5H14.1922C15.2779 19.5 15.8995 19.1481 16.2757 18.7751C16.6661 18.388 16.8365 17.9367 16.9436 17.6465C16.9438 17.6459 16.944 17.6453 16.9443 17.6446L16.9575 17.608L16.9592 17.6032L16.9592 17.6032C17.1274 17.1518 17.4751 16.8131 17.7632 16.5325C17.7711 16.5248 17.7789 16.5172 17.7867 16.5096C18.1327 16.168 18.4687 15.8345 18.7193 15.3323L18.7193 15.3322C18.9978 14.7745 18.968 14.2844 18.927 13.7379C18.927 13.7377 18.927 13.7376 18.927 13.7374L18.9246 13.707C18.9008 13.3988 18.8717 13.0233 18.958 12.662M6.06 16.6667L12.2822 7.71396L12.2067 8.28H12.7778H17.4278C18.187 8.28 18.6799 8.51751 18.9907 8.87227C19.311 9.23777 19.5 9.79857 19.5 10.5556C19.5 11.1749 19.3805 11.4725 19.2319 11.8424L19.2307 11.8453C19.1423 12.0647 19.0385 12.3225 18.958 12.662M6.06 16.6667V10.3507M6.06 16.6667V10.3507M18.958 12.662C18.958 12.6621 18.958 12.6623 18.9579 12.6625L19.4444 12.7778L18.9582 12.6615C18.9581 12.6616 18.9581 12.6618 18.958 12.662ZM6.06 10.3507C6.79414 9.81531 7.48043 8.88806 8.03352 7.88113C8.65617 6.74756 9.15412 5.43197 9.37982 4.26148L6.06 10.3507ZM0.841708 9.7306L0.488155 9.37704L0.841709 9.7306C1.0605 9.51181 1.35725 9.38889 1.66667 9.38889C1.97609 9.38889 2.27283 9.51181 2.49162 9.7306L2.84518 9.37704L2.49163 9.7306C2.71042 9.94939 2.83333 10.2461 2.83333 10.5556V18.3333C2.83333 18.6428 2.71042 18.9395 2.49162 19.1583C2.27283 19.3771 1.97609 19.5 1.66667 19.5C1.35725 19.5 1.0605 19.3771 0.841709 19.1583C0.622916 18.9395 0.5 18.6428 0.5 18.3333V10.5556C0.5 10.2461 0.622916 9.94939 0.841708 9.7306Z" stroke="black"/>
+                                </svg>
+                                
+                        </div>
+                        <div class="dislike-button">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.68294 17.9267L9.68289 17.9262L9.68027 17.9009C9.61965 17.3167 9.54428 16.5901 9.37985 15.7387L9.68294 17.9267ZM9.68294 17.9267C9.71781 18.2664 9.74665 18.5457 9.784 18.7819C9.82169 19.0202 9.86347 19.182 9.91169 19.2931C9.95659 19.3965 9.99672 19.4322 10.0243 19.4496C10.0554 19.4691 10.1264 19.5 10.2889 19.5C10.8009 19.5 11.4221 19.273 11.9144 18.855C12.3999 18.4428 12.7222 17.879 12.7222 17.2222C12.7222 16.4186 12.614 15.1922 12.5028 14.1491C12.4476 13.6313 12.3924 13.1651 12.351 12.8283C12.3303 12.6599 12.313 12.524 12.301 12.4304L12.287 12.3228L12.2834 12.2951L12.2824 12.2882L12.2822 12.2865L12.2822 12.2861L12.2822 12.286L12.7778 12.22L9.68294 17.9267ZM6.06 3.33333V3.33244C6.05783 2.10972 6.2679 1.48989 6.73415 1.12148C7.24438 0.71833 8.19159 0.5 10 0.5H14.1922C15.2779 0.5 15.8995 0.851894 16.2757 1.22491C16.6661 1.61197 16.8365 2.06334 16.9436 2.35351C16.9438 2.35413 16.944 2.35474 16.9443 2.35536L16.9575 2.39203L16.9592 2.39679L16.9592 2.39678C17.1274 2.84815 17.4751 3.18688 17.7632 3.46753C17.7711 3.47519 17.7789 3.48281 17.7867 3.49039C18.1327 3.83199 18.4687 4.16552 18.7193 4.66771L18.7193 4.66776C18.9978 5.22554 18.968 5.71563 18.927 6.26212C18.927 6.26227 18.927 6.26243 18.927 6.26258L18.9246 6.29303C18.9008 6.60116 18.8717 6.9767 18.958 7.33804M6.06 3.33333L12.2822 12.286L12.2067 11.72H12.7778H17.4278C18.187 11.72 18.6799 11.4825 18.9907 11.1277C19.311 10.7622 19.5 10.2014 19.5 9.44444C19.5 8.82512 19.3805 8.52753 19.2319 8.15759L19.2307 8.1547C19.1423 7.93533 19.0385 7.67749 18.958 7.33804M6.06 3.33333V9.64929M6.06 3.33333V9.64929M18.958 7.33804C18.958 7.33787 18.958 7.33771 18.9579 7.33755L19.4444 7.22222L18.9582 7.33855C18.9581 7.33838 18.9581 7.33821 18.958 7.33804ZM6.06 9.64929C6.79414 10.1847 7.48043 11.1119 8.03352 12.1189C8.65617 13.2524 9.15412 14.568 9.37982 15.7385L6.06 9.64929ZM0.841708 10.2694L0.488155 10.623L0.841709 10.2694C1.0605 10.4882 1.35725 10.6111 1.66667 10.6111C1.97609 10.6111 2.27283 10.4882 2.49162 10.2694L2.84518 10.623L2.49163 10.2694C2.71042 10.0506 2.83333 9.75386 2.83333 9.44444V1.66667C2.83333 1.35725 2.71042 1.0605 2.49162 0.841709C2.27283 0.622915 1.97609 0.5 1.66667 0.5C1.35725 0.5 1.0605 0.622915 0.841709 0.841709C0.622916 1.0605 0.5 1.35725 0.5 1.66667V9.44444C0.5 9.75386 0.622916 10.0506 0.841708 10.2694Z" stroke="black"/>
+                                </svg>
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    
+
+
+      </section>
+    </div>
+
+ </div>
+
+  
+
+
+    </section>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
